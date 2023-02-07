@@ -1,0 +1,60 @@
+on:
+  push:
+    branches:
+      - main
+jobs:
+  # Build job
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Setup Python
+      uses: actions/setup-python@v3
+      with:
+        python-version: '3.8'
+    - name: Cache Python environment
+      uses: actions/cache@v3
+      id: cache-python
+      with:
+        path: web/.venv
+        key: web/.venv-${{ hashFiles('requirements.txt') }}
+    - name: Check for Apt updates
+      shell: bash
+      run: |
+        sudo apt-get update -yq
+        echo "webAptVersion=graphviz-$(apt-cache policy graphviz | grep -oP '(?<=Candidate:\s)(.+)')-libgraphviz-dev-$(apt-cache policy libgraphviz-dev | grep -oP '(?<=Candidate:\s)(.+)')" >> $GITHUB_ENV
+    - name: Cache Apt packages
+      uses: actions/cache@v3
+      id: cache-apt
+      with:
+        path: ~/.aptcache
+        key: ${{ env.webAptVersion }}
+    - name: Install or restore Apt packages
+      shell: bash
+      env:
+        CACHE_HIT: ${{ steps.cache-apt.outputs.cache-hit }}
+      run: |
+        if [[ "$CACHE_HIT" != 'true' ]]; then
+            sudo apt-get install -yq graphviz libgraphviz-dev
+            mkdir -p ~/.aptcache
+            sudo dpkg -L graphviz libgraphviz-dev | while IFS= read -r f; do if test -f $f; then echo $f; fi; done | xargs cp --parents --target-directory ~/.aptcache/
+        else
+            sudo cp --verbose --force --recursive ~/.aptcache/* /
+        fi
+    - name: Build website
+      shell: bash
+      run: make prod
+
+  deploy:
+    needs: build
+    if: ${{ github.ref == 'refs/heads/main' }}
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v1
