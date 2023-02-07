@@ -22,8 +22,8 @@ jobs:
       uses: actions/cache@v3
       id: cache-python
       with:
-        path: web/.venv
-        key: web/.venv-${{ hashFiles('requirements.txt') }}
+        path: .venv
+        key: .venv-${{ hashFiles('requirements.txt') }}
     - name: Check for Apt updates
       shell: bash
       run: |
@@ -50,6 +50,10 @@ jobs:
     - name: Build website
       shell: bash
       run: make prod
+    - name: Upload artifact
+      uses: actions/upload-pages-artifact@v1
+      with:
+        path: 'dist'
 
   deploy:
     needs: build
