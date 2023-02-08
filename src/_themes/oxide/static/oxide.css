@@ -252,14 +252,14 @@ main {
 }
 
 .sidebar-logo {
-  width: 3.555rem;
   height: 3.555rem;
 }
 
 .sidebar-sitename {
-  margin: 0 0 0 0.666rem;
+  margin: 0;
+  padding: 0 0 0 1rem;
   font-size: var(--h1-size);
-  line-height: 3.555rem;
+  line-height: 2rem;
   font-weight: bold;
 }
 
