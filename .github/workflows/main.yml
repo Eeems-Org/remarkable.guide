@@ -29,6 +29,7 @@ jobs:
       uses: awalsh128/cache-apt-pkgs-action@latest
       with:
         packages: graphviz libgraphviz-dev librsvg2-bin texlive-full pdf2svg
+        execute_install_scripts: true
         version: 1.0
     - name: Build website
       shell: bash
