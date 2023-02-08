@@ -2,6 +2,9 @@ DIST=dist
 SRC=src
 VENV=.venv
 
+texFiles := $(wildcard src/images/*.svg.tex)
+imageFiles := $(texFiles:src/images/%.svg.tex=src/_static/images/%.svg)
+
 all: prod
 
 $(VENV)/bin/activate:
@@ -10,7 +13,23 @@ $(VENV)/bin/activate:
 	. .venv/bin/activate; \
 	python -m pip install -r requirements.txt
 
-prod: $(VENV)/bin/activate
+.build/images/%.pdf: src/images/%.svg.tex
+	mkdir -p .build/images
+	cd src/images && pdflatex \
+	    -shell-escape \
+	    -halt-on-error \
+	    -file-line-error \
+	    -interaction nonstopmode \
+	    -output-directory=../../.build/images \
+	    $*.svg.tex
+
+src/_static/images/%.svg: .build/images/%.pdf
+	pdf2svg .build/images/$*.svg.pdf src/_static/images/$*.svg
+
+src/_static/images/favicon.png: src/_static/images/favicon.svg
+	rsvg-convert -h 180 src/_static/images/favicon.svg -o src/_static/images/favicon.png
+
+prod: $(VENV)/bin/activate $(imageFiles) src/_static/images/favicon.png
 	. $(VENV)/bin/activate; \
 	sphinx-build -a -n -E -b html $(SRC) $(DIST)
 	# Clean unused files inherited from default theme
@@ -35,12 +54,16 @@ prod: $(VENV)/bin/activate
 	    $(DIST)/_static/underscore-1.13.1.js \
 	    $(DIST)/_static/underscore.js \
 
-dev: $(VENV)/bin/activate
+dev: $(VENV)/bin/activate src/_static/images/favicon.png $(imageFiles)
 	. $(VENV)/bin/activate; \
-	sphinx-autobuild -a $(SRC) $(DIST)
+	    sphinx-autobuild -a $(SRC) $(DIST)
+
 
 clean:
-	rm -r $(DIST)
-	rm -r $(VENV)
+	rm -rf $(DIST)
+	rm -rf $(VENV)
+	rm -rf .build/
+	rm -f src/_static/images/*.png
+	rm -f src/_static/images/*.svg
 
 .PHONY: all prod dev clean
