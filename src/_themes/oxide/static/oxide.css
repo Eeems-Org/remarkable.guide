@@ -220,7 +220,7 @@ dd {
 body {
   display: flex;
   width: var(--page-width);
-  margin: calc(2 * var(--page-spacing)) auto;
+  margin: var(--page-spacing) auto;
   flex-direction: row;
   justify-content: center;
 }
@@ -237,6 +237,7 @@ main {
   flex: 0 0 var(--sidebar-width);
   align-self: flex-start;
   margin: 0 var(--page-spacing);
+  padding-top: calc(1 * var(--text-size));
 }
 
 /* Sidebar */
