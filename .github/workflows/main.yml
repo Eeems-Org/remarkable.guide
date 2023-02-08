@@ -25,14 +25,21 @@ jobs:
       with:
         path: .venv
         key: .venv-${{ hashFiles('requirements.txt') }}
-    - name: Install Apt packages
+    - name: Install base Apt packages
       uses: awalsh128/cache-apt-pkgs-action@latest
       with:
-        packages: graphviz libgraphviz-dev librsvg2-bin texlive-full pdf2svg
-        execute_install_scripts: true
+        packages: graphviz libgraphviz-dev
         version: 1.0
-    - run: |
-        sudo texconfig rehash
+    - name: Cache Images
+      uses: actions/cache@v3
+      id: cache-images
+      with:
+        path: src/_static/images
+        key: ${{ hashFiles('src/images/*.tex') }}
+    - name: Install texlive Apt packages
+      if: ${{ !steps.cache-images.outputs.cache-hit }}
+      run: |
+        sudo apt-get install -yq librsvg2-bin texlive-full pdf2svg
     - name: Build website
       shell: bash
       run: make prod
