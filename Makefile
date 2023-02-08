@@ -13,8 +13,10 @@ $(VENV)/bin/activate:
 	. .venv/bin/activate; \
 	python -m pip install -r requirements.txt
 
-.build/images/%.pdf: src/images/%.svg.tex
+.build/images:
 	mkdir -p .build/images
+
+.build/images/%.pdf: .build/images src/images/%.svg.tex
 	cd src/images && pdflatex \
 	    -shell-escape \
 	    -halt-on-error \
