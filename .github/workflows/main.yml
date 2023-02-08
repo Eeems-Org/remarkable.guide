@@ -31,7 +31,7 @@ jobs:
           echo "$1-$(apt-cache policy "$1" | grep -oP '(?<=Candidate:\s)(.+)')"
         }
         sudo apt-get update -yq
-        echo "webAptVersion=$(aptHash graphviz)-$(aptHash libgraphviz-dev)-$(aptHash rsvg-convert)-$(aptHash texlive-full)" >> $GITHUB_ENV
+        echo "webAptVersion=$(aptHash graphviz)-$(aptHash libgraphviz-dev)-$(aptHash librsvg2-bin)-$(aptHash texlive-full)" >> $GITHUB_ENV
     - name: Cache Apt packages
       uses: actions/cache@v3
       id: cache-apt
@@ -44,9 +44,9 @@ jobs:
         CACHE_HIT: ${{ steps.cache-apt.outputs.cache-hit }}
       run: |
         if [[ "$CACHE_HIT" != 'true' ]]; then
-            sudo apt-get install -yq graphviz libgraphviz-dev rsvg-convert texlive-full
+            sudo apt-get install -yq graphviz libgraphviz-dev librsvg2-bin texlive-full
             mkdir -p ~/.aptcache
-            sudo dpkg -L graphviz libgraphviz-dev rsvg-convert texlive-full | while IFS= read -r f; do if test -f $f; then echo $f; fi; done | xargs cp --parents --target-directory ~/.aptcache/
+            sudo dpkg -L graphviz libgraphviz-dev librsvg2-bin texlive-full | while IFS= read -r f; do if test -f $f; then echo $f; fi; done | xargs cp --parents --target-directory ~/.aptcache/
         else
             sudo cp --verbose --force --recursive ~/.aptcache/* /
         fi
