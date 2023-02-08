@@ -2,7 +2,13 @@
 Getting Started
 ===============
 
-This guide is still under construction and currently only contains frequently asked questions and their answers.
+.. raw:: html
+
+   <img src="_static/images/favicon.svg" alt="" class="logo">
+   <br/>
+   <div class="warning">
+      ⚠️ This guide is still under construction and currently only contains frequently asked questions and their answers.
+   </div>
 
 Here are some useful links to get you started in the meantime:
 
