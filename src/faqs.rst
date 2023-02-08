@@ -10,7 +10,7 @@ Not exactly. The factory reset mechanism isn't a true factory reset. It will wip
 Can I downgrade to a different OS version?
 ==========================================
 
-Yes! You can install any OS verion you want with `remarkable-update<https://github.com/ddvk/remarkable-update>`_.
+Yes! You can install any OS verion you want with `remarkable-update <https://github.com/ddvk/remarkable-update>`_.
 
 Can I install toltec on my OS version?
 ======================================

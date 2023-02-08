@@ -210,6 +210,11 @@ dd {
   content: url("images/icon-matrix.svg");
 }
 
+.icon-reddit::before {
+  vertical-align: -10%;
+  content: url("images/icon-reddit.svg");
+}
+
 /* Global page layout */
 
 body {
@@ -280,6 +285,17 @@ main {
 
 .sidebar-footer {
   margin-top: calc(3 * var(--text-size));
+}
+
+.sidebar-footer > .sidebar-icons {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: start;
+  align-content: start;
+  justify-content: start;
+}
+.sidebar-footer > .sidebar-icons > div{
+  width: 50%;
 }
 
 .sidebar-copyright {
