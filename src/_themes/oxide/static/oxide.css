@@ -10,9 +10,9 @@
 
   /* Fonts */
   --font: "-apple-system", "BlinkMacSystemFont", "Helvetica Neue", "Roboto", sans-serif;
-  --font-color: #222;
-  --font-color-dim: #777;
-  --font-color-inv: #fcfaf8;
+  --font-color: #fcfaf8;
+  --font-color-dim: #b5b2af;
+  --font-color-inv: #222;
 
   /* Text sizes */
   --text-size: calc(var(--scaling) * 18px);
@@ -32,28 +32,15 @@
   --sidebar-seam: calc(50% - var(--page-width) / 2 + var(--sidebar-width) + 2 * var(--page-spacing));
 
   /* Colors */
-  --bg-color: #fcfaf8;
-  --bg-color-dim: #f4f2f0;
-  --bg-color-inv: #222;
-  --accent-color: #e09e53;
-  --accent-color-dim: #f7af5c;
+  --bg-color: #222;
+  --bg-color-dim: #333;
+  --bg-color-inv: #fcfaf8;
+  --accent-color: #b58043;
+  --accent-color-dim: #e09e53;
 
   /* Other */
   --transition: 0.1s ease-out;
   --border-radius: calc(var(--scaling) * 3px);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bg-color: #222;
-    --bg-color-dim: #333;
-    --bg-color-inv: #fcfaf8;
-    --accent-color: #b58043;
-    --accent-color-dim: #e09e53;
-    --font-color: #fcfaf8;
-    --font-color-dim: #b5b2af;
-    --font-color-inv: #222;
-  }
 }
 
 /* Generic elements */
@@ -187,12 +174,7 @@ dd {
   width: 1rem;
   height: 1rem;
   margin-right: 0.444rem;
-}
-
-@media (prefers-color-scheme: dark) {
-  .icon::before {
-    filter: invert(100);
-  }
+  filter: invert(100);
 }
 
 .icon-discord::before {
@@ -307,6 +289,26 @@ main {
 
 main > section:first-of-type > h1:first-of-type {
   margin-top: 0.9rem;
+}
+main section{
+  padding: calc(var(--text-height) * 0.5);
+}
+
+main section:target {
+  border-radius: var(--border-radius);
+  outline-color: var(--bg-color-dim);
+  outline-style: none;
+  width: 100%;
+  font-size: 0.888rem;
+  overflow: auto;
+  animation: blink 1s;
+  animation-iteration-count: 3;
+}
+
+@keyframes blink {
+  50% {
+    outline-style: dashed;
+  }
 }
 
 .logo {
