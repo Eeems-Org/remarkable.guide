@@ -24,30 +24,11 @@ jobs:
       with:
         path: .venv
         key: .venv-${{ hashFiles('requirements.txt') }}
-    - name: Check for Apt updates
-      shell: bash
-      run: |
-        sudo apt-get update -yq
-        aptHash(){ echo "$1-$(apt-cache policy "$1" | grep -oP '(?<=Candidate:\s)(.+)')"; }
-        echo "webAptVersion=$(aptHash graphviz)-$(aptHash libgraphviz-dev)-$(aptHash librsvg2-bin)-$(aptHash texlive-full)-$(aptHash pdf2svg)" >> $GITHUB_ENV
-    - name: Cache Apt packages
-      uses: actions/cache@v3
-      id: cache-apt
+    - name: Install Apt packages
+      uses: awalsh128/cache-apt-pkgs-action@latest
       with:
-        path: ~/.aptcache
-        key: ${{ env.webAptVersion }}
-    - name: Install or restore Apt packages
-      shell: bash
-      env:
-        CACHE_HIT: ${{ steps.cache-apt.outputs.cache-hit }}
-      run: |
-        if [[ "$CACHE_HIT" != 'true' ]]; then
-            sudo apt-get install -yq graphviz libgraphviz-dev librsvg2-bin texlive-full pdf2svg
-            mkdir -p ~/.aptcache
-            sudo dpkg -L graphviz libgraphviz-dev librsvg2-bin texlive-full pdf2svg | while IFS= read -r f; do if test -f $f; then echo $f; fi; done | xargs cp --parents --target-directory ~/.aptcache/
-        else
-            sudo cp --verbose --force --recursive ~/.aptcache/* /
-        fi
+        packages: graphviz libgraphviz-dev librsvg2-bin texlive-full pdf2svg
+        version: 1.0
     - name: Build website
       shell: bash
       run: make prod
