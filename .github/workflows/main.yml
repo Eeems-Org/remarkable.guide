@@ -31,6 +31,8 @@ jobs:
         packages: graphviz libgraphviz-dev librsvg2-bin texlive-full pdf2svg
         execute_install_scripts: true
         version: 1.0
+    - run: |
+        sudo texconfig rehash
     - name: Build website
       shell: bash
       run: make prod
