@@ -57,6 +57,12 @@ dev: $(VENV)/bin/activate src/_static/images/favicon.png $(imageFiles)
 	. $(VENV)/bin/activate; \
 	    sphinx-autobuild -a $(SRC) $(DIST)
 
+dev-images:
+	while inotifywait -e close_write src/images/*.tex;do \
+	    rm -f $(imageFiles); \
+	    $(MAKE) $(imageFiles); \
+	done
+
 clean:
 	rm -rf $(DIST) $(VENV) $(BUILD)
 	rm -f src/_static/images/*.png src/_static/images/*.svg
