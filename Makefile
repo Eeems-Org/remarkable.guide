@@ -14,7 +14,7 @@ $(VENV)/bin/activate:
 	. .venv/bin/activate; \
 	python -m pip install -r requirements.txt
 
-src/_static/images/%.svg: .build/images src/images/%.svg.tex
+src/_static/images/%.svg: src/images/%.svg.tex
 	mkdir -p $(BUILD)/images
 	cd src/images && pdflatex \
 	    -shell-escape \
