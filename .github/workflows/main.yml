@@ -28,6 +28,7 @@ jobs:
     - name: Install base Apt packages
       uses: awalsh128/cache-apt-pkgs-action@latest
       with:
+        execute_install_scripts: true
         packages: graphviz libgraphviz-dev librsvg2-bin pdf2svg texlive-base texlive-latex-extra
         version: 1.0
     - name: Build website
