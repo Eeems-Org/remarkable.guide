@@ -28,23 +28,13 @@ jobs:
     - name: Install base Apt packages
       uses: awalsh128/cache-apt-pkgs-action@latest
       with:
-        packages: graphviz libgraphviz-dev
+        packages: graphviz libgraphviz-dev librsvg2-bin pdf2svg texlive-base texlive-latex-extra
         version: 1.0
-    - name: Cache Images
-      uses: actions/cache@v3
-      id: cache-images
-      with:
-        key: images-${{ hashFiles('images/*.tex') }}
-        path: |
-          src/_static/images/*.png
-          src/_static/images/*.svg
-    - name: Install texlive Apt packages
-      if: ${{ !steps.cache-images.outputs.cache-hit }}
-      run: |
-        sudo apt-get update -yq && sudo apt-get install -yq --no-install-recommends librsvg2-bin texlive-full pdf2svg
     - name: Build website
       shell: bash
-      run: make prod
+      run: |
+        tree src/_static/images
+        make prod
     - name: Upload artifact
       uses: actions/upload-pages-artifact@v1
       with:
