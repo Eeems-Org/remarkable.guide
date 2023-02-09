@@ -35,7 +35,7 @@ jobs:
       id: cache-images
       with:
         path: src/_static/images
-        key: images-${{ hashFiles('src/images/*.tex') }}
+        key: images-${{ hashFiles('images/*.tex') }}
     - name: Install texlive Apt packages
       if: ${{ !steps.cache-images.outputs.cache-hit }}
       run: |

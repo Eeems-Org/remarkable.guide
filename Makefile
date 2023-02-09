@@ -1,10 +1,11 @@
-DIST=dist
-SRC=src
-VENV=.venv
-BUILD=.build
+DIST=$(CURDIR)/dist
+SRC=$(CURDIR)/src
+IMAGES=$(CURDIR)/images
+VENV=$(CURDIR)/.venv
+BUILD=$(CURDIR)/.build
 
-texFiles := $(wildcard $(SRC)/images/*.svg.tex)
-imageFiles := $(texFiles:$(SRC)/images/%.svg.tex=$(SRC)/_static/images/%.svg)
+texFiles := $(wildcard $(IMAGES)/*.svg.tex)
+imageFiles := $(texFiles:$(IMAGES)/%.svg.tex=$(SRC)/_static/images/%.svg)
 
 .PHONY: all prod images dev dev-images clean
 
@@ -16,9 +17,9 @@ $(VENV)/bin/activate:
 	. .venv/bin/activate; \
 	python -m pip install -r requirements.txt
 
-$(SRC)/_static/images/%.svg: $(SRC)/images/%.svg.tex
+$(SRC)/_static/images/%.svg: $(IMAGES)/%.svg.tex
 	mkdir -p $(BUILD)/images
-	cd $(SRC)/images && pdflatex \
+	cd $(IMAGES) && pdflatex \
 	    -shell-escape \
 	    -halt-on-error \
 	    -file-line-error \
@@ -64,7 +65,7 @@ dev: $(VENV)/bin/activate $(SRC)/_static/images/favicon.png $(imageFiles)
 	    sphinx-autobuild -a $(SRC) $(DIST)
 
 dev-images:
-	while inotifywait -e close_write $(SRC)/images/*.tex;do \
+	while inotifywait -e close_write $(IMAGES)/*.tex;do \
 	    rm -f $(imageFiles); \
 	    $(MAKE) $(imageFiles); \
 	done
