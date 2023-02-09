@@ -3,8 +3,10 @@ SRC=src
 VENV=.venv
 BUILD=.build
 
-texFiles := $(wildcard src/images/*.svg.tex)
-imageFiles := $(texFiles:src/images/%.svg.tex=src/_static/images/%.svg)
+texFiles := $(wildcard $(SRC)/images/*.svg.tex)
+imageFiles := $(texFiles:$(SRC)/images/%.svg.tex=$(SRC)/_static/images/%.svg)
+
+.PHONY: all prod images dev dev-images clean
 
 all: prod
 
@@ -14,21 +16,23 @@ $(VENV)/bin/activate:
 	. .venv/bin/activate; \
 	python -m pip install -r requirements.txt
 
-src/_static/images/%.svg: src/images/%.svg.tex
+$(SRC)/_static/images/%.svg: $(SRC)/images/%.svg.tex
 	mkdir -p $(BUILD)/images
-	cd src/images && pdflatex \
+	cd $(SRC)/images && pdflatex \
 	    -shell-escape \
 	    -halt-on-error \
 	    -file-line-error \
 	    -interaction nonstopmode \
 	    -output-directory=../../.build/images \
 	    $*.svg.tex
-	pdf2svg $(BUILD)/images/$*.svg.pdf src/_static/images/$*.svg
+	pdf2svg $(BUILD)/images/$*.svg.pdf $(SRC)/_static/images/$*.svg
 
-src/_static/images/favicon.png: src/_static/images/favicon.svg
-	rsvg-convert -h 180 src/_static/images/favicon.svg -o src/_static/images/favicon.png
+$(SRC)/_static/images/favicon.png: $(SRC)/_static/images/favicon.svg
+	rsvg-convert -h 180 $(SRC)/_static/images/favicon.svg -o $(SRC)/_static/images/favicon.png
 
-prod: $(VENV)/bin/activate $(imageFiles) src/_static/images/favicon.png
+images: $(imageFiles) $(SRC)/_static/images/favicon.png
+
+$(DIST): $(VENV)/bin/activate images
 	. $(VENV)/bin/activate; \
 	    sphinx-build -a -n -E -b html $(SRC) $(DIST)
 	# Clean unused files inherited from default theme
@@ -53,18 +57,18 @@ prod: $(VENV)/bin/activate $(imageFiles) src/_static/images/favicon.png
 	    $(DIST)/_static/underscore-1.13.1.js \
 	    $(DIST)/_static/underscore.js \
 
-dev: $(VENV)/bin/activate src/_static/images/favicon.png $(imageFiles)
+prod: $(DIST)
+
+dev: $(VENV)/bin/activate $(SRC)/_static/images/favicon.png $(imageFiles)
 	. $(VENV)/bin/activate; \
 	    sphinx-autobuild -a $(SRC) $(DIST)
 
 dev-images:
-	while inotifywait -e close_write src/images/*.tex;do \
+	while inotifywait -e close_write $(SRC)/images/*.tex;do \
 	    rm -f $(imageFiles); \
 	    $(MAKE) $(imageFiles); \
 	done
 
 clean:
 	rm -rf $(DIST) $(VENV) $(BUILD)
-	rm -f src/_static/images/*.png src/_static/images/*.svg
-
-.PHONY: all prod dev clean
+	rm -f $(SRC)/_static/images/*.png $(SRC)/_static/images/*.svg
