@@ -4,8 +4,10 @@ IMAGES=$(CURDIR)/images
 VENV=$(CURDIR)/.venv
 BUILD=$(CURDIR)/.build
 
-texFiles := $(wildcard $(IMAGES)/*.svg.tex)
-imageFiles := $(texFiles:$(IMAGES)/%.svg.tex=$(SRC)/_static/images/%.svg)
+texSvgFiles := $(wildcard $(IMAGES)/*.svg.tex)
+svgFiles := $(texSvgFiles:$(IMAGES)/%.svg.tex=$(SRC)/_static/images/%.svg)
+texPngFiles := $(wildcard $(IMAGES)/*.png.tex)
+pngFiles := $(texPngFiles:$(IMAGES)/%.png.tex=$(SRC)/_static/images/%.png)
 
 .PHONY: all prod images dev dev-images clean
 
@@ -28,10 +30,23 @@ $(SRC)/_static/images/%.svg: $(IMAGES)/%.svg.tex
 	    $*.svg.tex
 	pdf2svg $(BUILD)/images/$*.svg.pdf $(SRC)/_static/images/$*.svg
 
+$(SRC)/_static/images/%.png: $(IMAGES)/%.png.tex
+	mkdir -p $(SRC)/_static/images
+	mkdir -p $(BUILD)/images
+	cd $(IMAGES) && pdflatex \
+	    -shell-escape \
+	    -halt-on-error \
+	    -file-line-error \
+	    -interaction nonstopmode \
+	    -output-directory=$(BUILD)/images \
+	    $*.png.tex
+	cd $(BUILD)/images && pdf2svg $*.png.pdf $*.svg
+	cd $(BUILD)/images && rsvg-convert $*.svg -o $(SRC)/_static/images/$*.png
+
 $(SRC)/_static/images/favicon.png: $(SRC)/_static/images/favicon.svg
 	rsvg-convert -h 180 $(SRC)/_static/images/favicon.svg -o $(SRC)/_static/images/favicon.png
 
-images: $(imageFiles) $(SRC)/_static/images/favicon.png
+images: $(svgFiles) $(pngFiles) $(SRC)/_static/images/favicon.png
 
 $(DIST): $(VENV)/bin/activate images
 	. $(VENV)/bin/activate; \
@@ -60,14 +75,14 @@ $(DIST): $(VENV)/bin/activate images
 
 prod: $(DIST)
 
-dev: $(VENV)/bin/activate $(SRC)/_static/images/favicon.png $(imageFiles)
+dev: $(VENV)/bin/activate $(SRC)/_static/images/favicon.png $(svgFiles)
 	. $(VENV)/bin/activate; \
 	    sphinx-autobuild -a $(SRC) $(DIST)
 
 dev-images:
 	while inotifywait -e close_write $(IMAGES)/*.tex;do \
-	    rm -f $(imageFiles); \
-	    $(MAKE) $(imageFiles); \
+	    rm -f $(svgFiles) $(pngFiles); \
+	    $(MAKE) images; \
 	done
 
 clean:
