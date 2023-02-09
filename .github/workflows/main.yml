@@ -25,12 +25,27 @@ jobs:
       with:
         path: .venv
         key: .venv-${{ hashFiles('requirements.txt') }}
+    - name: Clear Apt cache of deb files
+      run: |
+        sudo apt-get update -yq
+        sudo apt-get clean -yq
+    - name: Cache deb files
+      uses: actions/cache@v3
+      with:
+        path: /var/cache/apt/archives/*.deb
+        key: deb-${{ hashFiles('/var/cache/apt/archives/*.deb') }}
+        restore-keys: |
+          deb-
     - name: Install base Apt packages
+      id: cache-apt
       uses: awalsh128/cache-apt-pkgs-action@latest
       with:
         execute_install_scripts: true
-        packages: graphviz libgraphviz-dev librsvg2-bin pdf2svg texlive-base texlive-latex-extra
+        packages: graphviz libgraphviz-dev librsvg2-bin pdf2svg
         version: 1.0
+    - name: Install texlive Apt dependencies
+      run: |
+        sudo apt-get install -yq texlive-base texlive-latex-extra
     - name: Build website
       shell: bash
       run: |
