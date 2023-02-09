@@ -24,7 +24,7 @@ $(SRC)/_static/images/%.svg: $(IMAGES)/%.svg.tex
 	    -halt-on-error \
 	    -file-line-error \
 	    -interaction nonstopmode \
-	    -output-directory=../../.build/images \
+	    -output-directory=$(BUILD)/images \
 	    $*.svg.tex
 	pdf2svg $(BUILD)/images/$*.svg.pdf $(SRC)/_static/images/$*.svg
 
