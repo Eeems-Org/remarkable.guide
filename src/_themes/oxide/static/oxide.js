@@ -14,7 +14,7 @@ ackeeTracker
     .record("b03e9427-2236-4411-98df-104b8504c51b");
 if (!dnt) {
     Sentry.init({
-        dsn: "https://5157ded602bc413eab75d2b897ba49e0@sentry.eeems.codes/1",
+        dsn: "https://5157ded602bc413eab75d2b897ba49e0@sentry.eeems.codes/3",
         integrations: [new Sentry.Integrations.BrowserTracing()],
         tracesSampleRate: 1.0,
     });
