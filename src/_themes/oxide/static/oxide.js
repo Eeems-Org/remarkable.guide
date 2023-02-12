@@ -16,6 +16,7 @@ if (!dnt) {
     Sentry.init({
         dsn: "https://5157ded602bc413eab75d2b897ba49e0@sentry.eeems.codes/3",
         integrations: [new Sentry.Integrations.BrowserTracing()],
+        tracePropagationTargets: ["localhost", "127.0.0.1", "remarkable.guide", /^\//],
         tracesSampleRate: 1.0,
     });
 }
