@@ -11,10 +11,10 @@ var dnt =
         window.external.msTrackingProtectionEnabled());
 ackeeTracker
     .create("https://peek.eeems.website", { detailed: !dnt })
-    .record("26d065f3-ef1d-44de-8292-5db06a5d4514");
+    .record("b03e9427-2236-4411-98df-104b8504c51b");
 if (!dnt) {
     Sentry.init({
-        dsn: "https://0151bab90e7048ccb0e5b138da50c6bb@sentry.eeems.codes/1",
+        dsn: "https://5157ded602bc413eab75d2b897ba49e0@sentry.eeems.codes/1",
         integrations: [new Sentry.Integrations.BrowserTracing()],
         tracesSampleRate: 1.0,
     });
