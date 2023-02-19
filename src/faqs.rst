@@ -23,6 +23,11 @@ Yes! You can install any OS verion you want with `remarkable-update <https://git
 
 If you use a reMarkable 2, there is another tool that has been built on top of this that simplifies the process called `rm-update-helper <https://github.com/Jayy001/rm-update-helper>`_.
 
+How get back to stable after installing the beta?
+=================================================
+
+First leave the beta program. After that, follow the instructions in `Can I downgrade to a different OS version?`_ to downgrade to an older version. After you downgrade, you will be able to go through the normal upgrade process to get to the latest available stable version.
+
 Can I install toltec on my OS version?
 ======================================
 
