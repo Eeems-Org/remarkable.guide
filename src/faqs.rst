@@ -33,6 +33,12 @@ Can I install toltec on my OS version?
 
 You can find up to date information on what version of the OS is the latest that toltec supports on the `toltec website <https://toltec-dev.org/#install-toltec>`_
 
+Can I install toltec before my OS version is supported?
+=======================================================
+
+On a reMarkable 2, you **will** soft-brick your device if you install toltec on an unsupported version. Due to how the display is accessed by third party software on a reMarkable 2, your device will **no longer** be able to display anything to the screen until you uninstall toltec. If you know what you are doing, you can provide a custom rm2fb configuration file to resolve this. This requires knowing how to find the values needed. It also may not work if there is a large enough change in this OS release that breaks rm2fb support without code changes.
+
+On a reMarkable 1, you **might** soft-brick your device if there are any breaking changes with the underlying dependencies. This doesn't happen often, but there have been several OS updates that require changes to the toolchain used to build toltec in order for it to work properly.
 
 Can I install toltec at the same time as ddvk-hacks?
 ====================================================
