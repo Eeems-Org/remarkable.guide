@@ -49,3 +49,8 @@ I updated my OS, but now I can't SSH into my device. How do I fix it?
 =====================================================================
 
 Every time you update your OS, the cryptographic key used to identify the device over SSH is regenerated. This means that the software you are using to SSH into your device will no longer trust it and refuse to connect. To resolve this you need to remove the entry for the reMarkable in your ``known_hosts`` file on your computer. This is usually located in the ``.ssh`` folder in your home directory. The software you use to SSH may have these values stored elsewhere.
+
+I noticed something incorrect on this site, how do I get that fixed?
+====================================================================
+
+Take a look at the `README on GitHub <https://github.com/Eeems-Org/remarkable.guide/#can-i-make-changes>`_. Issues and Pull Requests are welcome.
