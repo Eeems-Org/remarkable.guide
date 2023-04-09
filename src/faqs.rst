@@ -40,6 +40,11 @@ On a reMarkable 2, you **will** soft-brick your device if you install toltec on 
 
 On a reMarkable 1, you **might** soft-brick your device if there are any breaking changes with the underlying dependencies. This doesn't happen often, but there have been several OS updates that require changes to the toolchain used to build toltec in order for it to work properly.
 
+Why doesn't toltec support the beta OS versions?
+================================================
+
+As part of the `EULA <https://support.remarkable.com/s/article/End-user-agreement-for-Opt-In-Beta>`_ you agree to in order to be able to install the beta, you agree that you will not install third party software on the device.
+
 Can I install toltec at the same time as ddvk-hacks?
 ====================================================
 
