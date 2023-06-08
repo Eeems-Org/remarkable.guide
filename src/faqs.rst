@@ -42,6 +42,8 @@ On a reMarkable 2, you **will** soft-brick your device if you install toltec on 
 
 On a reMarkable 1, you **might** soft-brick your device if there are any breaking changes with the underlying dependencies. This doesn't happen often, but there have been several OS updates that require changes to the toolchain used to build toltec in order for it to work properly.
 
+For both devices, there may be issues with packages (like custom kernels) that could soft brick your device. Packages may have other issues and not work as expected before the OS version is supported.
+
 Why doesn't toltec support the beta OS versions?
 ================================================
 
