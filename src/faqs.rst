@@ -23,7 +23,7 @@ Yes! You can install any OS verion you want with `remarkable-update <https://git
 
 If you use a reMarkable 2, there is another tool that has been built on top of this that simplifies the process called `rm-update-helper <https://github.com/Jayy001/rm-update-helper>`_.
 
-The file format used for notebooks sometimes changes between versions. This means that if you downgrade, you may not be able to open one, or all, of your notebooks until you upgrade again.
+The file format used to store lines you draw in notebooks/pdfs/epubs sometimes changes between versions. This means that if you downgrade, you may not be able to open one, or all, of your notebooks until you upgrade again.
 
 How get back to stable after installing the beta?
 =================================================
