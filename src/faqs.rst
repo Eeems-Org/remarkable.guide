@@ -5,7 +5,7 @@ Frequenty Asked Questions
 Is it safe to factory reset my device?
 ======================================
 
-Not exactly. The factory reset mechanism isn't a true factory reset. It will wipe your data partition, but it doesn't do anything to the root partition where the OS is installed. This can soft brick your device if you have toltec installed, or other third party software. You can find some more information on the `reMarkableWiki <https://remarkablewiki.com/trouble/factory-reset>`_.
+Not exactly. The factory reset mechanism isn't a true factory reset. It will wipe your data partition, but it doesn't do anything to the root partition where the OS is installed. This can soft brick your device if you have toltec installed, or other third party software. You can find some more information on the `reMarkableWiki <https://web.archive.org/web/20230619073326/https://remarkablewiki.com/trouble/factory-reset>`_.
 
 How do I remove all third party software from my device?
 ========================================================
