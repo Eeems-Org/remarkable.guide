@@ -4,9 +4,12 @@ Tailscale and Remarkable
 You can use `tailscale <https://tailscale.com/>`_ to set up convenient VPN connections between devices, including reMarkable devices.
 The details below have been tested on a reMarkable 2.
 
-Several guides explaining various parts of this setup exist (see `here <https://addcnin.blue/2021/10/26/remarkable-tailscale/>`_,
-`here <https://gist.github.com/cceckman/eafd57463f757d9488749a9ea87d808c>`_,
-and `here <https://web.archive.org/web/20230619091850/https://remarkablewiki.com/tips/tailscale>`_).
+Several guides explaining various parts of this setup exist:
+
+- `<https://addcnin.blue/2021/10/26/remarkable-tailscale/>`_
+- `<https://gist.github.com/cceckman/eafd57463f757d9488749a9ea87d808c>`_
+- `<https://web.archive.org/web/20230619091850/https://remarkablewiki.com/tips/tailscale>`_
+
 Setting up Tailscale isn't particularly hard, especially if you already have Toltec installed,
 but because reMarkable doesn't support ``dev/net/tun``, you'll need to do extra work if you want to establish outgoing connections to other devices on your tailnet.
 
