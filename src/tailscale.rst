@@ -35,13 +35,13 @@ Save this to ``/lib/systemd/system/tailscaled.service``:
  Description=Tailscale node agent
  Documentation=https://tailscale.com/kb/
  Wants=network-pre.target
- After=network-pre.targe
+ After=network-pre.target
 
  [Service]
- EnvironmentFile=/etc/default/tailscaled
- ExecStartPre=/usr/sbin/tailscaled --cleanup
- ExecStart=/usr/sbin/tailscaled --state=/var/lib/tailscale/tailscaled.state --socket=/run/tailscale/tailscaled.sock --tun=userspace-networking --socks5-server=localhost:1055 --outbound-http-proxy-listen=localhost:1055
- ExecStopPost=/usr/sbin/tailscaled --cleanup
+ Environment="HOME=/home/root"
+ ExecStartPre=/opt/bin/tailscaled --cleanup
+ ExecStart=/opt/bin/tailscaled --state=/var/lib/tailscale/tailscaled.state --socket=/run/tailscale/tailscaled.sock --tun=userspace-networking --socks5-server=localhost:1055 --outbound-http-proxy-listen=localhost:1055
+ ExecStopPost=/opt/bin/tailscaled --cleanup
 
  Restart=on-failure
 
