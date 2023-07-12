@@ -29,12 +29,13 @@ Get it with ``opkg install tailscale``.
 You'll also want to set up systemd to manage running ``tailscaled``.
 Save this to ``/lib/systemd/system/tailscaled.service``:
 
-.. code-block:: systemd
+.. code-block:: ini
+
  [Unit]
  Description=Tailscale node agent
  Documentation=https://tailscale.com/kb/
  Wants=network-pre.target
- After=network-pre.target
+ After=network-pre.targe
 
  [Service]
  EnvironmentFile=/etc/default/tailscaled
@@ -69,12 +70,17 @@ Outbound SSH to your tailnet
 ============================
 reMarkable ships with Dropbear for SSH, which doesn't support anything like SOCKS proxying.
 You'll need to install OpenSSH's client instead. Get it through Toltec with ``opkg install openssh-client``.
+
 Next, you'll need something to handle the proxying.
 Your system `nc` is from Busybox, which is too stripped down for what we need here, so get ``ncat`` with ``opkg install ncat``.
+
 You'll then need to configure OpenSSH to use ``ncat`` to use the proxy you asked ``tailscaled`` to set up.
 If you want to set this up nicely, you can `work with OpenSSH's config files <https://www.ssh.com/academy/ssh/config#format-of-ssh-client-config-file-ssh_config>`_
 to use the proxy for whatever situation you care about.
+
 This author was too lazy to try to do that as of this initial draft, and instead used an alias for this command to get the job done:
+
 ``/opt/libexec/ssh-openssh user@host -o ProxyCommand='ncat --proxy-type socks5 --proxy 127.0.0.1:1055 %h %p'``
+
 You should be able to use the device name in your tailnet for the host: give that a shot and see if your connection works!
 
