@@ -6,3 +6,4 @@ Site Map
 
     index
     faqs
+    tailscale
