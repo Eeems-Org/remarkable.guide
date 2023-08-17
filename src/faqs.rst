@@ -2,6 +2,11 @@
 Frequenty Asked Questions
 =========================
 
+.. contents::
+    :depth: 1
+    :local:
+    :backlinks: none
+
 Is it safe to factory reset my device?
 ======================================
 
@@ -63,3 +68,17 @@ I noticed something incorrect on this site, how do I get that fixed?
 ====================================================================
 
 Take a look at the `README on GitHub <https://github.com/Eeems-Org/remarkable.guide/#can-i-make-changes>`_. Issues and Pull Requests are welcome.
+
+My device is connected to wifi, but can't sync or check for updates, how can I fix this?
+========================================================================================
+
+You could attempt the following troubleshooting steps:
+
+1. Ensure that your network works with another device.
+2. Test with another network, like a hotspot from your phone.
+3. Ensure that your device has free space on the root partition:
+
+   - To check the amount of free space available, ssh into your device and run the following: ``df -h /``
+   - If it reports ``Use%`` as ``100%`` you can attempt to clear some by running the following command on your device: ``journalctl --vaccum-size=1``
+   - If running ``df -h /`` still reports ``Use%`` as ``100%``, you may need to remove other files from your device. If you have installed custom templates or suspend screen, you may need to remove them.
+   - If you still are unable to free up space, ask for help on the `community discord <https://discord.gg/ATqQGfu>`_.
