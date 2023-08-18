@@ -17,6 +17,8 @@ $(VENV)/bin/activate:
 	@echo "Setting up development virtual env in .venv"
 	python -m venv .venv; \
 	. .venv/bin/activate; \
+	python -m pip install --upgrade pip; \
+	python -m pip install wheel; \
 	python -m pip install -r requirements.txt
 
 $(SRC)/_static/images/%.svg: $(IMAGES)/%.svg.tex
