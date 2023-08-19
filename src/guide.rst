@@ -1,6 +1,6 @@
-================
-reMarkable Guide
-================
+==========
+User Guide
+==========
 
 .. toctree::
     :titlesonly:

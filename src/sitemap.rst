@@ -6,5 +6,6 @@ Site Map
     :titlesonly:
 
     index
+    guide
     tech
     faqs
