@@ -6,6 +6,7 @@ There is an optional web interface that can be turned on that allows you upload 
 
 Enable the interface
 ====================
+See the official `Transferring files using a USB cable <https://support.remarkable.com/s/article/Transferring-files-using-a-USB-cable>`_ article for up to date information.
 
 1. Open the Menu from the main page.
 2. Select "Settings".
