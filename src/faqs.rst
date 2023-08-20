@@ -1,11 +1,12 @@
 =========================
 Frequenty Asked Questions
 =========================
-
 .. contents::
-    :depth: 1
-    :local:
-    :backlinks: none
+   :depth: 1
+   :local:
+   :backlinks: none
+
+- `Old Wiki Articles <https://web.archive.org/web/20230616050052/https://remarkablewiki.com/faq/start>`_
 
 Is it safe to factory reset my device?
 ======================================
