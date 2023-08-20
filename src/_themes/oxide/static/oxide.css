@@ -84,6 +84,11 @@ div.warning {
   font-size: 0.888rem;
   overflow: auto;
   padding: var(--text-height);
+  text-align: center;
+  font-weight: bold;
+}
+div.warning p{
+  font-weight: normal;
 }
 
 a {
