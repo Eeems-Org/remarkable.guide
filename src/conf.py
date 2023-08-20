@@ -1,4 +1,5 @@
 import datetime
+
 year = datetime.datetime.today().year
 
 project = "reMarkable Guide"
@@ -15,4 +16,4 @@ master_doc = "sitemap"
 html_sidebars = {"**": ["nav.html", "sidefooter.html"]}
 html_permalinks_icon = "#"
 
-extensions = ["sphinxcontrib.fulltoc", "breathe"]
+extensions = ["sphinxcontrib.fulltoc", "breathe", "sphinx.ext.autosectionlabel"]

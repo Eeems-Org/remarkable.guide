@@ -93,12 +93,14 @@ When your reMarkable is showing the powered off screen, but won't turn on, your 
 
 Let the device charge for a few hours and then try to turn it on again. If it still wont turn on, ask for help on the `community discord <https://discord.gg/ATqQGfu>`_.
 
+.. _enable-ssh-rsa:
+
 How do I resolve the "no matching host key type found. Their offer: ssh-rsa" error when attempting to SSH into my device?
 =========================================================================================================================
 
 Starting with OpenSSH 8.8 ssh-rsa keys are `disabled by default <https://www.openssh.com/txt/release-8.7>`_, which is causing this error. Some Linux distros like Fedora 33 have also disabled weaker ssh-rsa keys independently of OpenSSH. That means you could face the same issue on OpenSSH versions lower than 8.8, depending on the distro you are on.
 
-To allow ssh-rsa keys, add the following lines to your SSH config file:
+To allow ssh-rsa keys, add the following lines to your :ref:`SSH Config File`:
 
 .. code-block:: bash
 
