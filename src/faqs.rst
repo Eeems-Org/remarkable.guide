@@ -22,6 +22,8 @@ If you installed ddvk-hacks with it's automagic script, it also provides `anothe
 
 For other third party software, they may provide an uninstall script, or they may not. If they don't, you'll need to either ask the author for instructions, or to work through what the installation script does and undo it.
 
+.. _upgrade:
+
 Can I downgrade to a different OS version?
 ==========================================
 

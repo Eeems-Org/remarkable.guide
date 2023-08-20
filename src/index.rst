@@ -12,7 +12,9 @@ Getting Started
 
 Here are some useful links to get you started in the meantime:
 
-- `reMarkable Community Wiki <https://web.archive.org/web/20230616024159/https://remarkablewiki.com/>`_
-- `Toltec <https://toltec-dev.org/>`_ - the community maintained software repository
-- `Awesome reMarkable <https://github.com/reHackable/awesome-reMarkable>`_ - A curated list of projects related to the reMarkable tablet
 - `Official support site <https://support.remarkable.com>`_
+- `Old reMarkable Community Wiki <https://web.archive.org/web/20230616024159/https://remarkablewiki.com/>`_
+- `Toltec <https://toltec-dev.org/>`_ - The community maintained software repository.
+- `Awesome reMarkable <https://github.com/reHackable/awesome-reMarkable>`_ - A curated list of projects related to the reMarkable tablet.
+- `rmkit <https://rmkit.dev/>`_ - A site about remarkable application development.
+

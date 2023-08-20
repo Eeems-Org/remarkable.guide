@@ -20,5 +20,5 @@ In order to factory reset the device you will need to do the following steps:
 3. Uninstall any manually added third party software or modifications.
 4. Uninstall toltec: ``toltecctl uninstall``
 5. Ensure that xochitl is enabled: ``systemctl enable --now xochitl``
-6. Perform two :doc:`system upgrades <upgrade>`.
+6. Perform two :ref:`system upgrades <upgrade>`.
 7. Perform a factory reset through the UI.
