@@ -11,8 +11,11 @@ Connecting via SSH
 Windows
 -------
 
-Mac/Linux
----------
+MacOS
+-----
+
+Linux
+-----
 
 .. _ssh-key:
 
