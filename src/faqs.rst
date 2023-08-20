@@ -83,3 +83,10 @@ You could attempt the following troubleshooting steps:
    - If it reports ``Use%`` as ``100%`` you can attempt to clear some by running the following command on your device: ``journalctl --vaccum-size=1``
    - If running ``df -h /`` still reports ``Use%`` as ``100%``, you may need to remove other files from your device. If you have installed custom templates or suspend screen, you may need to remove them.
    - If you still are unable to free up space, ask for help on the `community discord <https://discord.gg/ATqQGfu>`_.
+
+My device is stuck on the power off screen and wont turn on, what do I do?
+==========================================================================
+
+When your reMarkable is showing the powered off screen, but won't turn on, your battery is probably completely depleted. Because of how the e-Ink technology works, the screen will continue to show the power off message. It will take a while of charging until there's enough battery to restart the device.
+
+Let the device charge for a few hours and then try to turn it on again. If it still wont turn on, ask for help on the `community discord <https://discord.gg/ATqQGfu>`_.
