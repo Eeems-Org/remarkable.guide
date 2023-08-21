@@ -1,16 +1,18 @@
 =========================
 Frequenty Asked Questions
 =========================
-
 .. contents::
-    :depth: 1
-    :local:
-    :backlinks: none
+   :depth: 1
+   :local:
+   :backlinks: none
+
+- `Toltec FAQs <https://toltec-dev.org/#frequently-asked-questions>`_
+- `Old Wiki Articles <https://web.archive.org/web/20230616050052/https://remarkablewiki.com/faq/start>`_
 
 Is it safe to factory reset my device?
 ======================================
 
-Not exactly. The factory reset mechanism isn't a true factory reset. It will wipe your data partition, but it doesn't do anything to the root partition where the OS is installed. This can soft brick your device if you have toltec installed, or other third party software. You can find some more information on the `reMarkableWiki <https://web.archive.org/web/20230619073326/https://remarkablewiki.com/trouble/factory-reset>`_.
+Not exactly. The factory reset mechanism isn't a true factory reset. It will wipe your data partition, but it doesn't do anything to the root partition where the OS is installed. This can soft brick your device if you have toltec installed, or other third party software. The :doc:`tech/factory-reset` page contains instructions on how to properly factory reset your device.
 
 How do I remove all third party software from my device?
 ========================================================
@@ -20,6 +22,8 @@ This all depends on how you installed them. If you installed toltec, it has a si
 If you installed ddvk-hacks with it's automagic script, it also provides `another script to uninstall the hacks <https://github.com/ddvk/remarkable-hacks#uninstall--removal>`_.
 
 For other third party software, they may provide an uninstall script, or they may not. If they don't, you'll need to either ask the author for instructions, or to work through what the installation script does and undo it.
+
+.. _upgrade:
 
 Can I downgrade to a different OS version?
 ==========================================
@@ -82,3 +86,24 @@ You could attempt the following troubleshooting steps:
    - If it reports ``Use%`` as ``100%`` you can attempt to clear some by running the following command on your device: ``journalctl --vaccum-size=1``
    - If running ``df -h /`` still reports ``Use%`` as ``100%``, you may need to remove other files from your device. If you have installed custom templates or suspend screen, you may need to remove them.
    - If you still are unable to free up space, ask for help on the `community discord <https://discord.gg/ATqQGfu>`_.
+
+My device is stuck on the power off screen and wont turn on, what do I do?
+==========================================================================
+
+When your reMarkable is showing the powered off screen, but won't turn on, your battery is probably completely depleted. Because of how the e-Ink technology works, the screen will continue to show the power off message. It will take a while of charging until there's enough battery to restart the device.
+
+Let the device charge for a few hours and then try to turn it on again. If it still wont turn on, ask for help on the `community discord <https://discord.gg/ATqQGfu>`_.
+
+.. _enable-ssh-rsa:
+
+How do I resolve the "no matching host key type found. Their offer: ssh-rsa" error when attempting to SSH into my device?
+=========================================================================================================================
+
+Starting with OpenSSH 8.8 ssh-rsa keys are `disabled by default <https://www.openssh.com/txt/release-8.7>`_, which is causing this error. Some Linux distros like Fedora 33 have also disabled weaker ssh-rsa keys independently of OpenSSH. That means you could face the same issue on OpenSSH versions lower than 8.8, depending on the distro you are on.
+
+To allow ssh-rsa keys, add the following lines to your :ref:`ssh_config`:
+
+.. code-block:: bash
+
+  PubkeyAcceptedKeyTypes +ssh-rsa
+  HostKeyAlgorithms +ssh-rsa
