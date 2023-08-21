@@ -104,9 +104,20 @@ div.warning {
   text-align: center;
   font-weight: bold;
 }
-div.warning *{
+div.warning * {
   font-weight: initial;
   text-align: initial;
+}
+
+a.footnote-reference {
+  vertical-align: super;
+  font-size: 0.5rem;
+}
+a.footnote-reference::before {
+  content: "(";
+}
+a.footnote-reference::after {
+  content: ")";
 }
 
 a {

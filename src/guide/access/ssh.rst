@@ -11,7 +11,7 @@ SSH Access
     </p>
   </div>
 
-.. contents::
+.. contents:: Contents
    :local:
    :backlinks: none
 
@@ -159,3 +159,15 @@ This will allow you to simplify how you connect to your device over SSH.
 .. code-block:: shell
 
   ssh remarkable
+
+External Resources
+==================
+
+- ``ssh`` command
+   https://www.man7.org/linux/man-pages/man1/ssh.1.html
+- ``ssh-keygen`` command
+   https://www.man7.org/linux/man-pages/man1/ssh-keygen.1.html
+- ``ssh-copy-id`` command
+   https://man.archlinux.org/man/core/openssh/ssh-copy-id.1.en
+- SSH config file manual
+   https://www.man7.org/linux/man-pages/man5/ssh_config.5.html
