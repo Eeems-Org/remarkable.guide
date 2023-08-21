@@ -11,6 +11,16 @@ System splash screens on the device be found in ``/usr/share/remarkable/``. You 
 Changescrn
 ==========
 
+.. raw:: html
+
+  <div class="warning">
+    ⚠️ Changescrn is not in toltec stable yet. ⚠️
+    <p>
+      <a href="https://github.com/toltec-dev/toltec/pull/722">You can watch this pull request</a>
+      to see the current status of the package being merged into stable.
+    </p>
+  </div>
+
 Toltec contains the `changescrn <https://github.com/pr0fsmith/rMscreens>`_ package, which provides a command line tool for managing system splash screens.
 
 .. code-block:: shell

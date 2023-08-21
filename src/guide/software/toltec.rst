@@ -1,6 +1,7 @@
 =================
 Installing Toltec
 =================
+
 .. raw:: html
 
   <div class="warning">
@@ -40,6 +41,9 @@ The following command will install a package, you will need to replace ``<packag
 
   opkg install <package>
 
+
+.. _opkg-remove:
+
 Removing a Package
 ------------------
 
@@ -78,3 +82,23 @@ After a system upgrade, the root partition has been completly replaced with a st
 .. code-block:: shell
 
   toltecctl reenable
+
+Switching to Toltec's Testing Repository
+----------------------------------------
+
+You may want to switch to the toltec testing repository to get earlier access to packages.
+
+.. code-block:: shell
+
+  toltecctl switch-branch testing
+
+Switching Back to Toltec's Stable Repository
+--------------------------------------------
+
+You can switch back to stable with the following command:
+
+.. code-block:: shell
+
+  toltecctl switch-branch stable
+
+This will not downgrade any pacakges you have installed from the testing repository, so you may need to :ref:`remove them <opkg-remove>` first.
