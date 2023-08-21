@@ -345,14 +345,15 @@ main section:target, main section:has(>span:target){
   }
 }
 
-.logo {
+img.logo {
   display: block;
-  width: calc(var(--scaling) * 256px);
   margin: calc(var(--scaling) * -32px) auto;
+  width: calc(var(--scaling) * 256px);
 }
 
-.screenshot {
+img.screenshot {
   border-radius: var(--border-radius);
+  width: calc(var(--scaling) * 256px);
 }
 
 /* Small screens */

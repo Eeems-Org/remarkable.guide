@@ -142,6 +142,8 @@ The following command will install your SSH public key on your device:
     </pre>
   </div>
 
+.. _ssh_config:
+
 SSH Config File
 ===============
 You can set up an alias that is easier to remember by adding the following lines to the ``~/.ssh/config`` file on your computer:

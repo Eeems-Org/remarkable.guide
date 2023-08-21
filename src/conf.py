@@ -16,4 +16,9 @@ master_doc = "sitemap"
 html_sidebars = {"**": ["nav.html", "sidefooter.html"]}
 html_permalinks_icon = "#"
 
-extensions = ["sphinxcontrib.fulltoc", "breathe", "sphinx.ext.autosectionlabel"]
+# Do not enable sphinx.ext.autosectionlabel
+# The expectation is that we explicitely add references
+extensions = [
+    "sphinxcontrib.fulltoc",
+    "breathe",
+]
