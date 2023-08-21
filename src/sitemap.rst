@@ -12,4 +12,5 @@ Site Map
     guide/config/index
     tech/index
     tips/index
+    devel/index
     faqs

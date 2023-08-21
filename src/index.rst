@@ -2,15 +2,29 @@
 Getting Started
 ===============
 
+The community maintained guide for your reMarkable tablet.
+
 .. raw:: html
 
+   <br/>
    <img src="_static/images/favicon.svg" alt="" class="logo">
    <br/>
-   <div class="warning">
-      ⚠️ This guide is still under construction ⚠️
-   </div>
 
-Here are some useful links to get you started in the meantime:
+What is This Guide For?
+=======================
+
+This guide will:
+
+- :doc:`Show you access to your device <guide/access/index>`
+- :doc:`Show you how to install software on your device <guide/software/index>`
+- :doc:`Show you how to configure your device <guide/config/index>`
+- :doc:`Provide more in depth technical guides for your device <tech/index>`
+- :doc:`Give you tips and tricks for using your device <tips/index>`
+- :doc:`Provide information on developing software for your device <devel/index>`
+- :doc:`Answer Frequenty Asked Questions <faqs>`
+
+Other Resources
+===============
 
 - `Official support site <https://support.remarkable.com>`_
 - `Old reMarkable Community Wiki <https://web.archive.org/web/20230616024159/https://remarkablewiki.com/>`_

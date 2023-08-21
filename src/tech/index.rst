@@ -1,6 +1,6 @@
-===========
-More Guides
-===========
+===============
+Technial Guides
+===============
 
 .. toctree::
     :titlesonly:
