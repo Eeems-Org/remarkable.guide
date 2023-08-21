@@ -2,7 +2,9 @@
 Picking A Launcher
 ==================
 
-After :doc:`toltec` you will need to pick a launcher to access any GUI applications you install. Currently there are `three launchers in toltec <https://toltec-dev.org/stable/#section-launchers>`_. Of which we only recommend two for use: Oxide and Remux.
+Launchers allow you to open and switch between applications. Without them there is no way to run third party applications from the user interface. You would have to SSH into your device to launch them every time you wanted to use them.
+
+After :doc:`toltec` you will need to install a launcher. Currently there are `three launchers in toltec <https://toltec-dev.org/stable/#section-launchers>`_. Of which we only recommend two for use: Oxide and Remux.
 
 .. contents:: Contents
    :local:
