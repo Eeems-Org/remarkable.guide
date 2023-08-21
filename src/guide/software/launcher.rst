@@ -1,5 +1,5 @@
 ==================
-Picking A Launcher
+Picking a Launcher
 ==================
 
 Launchers allow you to open and switch between applications. Without them there is no way to run third party applications from the user interface. You would have to SSH into your device to launch them every time you wanted to use them.

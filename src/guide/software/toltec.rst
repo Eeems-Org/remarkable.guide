@@ -21,6 +21,8 @@ Install Toltec
 
 After setting up :doc:`../access/ssh`, follow the `toltec installation instructions <https://toltec-dev.org/#install-toltec>`_ to install toltec.
 
+.. _opkg:
+
 Using Toltec
 ============
 
