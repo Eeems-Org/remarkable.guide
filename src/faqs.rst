@@ -6,6 +6,7 @@ Frequenty Asked Questions
    :local:
    :backlinks: none
 
+- `Toltec FAQs <https://toltec-dev.org/#frequently-asked-questions>`_
 - `Old Wiki Articles <https://web.archive.org/web/20230616050052/https://remarkablewiki.com/faq/start>`_
 
 Is it safe to factory reset my device?

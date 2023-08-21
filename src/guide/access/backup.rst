@@ -44,4 +44,4 @@ GUI Tools
 Remarks
 =======
 
-These solutions are only for backing up your data on the device, and are not full device backups. As the reMarkable is just a linux machine, there are various solutions out there for full device backups. These are largely not necessary though, as you can restore a stock OS image with :ref:`system upgrades <upgrade>`. If you only use :doc:`toltec <../software/toltec>` for third party software, you can reenable after an upgrade to reinstall your toltec packages.
+These solutions are only for backing up your data on the device, and are not full device backups. As the reMarkable is just a linux machine, there are various solutions out there for full device backups. These are largely not necessary though, as you can restore a stock OS image with :ref:`system upgrades <upgrade>`. If you only use :doc:`toltec <../software/toltec>` for third party software, you can :ref:`reenable <toltec-reenable>` after an upgrade to reinstall your toltec packages.
