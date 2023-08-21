@@ -9,6 +9,7 @@ Site Map
     index
     guide/access/index
     guide/software/index
+    guide/config/index
     tech/index
     tips/index
     faqs
