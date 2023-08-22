@@ -43,7 +43,7 @@ Yes, you usually will want to accomplish this by just changing the first header 
 ```rst
 This page has been moved to :doc:`new-page-name`.
 
-.. html
+.. raw:: html
 
   <noscript>
     <meta http-equiv="refresh" content="0; url=/new-page-name.html"/>
