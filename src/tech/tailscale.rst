@@ -1,6 +1,7 @@
-========================
-Tailscale and Remarkable
-========================
+=========
+Tailscale
+=========
+
 You can use `tailscale <https://tailscale.com/>`_ to set up convenient VPN connections between devices, including reMarkable devices.
 The details below have been tested on a reMarkable 2.
 
@@ -15,6 +16,7 @@ but because reMarkable doesn't support ``dev/net/tun``, you'll need to do extra 
 
 Why use Tailscale?
 ==================
+
 For the same reasons you'd use it on any other PC.
 Tailscale lets you build "tailnets," giving you VPN connections between computers running a client that's signed into (or shared with) your account.
 Casually speaking, you can imagine they're all on your home network, even though they might be spread out all over the Internet.
@@ -71,6 +73,7 @@ and display a QR code in the terminal to scan to approve the login.
 
 Outbound SSH to your tailnet
 ============================
+
 reMarkable ships with Dropbear for SSH, which doesn't support anything like SOCKS proxying.
 You'll need to install OpenSSH's client instead. Get it through Toltec with ``opkg install openssh-client``.
 

@@ -2,6 +2,8 @@
 Emergency Recovery
 ==================
 
+If you soft-brick your device by losing access to both the user interface and SSH, you will need to recovery your device.
+
 reMarkable 1 Recovery
 =====================
 

@@ -4,6 +4,10 @@ USB Web Interface
 
 There is an optional web interface that can be turned on that allows you upload and export files from the device.
 
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
 Enable the interface
 ====================
 See the official `Transferring files using a USB cable <https://support.remarkable.com/s/article/Transferring-files-using-a-USB-cable>`_ article for up to date information.
@@ -18,8 +22,8 @@ API
 
 The USB Web Interface exposes the following API endpoints that can be used to interact with the xochitl filesystem.
 
-POST http://10.11.99.1/documents/
----------------------------------
+``POST http://10.11.99.1/documents/``
+-------------------------------------
 
 Get the document and folders list for the root folder.
 
@@ -32,8 +36,8 @@ Get the document and folders list for the root folder.
     http://10.11.99.1/documents/ \
   | jq -r 'map({(.ID): {VissibleName,Type}}) | add'
 
-POST http://10.11.99.1/documents/{guid}
----------------------------------------
+``POST http://10.11.99.1/documents/{guid}``
+-------------------------------------------
 
 Get the documents and folders list for a specific folder.
 
@@ -47,8 +51,8 @@ Get the documents and folders list for a specific folder.
     "http://10.11.99.1/documents/$guid" \
   | jq -r 'map({(.ID): {VissibleName,Type}}) | add'
 
-GET http://10.11.99.1/download/{guid}/placeholder
--------------------------------------------------
+``GET http://10.11.99.1/download/{guid}/placeholder``
+-----------------------------------------------------
 
 Download the PDF for a specific document.
 
@@ -60,8 +64,8 @@ Download the PDF for a specific document.
   curl \
     -I "http://10.11.99.1/download/$guid/placeholder"
 
-POST http://10.11.99.1/upload
------------------------------
+``POST http://10.11.99.1/upload``
+---------------------------------
 
 Upload a document to the last folder that was listed.
 
