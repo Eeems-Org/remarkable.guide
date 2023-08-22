@@ -31,4 +31,3 @@ Other Resources
 - `Toltec <https://toltec-dev.org/>`_ - The community maintained software repository.
 - `Awesome reMarkable <https://github.com/reHackable/awesome-reMarkable>`_ - A curated list of projects related to the reMarkable tablet.
 - `rmkit <https://rmkit.dev/>`_ - A site about remarkable application development.
-

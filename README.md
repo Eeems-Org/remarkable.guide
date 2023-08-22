@@ -43,7 +43,7 @@ Yes, you usually will want to accomplish this by just changing the first header 
 ```rst
 This page has been moved to :doc:`new-page-name`.
 
-.. html
+.. raw:: html
 
   <noscript>
     <meta http-equiv="refresh" content="0; url=/new-page-name.html"/>
@@ -51,4 +51,25 @@ This page has been moved to :doc:`new-page-name`.
   <script>
     location.pathname = "new-page-name.html";
   </script>
+```
+
+### How to I add a warning to a page?
+```rst
+.. raw:: html
+
+    <div class="warning">
+        ⚠️ Warning title. ⚠️
+        <p>
+            Warning text.
+        </p>
+    </div>
+```
+
+### How do I add screenshots to a page?
+```rst
+.. raw:: html
+
+  <img src="/_static/path/to/file-1.png" alt="First screenshot" class="screenshot">
+  <img src="/_static/path/to/file-2.png" alt="Second screenshot" class="screenshot">
+  <br/>
 ```
