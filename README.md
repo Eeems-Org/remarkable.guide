@@ -49,7 +49,7 @@ This page has been moved to :doc:`new-page-name`.
     <meta http-equiv="refresh" content="0; url=/new-page-name.html"/>
   </noscript>
   <script>
-    location.pathname = "new-page-name.html";
+    location.pathname = "/new-page-name.html";
   </script>
 ```
 
