@@ -82,7 +82,7 @@ You could attempt the following troubleshooting steps:
 2. Test with another network, like a hotspot from your phone.
 3. Ensure that your device has free space on the root partition:
 
-   - To check the amount of free space available, ssh into your device and run the following: ``df -h /``
+   - To check the amount of free space available, :doc:`ssh into your device <guide/access/ssh>` and run the following: ``df -h /``
    - If it reports ``Use%`` as ``100%`` you can attempt to clear some by running the following command on your device: ``journalctl --vaccum-size=1``
    - If running ``df -h /`` still reports ``Use%`` as ``100%``, you may need to remove other files from your device. If you have installed custom templates or suspend screen, you may need to remove them.
    - If you still are unable to free up space, ask for help on the `community discord <https://discord.gg/ATqQGfu>`_.
