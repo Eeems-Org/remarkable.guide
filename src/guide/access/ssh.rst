@@ -130,7 +130,7 @@ The following command will install your SSH public key on your device:
   <div class="warning">
     ⚠️ This will not work properly until OpenSSH 9.4. ⚠️
     <p>
-      Due to a bug in ssh-copy-id this installs to the wrong location on the device on versions of OpenSSH older than 9.4. You can check your version of OpenSSH with the following command:
+      Due to a bug in ssh-copy-id this installs to the wrong location on the device on versions of OpenSSH older than 9.4. You can check your version of OpenSSH with the following command on your computer:
     </p>
     <pre>ssh -V</pre>
     <p>For these versions you can use the following commands to install your public key instead:</p>
