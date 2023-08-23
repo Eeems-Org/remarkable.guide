@@ -7,7 +7,10 @@ SSH Access
   <div class="warning">
     ⚠️ Make sure you write down your SSH password. ⚠️
     <p>
-      This will allow you to still access your device if you are unable to use the UI for any reason. It is recommended to setup a <a href="#ssh-key">SSH key</a> instead of using password authentication.
+      If you don't write down your password and lose access to the UI, you will be unable to access your device. A <a href="/tech/recovery.html">emergency recovery</a> will be required.
+    </p>
+    <p>
+      It is also recommended to setup a <a href="#ssh-key">SSH key</a> instead of using password authentication.
     </p>
   </div>
 
@@ -77,7 +80,7 @@ Setting Up a SSH Key
     <p>If you encounter the following error when attempting to use a SSH key:</p>
     <blockquote>Unable to negotiate with 10.11.99.1 port 22: no matching host key type found. Their offer: ssh-rsa</blockquote>
     <p>
-      You will need to enable ssh-rsa keys. See the relevant <a href="../../faqs.html#enable-ssh-rsa">FAQ</a> for more information.
+      You will need to enable ssh-rsa keys. See the relevant <a href="/faqs.html#enable-ssh-rsa">FAQ</a> for more information.
     </p>
   </div>
 
