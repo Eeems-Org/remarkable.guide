@@ -19,12 +19,12 @@ Screenshots
 
 .. raw:: html
 
-  <img src="/_static/images/launcher/oxide-lockscreen.png" alt="oxide lockscreen" class="screenshot">
-  <img src="/_static/images/launcher/oxide-splashscreen.png" alt="oxide splashscreen" class="screenshot">
-  <img src="/_static/images/launcher/oxide-launcher.png" alt="oxide launcher" class="screenshot">
-  <img src="/_static/images/launcher/oxide-process-manager.png" alt="oxide process manager" class="screenshot">
-  <img src="/_static/images/launcher/oxide-task-switcher.png" alt="oxide task switcher" class="screenshot">
-  <img src="/_static/images/launcher/oxide-screenshots.png" alt="oxide screenshots" class="screenshot">
+  <img src="/_static/launcher/oxide-lockscreen.png" alt="oxide lockscreen" class="screenshot">
+  <img src="/_static/launcher/oxide-splashscreen.png" alt="oxide splashscreen" class="screenshot">
+  <img src="/_static/launcher/oxide-launcher.png" alt="oxide launcher" class="screenshot">
+  <img src="/_static/launcher/oxide-process-manager.png" alt="oxide process manager" class="screenshot">
+  <img src="/_static/launcher/oxide-task-switcher.png" alt="oxide task switcher" class="screenshot">
+  <img src="/_static/launcher/oxide-screenshots.png" alt="oxide screenshots" class="screenshot">
   <br/>
 
 Features
@@ -60,7 +60,7 @@ Screenshots
 
 .. raw:: html
 
-  <img src="/_static/images/launcher/remux.png" alt="remux launcher" class="screenshot">
+  <img src="/_static/launcher/remux.png" alt="remux launcher" class="screenshot">
   <br/>
 
 Features

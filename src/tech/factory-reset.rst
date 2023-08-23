@@ -15,10 +15,8 @@ Factory Reset
 
 In order to factory reset the device you will need to do the following steps:
 
-1. Revert any changed :doc:`screens <../guide/software/screens>`.
-2. Revert any changed :doc:`templates <../guide/software/templates>`.
-3. Uninstall any manually added third party software or modifications.
-4. Uninstall toltec: ``toltecctl uninstall``
-5. Ensure that xochitl is enabled: ``systemctl enable --now xochitl``
-6. Perform two :ref:`system upgrades <upgrade>`.
-7. Perform a factory reset through the UI.
+1. Uninstall any manually added third party software or modifications.
+2. Uninstall toltec: ``toltecctl uninstall``
+3. Ensure that xochitl is enabled: ``systemctl enable --now xochitl``
+4. Perform two :ref:`system upgrades <upgrade>`.
+5. Perform a factory reset through the UI.

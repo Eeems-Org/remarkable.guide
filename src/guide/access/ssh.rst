@@ -19,7 +19,7 @@ Finding Your Device Password and IP Addresses
 =============================================
 
 1. Connect your device to Wifi, or with a USB cable to your computer.
-2. Open the Menu from the main page.
+2. On your device, open the Menu from the main page.
 3. Select "Settings".
 4. Select "Help".
 5. Select "Copyright and licenses".
@@ -33,7 +33,7 @@ Connecting via SSH
 Picking a SSH client
 --------------------
 
-On windows you can `install OpenSSH for windows <https://learn.microsoft.com/en-us/windows-server/administration/openssh/openssh_install_firstuse?tabs=gui>`_, or use `PuTTY <https://putty.org/>`_.
+Newer versions of windows already come with OpenSSH installed. If it is not installed you can `install OpenSSH for windows <https://learn.microsoft.com/en-us/windows-server/administration/openssh/openssh_install_firstuse?tabs=gui>`_. You may also use `PuTTY <https://putty.org/>`_.
 
 On MacOS and Linux you will have OpenSSH or a compatible SSH client installed already that can be used.
 
