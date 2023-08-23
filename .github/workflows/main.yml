@@ -38,7 +38,7 @@ jobs:
         packages: texlive-base texlive-latex-extra
     - name: Build website
       shell: bash
-      run: make prod
+      run: make -j $(nproc) prod
     - name: Upload artifact
       uses: actions/upload-pages-artifact@v1
       with:
