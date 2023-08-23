@@ -33,7 +33,7 @@ Connecting via SSH
 Picking a SSH client
 --------------------
 
-Newer versions of windows already come with OpenSSH installed. If it is not installed you can `install OpenSSH for windows <https://learn.microsoft.com/en-us/windows-server/administration/openssh/openssh_install_firstuse?tabs=gui>`_. You may also use `PuTTY <https://putty.org/>`_.
+Newer versions of windows already come with OpenSSH installed. If it is not installed you can `install OpenSSH for windows <https://learn.microsoft.com/en-us/windows-server/administration/openssh/openssh_install_firstuse?tabs=gui>`_ (Only the OpenSSH client is needed). You may also use `PuTTY <https://putty.org/>`_.
 
 On MacOS and Linux you will have OpenSSH or a compatible SSH client installed already that can be used.
 
