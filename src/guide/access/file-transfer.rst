@@ -2,6 +2,18 @@
 Transfering Files
 =================
 
+.. raw:: html
+
+  <div class="warning">
+    ⚠️ Try to keep your files inside ``/home/root`` ⚠️
+    <p>
+      The root partition is completely replaced on os upgrade, which means any modifications will be lost.
+    </p>
+    <p>
+      Because you have root access to the device, you can modify any system file you which. This does mean that you can soft-brick your device if you are not careful.
+    </p>
+  </div>
+
 Since you have :doc:`ssh` to your device, there are various tools you can use to transfer files to and from the device. This is not the same as transferring documents to xochitl, as this is accessing the OS filesystem. This lets you modify system files. For example, you can use this to change templates and the suspend screen.
 
 .. contents:: Contents
