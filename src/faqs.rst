@@ -94,7 +94,7 @@ You could attempt the following troubleshooting steps:
 
        journalctl --vaccum-size=1
 
-   - If running ``df -h /`` still reports ``Use%`` as ``100%``, you may need to remove other files from your device. If you have installed custom templates or suspend screen, you may need to remove them.
+   - If running ``df -h /`` still reports ``Use%`` as ``100%``, you may need to remove other files from your device. If you have installed :doc:`custom templates <guide/software/templates>`, :doc"`splash screens <guide/software/screens>`, or fonts, you may need to remove them.
    - If you still are unable to free up space, ask for help on the `community discord <https://discord.gg/ATqQGfu>`_.
 
 My device is stuck on the power off screen and wont turn on, what do I do?
