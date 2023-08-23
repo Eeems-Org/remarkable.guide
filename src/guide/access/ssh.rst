@@ -54,11 +54,11 @@ From your computer you can now use your SSH client to connect to your reMarkable
 Connecting over Wifi
 --------------------
 
-When your device is connected to Wifi, you can connect to it with SSH using the IP address(es) assigned by your router. See `Finding Your Device Password and IP Addresses`_ for information on how to find the IP address.
+When your device is connected to Wifi, you can connect to it with SSH using the IP address(es) assigned by your router. Replace ``<ip-address>`` in the following command with a valid IP Address for your device. See `Finding Your Device Password and IP Addresses`_ for information on how to find the IP address.
 
 .. code-block:: shell
 
-  ssh root@192.168.0.x
+  ssh root@<ip-address>
 
 Depending on your network configuration, your reMarkable may also be available via hostname like ``remarkable``, ``remarkable.local``, or ``remarkable.lan``.
 
