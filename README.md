@@ -84,7 +84,7 @@ Ideally you don't add stub pages, but sometimes it's better to just add a page a
     <div class="warning">
         ⚠️ FIXME. ⚠️
 
-This page is just a stub that needs to be completed. You can `open a PR on the repo <https://github.com/toltec-dev/toltec>`_ to add more content to the page.
+This page is just a stub that needs to be completed. You can `open a PR on the repo <https://github.com/Eeems-Org/remarkable.guide>`_ to add more content to the page.
 
 .. raw:: html
 
