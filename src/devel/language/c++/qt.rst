@@ -10,7 +10,7 @@ Pros
 
 - Comes preinstalled.
 - Large feature set.
-- Tools like :doc:`Qt Creator <qt-creator>` can be used to assist in development.
+- Tools like Qt creator can be used to assist in development.
 
 Cons
 ====
@@ -24,3 +24,5 @@ Extenal Links
 
 - Qt 5 Documentation
    https://doc.qt.io/qt-5/
+- Old wiki article on setting up Qt creator
+   https://web.archive.org/web/20230129161833/https://remarkablewiki.com/devel/qt_creator
