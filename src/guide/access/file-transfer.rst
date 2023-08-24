@@ -5,7 +5,7 @@ Transfering Files
 .. raw:: html
 
   <div class="warning">
-    ⚠️ Try to keep your files inside ``/home/root`` ⚠️
+    ⚠️ Try to keep your files inside /home/root ⚠️
     <p>
       The root partition is completely replaced on os upgrade, which means any modifications will be lost.
     </p>
