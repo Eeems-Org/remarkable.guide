@@ -35,18 +35,18 @@ Over time the community has requested, and been provided with newer versions of 
 
 After the toolchain has been installed, you'll need to source it to load the appropriate environment variables for it's use.
 
-.. code-block:: shell
+.. code-block:: console
 
-  source /opt/codex/rm11x/3.1.15/environment-setup-cortexa7hf-neon-remarkable-linux-gnueabi
+  $ source /opt/codex/rm11x/3.1.15/environment-setup-cortexa7hf-neon-remarkable-linux-gnueabi
 
 Docker
 ------
 
 If you are unable to develop on a linux machine, or would like to avoid installing the toolchain on your machine directly, you can use the `unofficial docker toolchain images <https://hub.docker.com/repository/docker/eeems/remarkable-toolchain>`_
 
-.. code-block:: shell
+.. code-block:: console
 
-  docker pull eeems/remarkable-toolchain:latest
+  $ docker pull eeems/remarkable-toolchain:latest
 
 
 You will still need to source the toolchain when running scripts inside the container to make sure it's loaded.
@@ -56,9 +56,9 @@ Toltec Toolchain
 
 Toltec provides it's own `toolchain in the form of docker images <https://github.com/toltec-dev/toolchain>`_. These can be used manually, but they are indended to be used in conjunction with the `toltecmk <https://pypi.org/project/toltecmk/>`_ tool to generate a toltec package.
 
-.. code-block:: shell
+.. code-block:: console
 
-  docker pull ghcr.io/toltec-dev/toolchain:latest
+  $ docker pull ghcr.io/toltec-dev/toolchain:latest
 
 Nix Toolchain
 =============

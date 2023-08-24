@@ -9,9 +9,9 @@ Toltecmk
 
 `Toltecmk <https://pypi.org/project/toltecmk/>`_ is a tool used to take a package recipe, and turn it into an ``ipk`` package file. It's available in pypi and can be installed with ``pip``.
 
-.. code-block:: shell
+.. code-block:: console
 
-  pip install toltecmk
+  $ pip install toltecmk
 
 Toltecmk also requires docker to be installed, configured, and running on your system.
 
@@ -38,7 +38,8 @@ Below is a very basic example package recipe. This will create a package that in
   sha256sums=(SKIP)
 
   package() {
-      install -D -m 755 -t "$pkgdir"/opt/bin "$srcdir"/my-program
+      install -D -m 755 -t "$pkgdir"/opt/bin \
+        "$srcdir"/my-program
   }
 
 To build this package you will need to run the following command from the folder containing ``package`` and ``src.tar.gz``:
