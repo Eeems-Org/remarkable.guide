@@ -13,7 +13,7 @@ This page is just a stub that needs to be completed. You can `open a PR on the r
 
     </div>
 
-https://web.archive.org/web/20230331221031/https://remarkablewiki.com/tech/display
+`Old wiki article <https://web.archive.org/web/20230331221031/https://remarkablewiki.com/tech/display>`_
 
 .. _rm2fb:
 

@@ -13,7 +13,7 @@ This page is just a stub that needs to be completed. You can `open a PR on the r
 
     </div>
 
-https://web.archive.org/web/20230129155419/https://remarkablewiki.com/tips/wifi
+`Old wiki article <https://web.archive.org/web/20230129155419/https://remarkablewiki.com/tips/wifi>`_
 
 Xochitl Network Settings
 ------------------------
