@@ -86,7 +86,10 @@ to use the proxy for whatever situation you care about.
 
 This author was too lazy to try to do that as of this initial draft, and instead used an alias for this command to get the job done:
 
-``/opt/libexec/ssh-openssh user@host -o ProxyCommand='ncat --proxy-type socks5 --proxy 127.0.0.1:1055 %h %p'``
+.. code-block:: shell
+
+  /opt/libexec/ssh-openssh user@host \
+    -o ProxyCommand='ncat --proxy-type socks5 --proxy 127.0.0.1:1055 %h %p'
 
 You should be able to use the device name in your tailnet for the host: give that a shot and see if your connection works!
 
