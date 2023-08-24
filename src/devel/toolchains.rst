@@ -2,6 +2,8 @@
 Picking A Toolchain
 ===================
 
+https://web.archive.org/web/20230129144348/https://remarkablewiki.com/devel/toolchain
+
 Official Toolchain
 ==================
 

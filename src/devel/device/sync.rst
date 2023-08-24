@@ -1,3 +1,3 @@
 =====================
-Setting up Qt Creator
+Cloud Synchronization
 =====================
