@@ -44,9 +44,9 @@ Below is a very basic example package recipe. This will create a package that in
 
 To build this package you will need to run the following command from the folder containing ``package`` and ``src.tar.gz``:
 
-.. code-block:: shell
+.. code-block:: console
 
-  toltecmk
+  $ toltecmk
 
 Github Action
 =============

@@ -62,6 +62,7 @@ $(DIST): $(VENV)/bin/activate images
 	    $(DIST)/search.html \
 	    $(DIST)/searchindex.js \
 	    $(DIST)/_sources \
+	    $(DIST)/_static/opensearch.xml \
 	    $(DIST)/_static/basic.css \
 	    $(DIST)/_static/file.png \
 	    $(DIST)/_static/jquery-3.5.1.js \
