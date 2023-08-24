@@ -1,0 +1,9 @@
+===
+C++
+===
+
+.. toctree::
+    :titlesonly:
+    :glob:
+
+    *
