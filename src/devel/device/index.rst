@@ -1,6 +1,6 @@
-==================
-Device Information
-==================
+====================
+Device Documentation
+====================
 
 .. toctree::
   :titlesonly:
