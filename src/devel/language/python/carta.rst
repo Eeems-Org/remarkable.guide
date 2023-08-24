@@ -18,7 +18,6 @@ Pros
 Cons
 ====
 
-- Python can be slower than other languages on the reMarkable.
 - Needs to be installed with pip, which can conflict with toltec python packages.
 
 External Links
