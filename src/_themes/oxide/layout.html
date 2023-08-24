@@ -1,3 +1,17 @@
+{%- macro script() %}
+    {%- for js in script_files %}
+        {{ js_tag(js) }}
+    {%- endfor %}
+{%- endmacro %}
+{%- macro css() %}
+    {%- for css in css_files %}
+        {%- if css|attr("filename") %}
+            {{ css_tag(css) }}
+        {%- else %}
+            <link rel="stylesheet" href="{{ pathto(css, 1)|e }}" type="text/css" />
+        {%- endif %}
+    {%- endfor %}
+{%- endmacro %}
 <!doctype html>
 <html lang="en">
     <head>
@@ -10,10 +24,14 @@
         {%- set titlesuffix = " &#8212; "|safe + docstitle|e %}
         <title>{{ title|striptags|e }}{{ titlesuffix }}</title>
         {%- endif %}
-
-        <link rel="stylesheet" href="/_static/oxide.css">
+        {%- if pageurl %}
+        <link rel="canonical" href="{{ pageurl|e }}" />
+        {%- endif %}
         <link rel="icon" href="/_static/images/favicon.png" type="image/png">
         <link rel="icon" href="/_static/images/favicon.svg" sizes="any" type="image/svg+xml">
+        {%- block css %}
+        {{- css() }}
+        {%- endblock %}
         <script src="https://peek.eeems.website/peek.js"></script>
         <script
             src="https://browser.sentry-cdn.com/6.16.1/bundle.tracing.min.js"
@@ -21,6 +39,34 @@
             crossorigin="anonymous"
         ></script>
         <script src="/_static/oxide.js"></script>
+        {%- block scripts %}
+        {{- script() }}
+        {%- endblock %}
+        {%- if use_opensearch %}
+        <link rel="search" type="application/opensearchdescription+xml"
+              title="{% trans docstitle=docstitle|e %}Search within {{ docstitle }}{% endtrans %}"
+              href="{{ pathto('_static/opensearch.xml', 1) }}"/>
+        {%- endif %}
+        {%- block linktags %}
+        {%- if hasdoc('about') %}
+        <link rel="author" title="{{ _('About these documents') }}" href="{{ pathto('about') }}" />
+        {%- endif %}
+        {%- if hasdoc('genindex') %}
+        <link rel="index" title="{{ _('Index') }}" href="{{ pathto('genindex') }}" />
+        {%- endif %}
+        {%- if hasdoc('search') %}
+        <link rel="search" title="{{ _('Search') }}" href="{{ pathto('search') }}" />
+        {%- endif %}
+        {%- if hasdoc('copyright') %}
+        <link rel="copyright" title="{{ _('Copyright') }}" href="{{ pathto('copyright') }}" />
+        {%- endif %}
+        {%- if next %}
+        <link rel="next" title="{{ next.title|striptags|e }}" href="{{ next.link|e }}" />
+        {%- endif %}
+        {%- if prev %}
+        <link rel="prev" title="{{ prev.title|striptags|e }}" href="{{ prev.link|e }}" />
+        {%- endif %}
+    {%- endblock %}
     </head>
     <body>
         <aside class="sidebar">

@@ -11,6 +11,7 @@ Python is available as a toltec package. Due to the package build built using th
 Pip is also available as a package, and can be used to install python libraries that are not available as packages:
 
 .. code-block:: shell
+
   opkg install python3-pip
 
 Pros
