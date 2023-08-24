@@ -59,9 +59,11 @@ This page has been moved to :doc:`new-page-name`.
 
     <div class="warning">
         ⚠️ Warning title. ⚠️
-        <p>
-            Warning text.
-        </p>
+
+Warning text.
+
+.. raw:: html
+
     </div>
 ```
 
@@ -81,8 +83,10 @@ Ideally you don't add stub pages, but sometimes it's better to just add a page a
 
     <div class="warning">
         ⚠️ FIXME. ⚠️
-        <p>
-            This page is just a stub that needs to be completed. You can <a href="https://github.com/toltec-dev/toltec">open a PR on the repo</a> to add more content to the page.
-        </p>
+
+This page is just a stub that needs to be completed. You can `open a PR on the repo <https://github.com/toltec-dev/toltec>`_ to add more content to the page.
+
+.. raw:: html
+
     </div>
   ```

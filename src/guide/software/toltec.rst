@@ -6,15 +6,16 @@ Toltec
 
   <div class="warning">
     ⚠️ Always refer to the <a href="https://toltec-dev.org">toltec website</a> for up to date information ⚠️
-    <p>
-      The website contains up to date information on what version of the OS is supported, as well as the latest installation steps.
-    </p>
-    <p>
-      See <a href="https://support.remarkable.com/s/article/How-can-I-tell-which-software-version-my-reMarkable-tablet-has" target="_blank">How can I tell which software version my reMarkable tablet has?</a> to determine what OS version you are currently running.
-    </p>
-    <p>
-      See <a href="/faqs.html#upgrade">Can I downgrade to a different OS version?</a> for information on how to downgrade to a supported OS version.
-    </p>
+
+The website contains up to date information on what version of the OS is supported, as well as the latest installation steps.
+
+
+See `How can I tell which software version my reMarkable tablet has? <https://support.remarkable.com/s/article/How-can-I-tell-which-software-version-my-reMarkable-tablet-has>`_ to determine what OS version you are currently running.
+
+See :ref:`upgrade` for information on how to downgrade to a supported OS version.
+
+.. raw:: html
+
   </div>
 
 Toltec is a community-maintained repository of free software for the `reMarkable tablet <https://remarkable.com/>`_. It is the recommended way to install software on the device. While you can manually install software on your device, this is fraught with compatibility issues, as well as different standards that may not be compatibile. Toltec makes sure that software works together and applies standards that work together for all the packages it contains.

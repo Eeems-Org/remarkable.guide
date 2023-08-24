@@ -6,9 +6,11 @@ Xochitl Documents Format
 
     <div class="warning">
         ⚠️ FIXME. ⚠️
-        <p>
-            This page is just a stub that needs to be completed. You can <a href="https://github.com/toltec-dev/toltec">open a PR on the repo</a> to add more content to the page.
-        </p>
+
+This page is just a stub that needs to be completed. You can `open a PR on the repo <https://github.com/toltec-dev/toltec>`_ to add more content to the page.
+
+.. raw:: html
+
     </div>
 
 https://web.archive.org/web/20230129151143/https://remarkablewiki.com/tech/filesystem#metadata_file_format
