@@ -9,6 +9,7 @@ Programming Languages
     c/index
     c++/index
     dotnet/index
+    nodejs/index
     python/index
     rust/index
     shell/index
