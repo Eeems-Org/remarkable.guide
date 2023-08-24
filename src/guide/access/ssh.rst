@@ -6,12 +6,13 @@ SSH Access
 
   <div class="warning">
     ⚠️ Make sure you write down your SSH password. ⚠️
-    <p>
-      If you don't write down your password and lose access to the UI, you will be unable to access your device. A <a href="/tech/recovery.html">emergency recovery</a> will be required.
-    </p>
-    <p>
-      It is also recommended to setup a <a href="#ssh-key">SSH key</a> instead of using password authentication.
-    </p>
+
+If you don't write down your password and lose access to the UI, you will be unable to access your device. An :doc:`../../tech/recovery` will be required.
+
+It is also recommended to setup a `ssh-key`_ instead of using password authentication.
+
+.. raw:: html
+
   </div>
 
 .. contents:: Contents
@@ -77,11 +78,15 @@ Setting Up a SSH Key
 
   <div class="warning">
     ⚠️ You may need to enable ssh-rsa keys. ⚠️
-    <p>If you encounter the following error when attempting to use a SSH key:</p>
-    <blockquote>Unable to negotiate with 10.11.99.1 port 22: no matching host key type found. Their offer: ssh-rsa</blockquote>
-    <p>
-      You will need to enable ssh-rsa keys. See the relevant <a href="/faqs.html#enable-ssh-rsa">FAQ</a> for more information.
-    </p>
+
+If you encounter the following error when attempting to use a SSH key:
+
+  Unable to negotiate with 10.11.99.1 port 22: no matching host key type found. Their offer: ssh-rsa
+
+You will need to enable ssh-rsa keys. See :ref:`enable-ssh-rsa` for more information.
+
+.. raw:: html
+
   </div>
 
 Creating a SSH Key
@@ -104,10 +109,15 @@ The following command will generate a private and public SSH key pair:
 
   <div class="warning">
     ⚠️ The generated SSH key will not have a password. ⚠️
-    <p>
-      This is a minor security concern, as anybody who can access the file will be able to use it to access your device. You can generate one with a password by using the following command instead:
-    </p>
-    <pre>ssh-keygen -f ~/.ssh/id_rsa_remarkable</pre>
+
+This is a minor security concern, as anybody who can access the file will be able to use it to access your device. You can generate one with a password by using the following command instead:
+
+.. code-block:: shell
+
+  ssh-keygen -f ~/.ssh/id_rsa_remarkable
+
+.. raw:: html
+
   </div>
 
 Installing a SSH Key on Your Device
@@ -129,12 +139,20 @@ The following command will install your SSH public key on your device:
 
   <div class="warning">
     ⚠️ This will not work properly until OpenSSH 9.4. ⚠️
-    <p>
-      Due to a bug in ssh-copy-id this installs to the wrong location on the device on versions of OpenSSH older than 9.4. You can check your version of OpenSSH with the following command on your computer:
-    </p>
-    <pre>ssh -V</pre>
-    <p>For these versions you can use the following commands to install your public key instead:</p>
-    <pre>
+
+Due to a bug in ssh-copy-id this installs to the wrong location on the device on versions of OpenSSH older than 9.4. You can check your version of OpenSSH with the following command on your computer:
+
+
+.. code-block:: shell
+
+  ssh -V
+
+.. raw:: html
+
+  <p>For these versions you can use the following commands to install your public key instead:</p>
+
+.. code-block:: shell
+
   ssh root@10.11.99.1 \
     mkdir -p -m 700 /home/root/.ssh
   cat ~/.ssh/id_rsa_remarkable.pub \
@@ -142,7 +160,9 @@ The following command will install your SSH public key on your device:
     tee -a /home/root/.ssh/authorized_keys
   ssh root@10.11.99.1 \
     chmod 600 /home/root/.ssh/authorized_keys
-    </pre>
+
+.. raw:: html
+
   </div>
 
 .. _ssh_config:

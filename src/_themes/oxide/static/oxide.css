@@ -70,11 +70,9 @@ html {
 
 pre {
   padding: var(--text-height);
-  background-color: var(--bg-color-inv);
   overflow: auto;
   border-radius: var(--border-radius);
   font-size: 0.888rem;
-  color: var(--font-color-inv);
   text-align: left;
   font-weight: normal;
 }

@@ -59,9 +59,11 @@ This page has been moved to :doc:`new-page-name`.
 
     <div class="warning">
         ⚠️ Warning title. ⚠️
-        <p>
-            Warning text.
-        </p>
+
+Warning text.
+
+.. raw:: html
+
     </div>
 ```
 
@@ -73,3 +75,18 @@ This page has been moved to :doc:`new-page-name`.
   <img src="/_static/path/to/file-2.png" alt="Second screenshot" class="screenshot">
   <br/>
 ```
+
+### How do I mark a page as a stub that needs further content written?
+Ideally you don't add stub pages, but sometimes it's better to just add a page and throw a couple links on it for future completion.
+```rest
+.. raw:: html
+
+    <div class="warning">
+        ⚠️ FIXME. ⚠️
+
+This page is just a stub that needs to be completed. You can `open a PR on the repo <https://github.com/toltec-dev/toltec>`_ to add more content to the page.
+
+.. raw:: html
+
+    </div>
+  ```
