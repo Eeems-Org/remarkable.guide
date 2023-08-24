@@ -4,11 +4,11 @@ Oxide Utils
 
 :ref:`oxide-launcher` provides various command line tools that can be used for scripting.
 
-.. code-block:: shell
+.. code-block:: console
 
-  opkg intall rot
-  opkg intall oxide-utils
-  opkg install inject_evdev
+  $ opkg intall rot
+  $ opkg intall oxide-utils
+  $ opkg install inject_evdev
 
 Pros
 ====

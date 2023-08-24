@@ -4,9 +4,9 @@ Simple App Script
 
 Simple app script is a tool that allows scripts to easily create an interactable user interface on the remarkable without needing to compile code.
 
-.. code-block:: shell
+.. code-block:: console
 
-  opkg intall simple
+  $ opkg intall simple
 
 Pros
 ====

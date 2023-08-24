@@ -4,6 +4,10 @@ rm-pySAS
 
 rm-pySAS is a python library that uses :doc:`../shell/simple` to interact with the device's screen.
 
+.. code-block:: console
+
+  $ pip install rm_pysas
+
 Pros
 ====
 

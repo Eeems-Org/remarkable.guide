@@ -56,13 +56,13 @@ DBus Interface
 Command Line Interface
 ----------------------
 
-.. code-block:: shell
+.. code-block:: console
 
-  update_engine_client -status
-  update_engine_client -reset_status
-  update_engine_client -check_for_update
-  update_engine_client -update
-  update_engine_client -watch_for_updates
+  $ update_engine_client -status
+  $ update_engine_client -reset_status
+  $ update_engine_client -check_for_update
+  $ update_engine_client -update
+  $ update_engine_client -watch_for_updates
 
 External Links
 ==============

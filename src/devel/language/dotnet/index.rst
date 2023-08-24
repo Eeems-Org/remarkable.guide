@@ -4,9 +4,9 @@
 
 Due to the cross platform nature of modern .NET, no porting was required to get it working on the device. The runtime is available as a package in toltec.
 
-.. code-block:: shell
+.. code-block:: console
 
-  opkg intall dotnet-sdk
+  $ opkg intall dotnet-sdk
 
 Pros
 ====

@@ -4,9 +4,9 @@ FBInk
 
 A small tool & library to print text & images to an eInk Linux framebuffer.
 
-.. code-block:: shell
+.. code-block:: console
 
-  opkg intall fbink
+  $ opkg intall fbink
 
 Pros
 ====

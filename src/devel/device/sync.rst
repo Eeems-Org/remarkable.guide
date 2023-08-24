@@ -52,7 +52,7 @@ Command Line Interface
 
 ``sync`` is renamed to ``rm-sync`` in OS 3.5.
 
-.. code-block:: shell
+.. code-block:: console
 
-  sync --client
-  sync --no-service --usertoken <usertoken> --basepath /home/root/.local/share/remarkable
+  $ sync --client
+  $ sync --no-service --usertoken <usertoken> --basepath /home/root/.local/share/remarkable

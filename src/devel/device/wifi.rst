@@ -32,3 +32,5 @@ Xochitl Network Settings
 
 DBus communication with wpa_supplicant
 --------------------------------------
+
+https://w1.fi/wpa_supplicant/devel/dbus.html
