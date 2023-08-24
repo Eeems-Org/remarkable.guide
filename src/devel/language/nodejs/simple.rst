@@ -1,5 +1,5 @@
-=========================
-Simple Application Script
-=========================
+=================
+Simple App Script
+=================
 
-See :doc:`../shell/simple` for more information.
+Node.js scripts can display simple interfaces by using :doc:`../shell/simple`. See :doc:`../shell/simple` for more information.

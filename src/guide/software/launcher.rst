@@ -10,6 +10,8 @@ After :doc:`toltec` you will need to install a launcher. Currently there are `th
    :local:
    :backlinks: none
 
+.. _oxide-launcher:
+
 Oxide
 =====
 `Oxide <https://oxide.eeems.codes/>`_ is a `desktop environment <https://en.wikipedia.org/wiki/Desktop_environment>`_ for your device.
