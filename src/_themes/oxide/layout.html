@@ -23,6 +23,7 @@
         <meta property="og:article:modified_time" content="{{ last_updated|e }}"/>
         {%- if pageurl %}
         <meta property="og:url" content="{{ pageurl|e }}"/>
+        <meta name="giscus:backlink" content="{{ pageurl|e }}">
         {%- endif %}
 
         {%- if title == "Home" %}
