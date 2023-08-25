@@ -12,7 +12,7 @@ var dnt =
 ackeeTracker
     .create("https://peek.eeems.website", { detailed: !dnt })
     .record("b03e9427-2236-4411-98df-104b8504c51b");
-if (!dnt) {
+if(!dnt){
     Sentry.init({
         dsn: "https://5157ded602bc413eab75d2b897ba49e0@sentry.eeems.codes/3",
         integrations: [new Sentry.Integrations.BrowserTracing()],
@@ -20,3 +20,16 @@ if (!dnt) {
         tracesSampleRate: 1.0,
     });
 }
+window.addEventListener('DOMContentLoaded', function(){
+    document
+        .querySelectorAll('img.screenshot')
+        .forEach(function(img){
+            img.addEventListener('click', function(){
+                if(!document.fullscreenElement){
+                    img.requestFullscreen();
+                }else{
+                    document.exitFullscreen();
+                }
+            });
+        });
+});
