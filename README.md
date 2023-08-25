@@ -78,7 +78,7 @@ Warning text.
 
 ### How do I mark a page as a stub that needs further content written?
 Ideally you don't add stub pages, but sometimes it's better to just add a page and throw a couple links on it for future completion.
-```rest
+```rst
 .. raw:: html
 
     <div class="warning">

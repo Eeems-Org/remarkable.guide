@@ -16,6 +16,7 @@ html_theme = "oxide"
 master_doc = "sitemap"
 html_sidebars = {"**": ["nav.html", "sidefooter.html"]}
 html_permalinks_icon = "#"
+html_baseurl = "https://remarkable.guide"
 html_use_opensearch = "https://remarkable.guide"
 
 # Do not enable sphinx.ext.autosectionlabel

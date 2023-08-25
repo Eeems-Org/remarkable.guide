@@ -17,6 +17,14 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta property="og:title" content="{{ docstitle|e }}"/>
+        <meta property="og:type" content="article"/>
+        <meta property="og:site_name" content="reMarkable Guide"/>
+        <meta property="og:article:modified_time" content="{{ last_updated|e }}"/>
+        {%- if pageurl %}
+        <meta property="og:url" content="{{ pageurl|e }}"/>
+        <meta name="giscus:backlink" content="{{ pageurl|e }}">
+        {%- endif %}
 
         {%- if title == "Home" %}
         <title>{{ docstitle|e }}</title>
@@ -66,7 +74,25 @@
         {%- if prev %}
         <link rel="prev" title="{{ prev.title|striptags|e }}" href="{{ prev.link|e }}" />
         {%- endif %}
-    {%- endblock %}
+        {%- endblock %}
+        <script
+            src="https://giscus.app/client.js"
+            data-repo="Eeems-Org/remarkable.guide"
+            data-repo-id="R_kgDOI7Ab8A"
+            data-category="General"
+            data-category-id="DIC_kwDOI7Ab8M4CY3cm"
+            data-mapping="pathname"
+            data-strict="1"
+            data-reactions-enabled="1"
+            data-emit-metadata="1"
+            data-input-position="top"
+            data-theme="transparent_dark"
+            data-lang="en"
+            data-loading="lazy"
+            crossorigin="anonymous"
+            async
+        >
+        </script>
     </head>
     <body>
         <aside class="sidebar">
@@ -83,14 +109,15 @@
         </aside>
         <main>
             {% block body %} {% endblock %}
-		    <nav>
-		    	{% if prev %}
-				<a href="{{ prev.link|e }}" class="button button-prev" title="{{ prev.title }}">Previous</a>
-				{% endif %}
-			    {% if next %}
-				<a href="{{ next.link|e }}" class="button button-next" title="{{ next.title }}">Next</a>
-				{% endif %}
-			</nav>
+            <div class="giscus"></div>
+            <nav>
+                {% if prev %}
+                <a href="{{ prev.link|e }}" class="button button-prev" title="{{ prev.title }}">Previous</a>
+                {% endif %}
+                {% if next %}
+                <a href="{{ next.link|e }}" class="button button-next" title="{{ next.title }}">Next</a>
+                {% endif %}
+            </nav>
         </main>
     </body>
 </html>
