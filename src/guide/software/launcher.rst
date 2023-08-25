@@ -63,8 +63,9 @@ Screenshots
 
 .. raw:: html
 
-  <img src="/_static/launcher/remux.png" alt="remux launcher" class="screenshot">
-  <br/>
+  <div class="gallery">
+    <img src="/_static/launcher/remux.png" alt="remux launcher" class="screenshot">
+  </div>
 
 Features
 --------
