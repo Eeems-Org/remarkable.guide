@@ -71,9 +71,10 @@ Warning text.
 ```rst
 .. raw:: html
 
-  <img src="/_static/path/to/file-1.png" alt="First screenshot" class="screenshot">
-  <img src="/_static/path/to/file-2.png" alt="Second screenshot" class="screenshot">
-  <br/>
+  <div class="gallery">
+    <img src="/_static/path/to/file-1.png" alt="First screenshot" class="screenshot">
+    <img src="/_static/path/to/file-2.png" alt="Second screenshot" class="screenshot">
+  </div>
 ```
 
 ### How do I mark a page as a stub that needs further content written?
