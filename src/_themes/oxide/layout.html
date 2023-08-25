@@ -1,17 +1,3 @@
-{%- macro script() %}
-    {%- for js in script_files %}
-        {{ js_tag(js) }}
-    {%- endfor %}
-{%- endmacro %}
-{%- macro css() %}
-    {%- for css in css_files %}
-        {%- if css|attr("filename") %}
-            {{ css_tag(css) }}
-        {%- else %}
-            <link rel="stylesheet" href="{{ pathto(css, 1)|e }}" type="text/css" />
-        {%- endif %}
-    {%- endfor %}
-{%- endmacro %}
 <!doctype html>
 <html lang="en">
     <head>
@@ -38,7 +24,13 @@
         <link rel="icon" href="/_static/images/favicon.png" type="image/png">
         <link rel="icon" href="/_static/images/favicon.svg" sizes="any" type="image/svg+xml">
         {%- block css %}
-        {{- css() }}
+        {%- for css in css_files %}
+            {%- if css|attr("filename") %}
+                {{ css_tag(css) }}
+            {%- else %}
+                <link rel="stylesheet" href="{{ pathto(css, 1)|e }}" type="text/css" />
+            {%- endif %}
+        {%- endfor %}
         {%- endblock %}
         <script src="https://peek.eeems.website/peek.js"></script>
         <script
@@ -48,7 +40,9 @@
         ></script>
         <script src="/_static/oxide.js"></script>
         {%- block scripts %}
-        {{- script() }}
+        {%- for js in script_files %}
+            {{ js_tag(js) }}
+        {%- endfor %}
         {%- endblock %}
         {%- if use_opensearch %}
         <link rel="search" type="application/opensearchdescription+xml"
