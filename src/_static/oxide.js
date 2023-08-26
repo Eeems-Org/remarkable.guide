@@ -1,14 +1,9 @@
 /*global Sentry, ackeeTracker*/
 var dnt =
-    (window.doNotTrack ||
-        navigator.doNotTrack ||
-        navigator.msDoNotTrack ||
-        "msTrackingProtectionEnabled" in window.external) &&
-    (window.doNotTrack === "1" ||
-        navigator.doNotTrack === "yes" ||
-        navigator.doNotTrack === "1" ||
-        navigator.msDoNotTrack === "1" ||
-        window.external.msTrackingProtectionEnabled());
+    (window.doNotTrack && window.doNotTrack === "1") ||
+    (navigator.doNotTrack && (navigator.doNotTrack === "yes" || navigator.doNotTrack === "1" )) ||
+    (navigator.msDoNotTrack && navigator.msDoNotTrack === "1") ||
+    ("msTrackingProtectionEnabled" in window.external && window.external.msTrackingProtectionEnabled());
 if(ackeeTracker){
     ackeeTracker
         .create("https://peek.eeems.website", { detailed: !dnt })
