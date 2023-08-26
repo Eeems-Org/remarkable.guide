@@ -21,7 +21,6 @@ html_baseurl = "https://remarkable.guide"
 html_use_opensearch = "https://remarkable.guide"
 html_js_files = [
     "https://peek.eeems.website/peek.js",
-    f"oxide.js?_t={time.time()}",
     (
         "https://browser.sentry-cdn.com/6.16.1/bundle.tracing.min.js",
         {
@@ -29,6 +28,7 @@ html_js_files = [
             "crossorigin": "anonymous",
         },
     ),
+    f"oxide.js?_t={time.time()}",
     (
         "https://giscus.app/client.js",
         {

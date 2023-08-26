@@ -76,7 +76,7 @@ prod: $(DIST)
 
 dev: $(VENV)/bin/activate $(SRC)/_static/images/favicon.png $(svgFiles)
 	. $(VENV)/bin/activate; \
-	    sphinx-autobuild -a $(SRC) $(DIST) --port=0 --open-browser
+	    sphinx-autobuild -a $(SRC) $(DIST) --host 0.0.0.0 --port=0 --open-browser
 
 dev-images:
 	while inotifywait -e close_write,create $(IMAGES) $(IMAGES)/*.tex;do \

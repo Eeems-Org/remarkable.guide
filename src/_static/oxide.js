@@ -4,7 +4,7 @@ var dnt =
     (navigator.doNotTrack && (navigator.doNotTrack === "yes" || navigator.doNotTrack === "1" )) ||
     (navigator.msDoNotTrack && navigator.msDoNotTrack === "1") ||
     ("msTrackingProtectionEnabled" in window.external && window.external.msTrackingProtectionEnabled());
-if(ackeeTracker){
+if(typeof ackeeTracker !== "undefined"){
     ackeeTracker
         .create("https://peek.eeems.website", { detailed: !dnt })
         .record("b03e9427-2236-4411-98df-104b8504c51b");
@@ -12,14 +12,18 @@ if(ackeeTracker){
     console.error("ackeeTracker is missing");
 }
 if(!dnt){
-    Sentry.init({
-        dsn: "https://5157ded602bc413eab75d2b897ba49e0@sentry.eeems.codes/3",
-        integrations: [new Sentry.Integrations.BrowserTracing()],
-        tracePropagationTargets: ["localhost", "127.0.0.1", "remarkable.guide", /^\//],
-        tracesSampleRate: 1.0,
-    });
+    if(typeof Sentry !== "undefined"){
+        Sentry.init({
+            dsn: "https://5157ded602bc413eab75d2b897ba49e0@sentry.eeems.codes/3",
+            integrations: [new Sentry.Integrations.BrowserTracing()],
+            tracePropagationTargets: ["localhost", "127.0.0.1", "remarkable.guide", /^\//],
+            tracesSampleRate: 1.0,
+        });
+    }else{
+        console.error("Sentry is missing");
+    }
 }
-window.addEventListener('DOMContentLoaded', function(){
+function setup(){
     document
         .querySelectorAll('img.screenshot')
         .forEach(function(img){
@@ -49,4 +53,9 @@ window.addEventListener('DOMContentLoaded', function(){
                 }
             });
         });
-});
+}
+if(document.readyState == "loading"){
+    window.addEventListener('DOMContentLoaded', setup);
+}else{
+    setup();
+}
