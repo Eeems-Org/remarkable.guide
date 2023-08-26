@@ -20,8 +20,8 @@ html_permalinks_icon = "#"
 html_baseurl = "https://remarkable.guide"
 html_use_opensearch = "https://remarkable.guide"
 html_js_files = [
-    f"oxide.js?_t={time.time()}",
     "https://peek.eeems.website/peek.js",
+    f"oxide.js?_t={time.time()}",
     (
         "https://browser.sentry-cdn.com/6.16.1/bundle.tracing.min.js",
         {

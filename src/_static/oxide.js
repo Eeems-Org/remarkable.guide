@@ -9,9 +9,13 @@ var dnt =
         navigator.doNotTrack === "1" ||
         navigator.msDoNotTrack === "1" ||
         window.external.msTrackingProtectionEnabled());
-ackeeTracker
-    .create("https://peek.eeems.website", { detailed: !dnt })
-    .record("b03e9427-2236-4411-98df-104b8504c51b");
+if(ackeeTracker){
+    ackeeTracker
+        .create("https://peek.eeems.website", { detailed: !dnt })
+        .record("b03e9427-2236-4411-98df-104b8504c51b");
+}else{
+    console.error("ackeeTracker is missing");
+}
 if(!dnt){
     Sentry.init({
         dsn: "https://5157ded602bc413eab75d2b897ba49e0@sentry.eeems.codes/3",
@@ -26,9 +30,13 @@ window.addEventListener('DOMContentLoaded', function(){
         .forEach(function(img){
             img.addEventListener('click', function(){
                 if(!document.fullscreenElement){
-                    img.requestFullscreen();
+                    img
+                    .requestFullscreen({ navigationUI: "show" })
+                    .catch(e => console.error(e));
                 }else{
-                    document.exitFullscreen();
+                    document
+                        .exitFullscreen();
+                        .catch(e => console.error(e));
                 }
             });
         });

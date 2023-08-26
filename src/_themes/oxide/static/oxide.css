@@ -356,12 +356,6 @@ img.screenshot {
   cursor: pointer;
 }
 
-img.screenshot:fullscreen{
-  height: 100%;
-  widht: 100%;
-  object-fit: contain;
-}
-
 div.gallery {
   scroll-snap-type: x mandatory;
   max-height: 80vh;
@@ -375,6 +369,13 @@ div.gallery > img.screenshot {
   scroll-snap-align: center;
   margin-left: 10px;
   margin-right: 10px;
+}
+
+img.screenshot:fullscreen{
+  object-fit: contain;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
 }
 
 /* Small screens */
