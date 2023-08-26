@@ -29,14 +29,28 @@ window.addEventListener('DOMContentLoaded', function(){
         .querySelectorAll('img.screenshot')
         .forEach(function(img){
             img.addEventListener('click', function(){
-                if(!document.fullscreenElement){
-                    img
-                    .requestFullscreen({ navigationUI: "show" })
-                    .catch(e => console.error(e));
-                }else{
-                    document
-                        .exitFullscreen();
+                if(document.fullscreenEnabled){
+                    if(!document.fullscreenElement){
+                        img
+                        .requestFullscreen({ navigationUI: "show" })
                         .catch(e => console.error(e));
+                    }else{
+                        document
+                            .exitFullscreen()
+                            .catch(e => console.error(e));
+                    }
+                }else{
+                    let el = document.createElement("img");
+                    el.src = img.src;
+                    el.title = "Click to close image";
+                    el.classList.add("fullscreen");
+                    el.addEventListener('click', () => document.body.removeChild(el));
+                    el.addEventListener('keypress', function(e){
+                        if(e.key == "Escape" || e.key == "F11"){
+                            document.body.removeChild(el);
+                        }
+                    });
+                    document.body.appendChild(el);
                 }
             });
         });

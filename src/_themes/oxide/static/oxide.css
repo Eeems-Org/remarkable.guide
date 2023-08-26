@@ -371,11 +371,17 @@ div.gallery > img.screenshot {
   margin-right: 10px;
 }
 
-img.screenshot:fullscreen{
+img.screenshot:fullscreen, img.fullscreen{
   object-fit: contain;
   width: 100vw;
   height: 100vh;
-  position: absolute;
+}
+img.fullscreen{
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-color: var(--bg-color);
+  cursor: pointer;
 }
 
 /* Small screens */
