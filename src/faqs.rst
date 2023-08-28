@@ -80,7 +80,7 @@ You could attempt the following troubleshooting steps:
 
 1. Ensure that your network works with another device.
 2. Test with another network, like a hotspot from your phone.
-3. Ensure that your device has free space on the root partition:
+3. Ensure that your device has free space on the root partition. This is not the same as the space used to store notebooks.
 
    - To check the amount of free space available, :doc:`ssh into your device <guide/access/ssh>` and run the following:
 
