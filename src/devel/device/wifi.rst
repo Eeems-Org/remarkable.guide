@@ -24,7 +24,7 @@ Xochitl Network Settings
   settings.sync();
   settings.beginGroup("wifinetworks");
   QMap<QString, QVariantMap> wifinetworks;
-  for(const QString& key : allKeys()){
+  for(const QString& key : settings.allKeys()){
       QVariantMap network = settings.value(key).toMap();
       wifinetworks[key] = network;
   }
