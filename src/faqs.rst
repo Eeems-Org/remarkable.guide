@@ -92,7 +92,7 @@ You could attempt the following troubleshooting steps:
 
      .. code-block:: shell
 
-       journalctl --vaccum-size=1
+       journalctl --vacuum-size=1
 
    - If running ``df -h /`` still reports ``Use%`` as ``100%``, you may need to remove other files from your device. If you have installed :doc:`custom templates <guide/software/templates>`, :doc:`splash screens <guide/software/screens>`, or fonts, you may need to remove them.
    - If you still are unable to free up space, ask for help on the `community discord <https://discord.gg/ATqQGfu>`_.
