@@ -30,7 +30,7 @@ Can I downgrade to a different OS version?
 
 Yes! You can install any OS verion you want with `remarkable-update <https://github.com/ddvk/remarkable-update>`_.
 
-If you use a reMarkable 2, there is another tool that has been built on top of this that simplifies the process called `codexctl <https://github.com/Jayy001/codexctl>`_.
+If you use a reMarkable 2, it is recommended to use `codexctl <https://github.com/Jayy001/codexctl>`_. This simplifies the process.
 
 The file format used to store lines you draw in notebooks/pdfs/epubs sometimes changes between versions. This means that if you downgrade, you may not be able to open one, or all, of your notebooks until you upgrade again.
 
