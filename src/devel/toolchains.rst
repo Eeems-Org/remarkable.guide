@@ -31,7 +31,7 @@ Over time the community has requested, and been provided with newer versions of 
 - Official 3.1.15 toolchain installer
    https://ipfs.eeems.website/ipfs/Qmdw66tZo2ZPRqicK4dtiUUskdHnDFZNpRAKBS5iYKKDTw
    sha256sum: ``1a9a5b4f9bebb6798f890ad91bdba0eddc11e8afee18d5d79e40da193e66411f``
-   OS Version: 2.11 and greater
+   OS Version: 2.11 to 3.5
 
 After the toolchain has been installed, you'll need to source it to load the appropriate environment variables for it's use.
 
