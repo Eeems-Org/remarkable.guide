@@ -68,10 +68,17 @@ html {
   }
 }
 
+main p {
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
 pre {
   padding: var(--text-height);
   overflow: auto;
   border-radius: var(--border-radius);
+}
+pre, .pre{
   font-size: 0.888rem;
   text-align: left;
   font-weight: normal;
@@ -244,6 +251,7 @@ main {
   flex: 1;
   min-width: 0;
   margin: 0 var(--page-spacing);
+  overflow-x: hidden;
 }
 
 .sidebar {
