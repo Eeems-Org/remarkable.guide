@@ -78,8 +78,8 @@ If you are unable to develop on a linux machine, or would like to avoid installi
 
 .. code-block:: console
 
+  $ docker pull eeems/remarkable-toolchain:3.1.15
   $ docker pull eeems/remarkable-toolchain:latest
-
 
 You will still need to source the toolchain when running scripts inside the container to make sure it's loaded.
 
