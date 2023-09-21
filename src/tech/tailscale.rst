@@ -31,37 +31,10 @@ Basic setup
 
 You'll need ``tailscale`` and ``tailscaled``, which are both available on Entware through Toltec in the ``tailscale`` package.
 Get it with ``opkg install tailscale``.
-You'll also want to set up systemd to manage running ``tailscaled``.
-Save this to ``/lib/systemd/system/tailscaled.service``:
+You can also configure tailscale to automatically run via SystemD. This is available via the ``tailscale-systemd`` package.
+Get it with ``opkg install tailscale-systemd``.
 
-.. code-block:: ini
-
- [Unit]
- Description=Tailscale node agent
- Documentation=https://tailscale.com/kb/
- Wants=network-pre.target
- After=network-pre.target
-
- [Service]
- Environment="HOME=/home/root"
- ExecStartPre=/opt/bin/tailscaled --cleanup
- ExecStart=/opt/bin/tailscaled --state=/var/lib/tailscale/tailscaled.state --socket=/run/tailscale/tailscaled.sock --tun=userspace-networking --socks5-server=localhost:1055 --outbound-http-proxy-listen=localhost:1055
- ExecStopPost=/opt/bin/tailscaled --cleanup
-
- Restart=on-failure
-
- RuntimeDirectory=tailscale
- RuntimeDirectoryMode=0755
- StateDirectory=tailscale
- StateDirectoryMode=0700
- CacheDirectory=tailscale
- CacheDirectoryMode=0750
- Type=notify
-
- [Install]
- WantedBy=multi-user.target
-
-Since you're working on a device that doesn't support ``tun``, you're specifying that you're using userspace networking.
+Since the default kernel does not contain the ``tun`` module, tailscale is configured to use userspace networking.
 If you want to place outgoing connections on your tailnet, you need one or both of the proxies that were set up,
 and then you'll need to configure the application making that outbound connection to use the appropriate proxy.
 (There's some more detail `on Tailscale's userspace networking docs <https://tailscale.com/kb/1112/userspace-networking/>`_).
@@ -77,19 +50,14 @@ Outbound SSH to your tailnet
 reMarkable ships with Dropbear for SSH, which doesn't support anything like SOCKS proxying.
 You'll need to install OpenSSH's client instead. Get it through Toltec with ``opkg install openssh-client``.
 
-Next, you'll need something to handle the proxying.
-Your system `nc` is from Busybox, which is too stripped down for what we need here, so get ``ncat`` with ``opkg install ncat``.
+Tailscale has a basic built in "nc" which tunnels traffic over the tailnet.
 
-You'll then need to configure OpenSSH to use ``ncat`` to use the proxy you asked ``tailscaled`` to set up.
-If you want to set this up nicely, you can `work with OpenSSH's config files <https://www.ssh.com/academy/ssh/config#format-of-ssh-client-config-file-ssh_config>`_
-to use the proxy for whatever situation you care about.
+The recommended way to configure this is via OpenSSH's `config files <https://www.ssh.com/academy/ssh/config#format-of-ssh-client-config-file-ssh_config>`_:
 
-This author was too lazy to try to do that as of this initial draft, and instead used an alias for this command to get the job done:
+.. code-block:: console
 
-.. code-block:: shell
-
-  /opt/libexec/ssh-openssh user@host \
-    -o ProxyCommand='ncat --proxy-type socks5 --proxy 127.0.0.1:1055 %h %p'
-
-You should be able to use the device name in your tailnet for the host: give that a shot and see if your connection works!
-
+  Host myalias
+    User myuser
+    HostName my.host.name
+    Port 1234
+    ProxyCommand /opt/bin/tailscale nc %h %p
