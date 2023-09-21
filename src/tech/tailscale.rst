@@ -34,7 +34,7 @@ Get it with ``opkg install tailscale``.
 You can also configure tailscale to automatically run via SystemD. This is available via the ``tailscale-systemd`` package.
 Get it with ``opkg install tailscale-systemd``.
 
-Since you're working on a device that doesn't support ``tun``, tailscale is configured to use userspace networking.
+Since the default kernel does not contain the ``tun`` module, tailscale is configured to use userspace networking.
 If you want to place outgoing connections on your tailnet, you need one or both of the proxies that were set up,
 and then you'll need to configure the application making that outbound connection to use the appropriate proxy.
 (There's some more detail `on Tailscale's userspace networking docs <https://tailscale.com/kb/1112/userspace-networking/>`_).
