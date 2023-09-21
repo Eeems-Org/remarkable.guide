@@ -56,8 +56,8 @@ The recommended way to configure this is via OpenSSH's `config files <https://ww
 
 .. code-block:: console
 
-  Host friendly-name
-    User user
-    HostName some-host.example.com
+  Host myalias
+    User myuser
+    HostName my.host.name
     Port 1234
     ProxyCommand /opt/bin/tailscale nc %h %p
