@@ -24,5 +24,7 @@ Extenal Links
 
 - Qt 5 Documentation
    https://doc.qt.io/qt-5/
+- Template for reMarkable Qt applications
+   https://github.com/Eeems-Org/remarkable-template-qt-app
 - Old wiki article on setting up Qt creator
    https://web.archive.org/web/20230129161833/https://remarkablewiki.com/devel/qt_creator
