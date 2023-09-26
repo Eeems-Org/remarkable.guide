@@ -82,6 +82,21 @@ Upload a document to the last folder that was listed.
     -H 'Connection: keep-alive' \
     -F "file=@$file;filename=$(basename "$file");type=application/pdf"
 
+``GET http://10.11.99.1/log.txt``
+---------------------------------
+
+Download the device's systemd journal entries as a log file.
+
+**Example:**
+
+.. code:: bash
+
+  curl \
+    --silent \
+    --remote-name \
+    --remote-header-name \
+    'http://10.11.99.1/log.txt'
+
 External links
 ==============
 
