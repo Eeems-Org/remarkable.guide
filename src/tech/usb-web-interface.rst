@@ -85,7 +85,7 @@ Upload a document to the last folder that was listed.
 ``GET http://10.11.99.1/log.txt``
 ---------------------------------
 
-Download the device's systemd journal entries as a log file.
+Download the xochitl log file found at ``/home/root/log.txt``.
 
 **Example:**
 
