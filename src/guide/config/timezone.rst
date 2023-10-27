@@ -29,7 +29,7 @@ The `timedatectl <https://www.man7.org/linux/man-pages/man1/timedatectl.1.html>`
 Available Timezones
 ===================
 
-The device does not come with the full set of timezones, to see what timezones are available, you can inspect the ``/usr/share/zoneinfo`` folder. Toltec contains the full set of timezones that can be installed with the following command:
+The device does not come with the full set of timezones that ``timedatectl list-timezones`` lists. To see what timezones are available, you can inspect the ``/usr/share/zoneinfo`` folder. Toltec contains the full set of timezones that can be installed with the following command:
 
 .. code-block:: shell
 
