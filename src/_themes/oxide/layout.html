@@ -73,6 +73,15 @@
             {%- endfor %}
         </aside>
         <main>
+            {% if parents %}
+            <nav class="parents">
+                {%- for parent in parents %}
+                <a href="{{ parent.link|e }}" title="{{ parent.title }}">{{ parent.title }}</a>
+                »
+                {% endfor %}
+                {{ title }}
+            </nav>
+            {% endif %}
             {% block body %} {% endblock %}
             <div class="giscus"></div>
             <nav>
