@@ -328,6 +328,10 @@ main {
 
 /* Content */
 
+nav.parents{
+  font-style: italic;
+}
+
 main > section:first-of-type > h1:first-of-type {
   margin-top: 0.9rem;
 }

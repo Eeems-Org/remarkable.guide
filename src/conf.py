@@ -1,3 +1,4 @@
+"""sphinx configuration"""
 import time
 from datetime import datetime
 
@@ -50,9 +51,26 @@ html_js_files = [
     ),
 ]
 
+ogp_site_url = html_baseurl
+ogp_description_length = 200
+ogp_site_name = project
+ogp_image = "/_static/images/favicon.svg"
+ogp_use_first_image = True
+ogp_type = "article"
+ogp_enable_meta_description = True
+ogp_custom_meta_tags = [
+    f'<meta property="og:article:modified_time" content="{datetime.utcnow().isoformat()}" />',
+]
+
 # Do not enable sphinx.ext.autosectionlabel
 # The expectation is that we explicitely add references
 extensions = [
     "sphinxcontrib.fulltoc",
+    "sphinxext.opengraph",
     "breathe",
 ]
+
+rst_prolog = """
+.. role:: raw-html(raw)
+    :format: html
+"""

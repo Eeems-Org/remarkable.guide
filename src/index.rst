@@ -2,13 +2,11 @@
 Getting Started
 ===============
 
-The community maintained guide for your reMarkable tablet.
+The community maintained guide for your reMarkable tablet. :raw-html:`<br />`
 
-.. raw:: html
-
-   <br/>
-   <img src="_static/images/favicon.svg" alt="" class="logo">
-   <br/>
+.. image:: /images/_generated/favicon.svg
+   :alt: reMarkable Tablet
+   :class: logo
 
 What is This Guide For?
 =======================

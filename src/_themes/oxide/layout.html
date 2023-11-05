@@ -3,12 +3,8 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta property="og:title" content="{{ docstitle|e }}"/>
-        <meta property="og:type" content="article"/>
-        <meta property="og:site_name" content="reMarkable Guide"/>
-        <meta property="og:article:modified_time" content="{{ last_updated|e }}"/>
+        {{ metatags }}
         {%- if pageurl %}
-        <meta property="og:url" content="{{ pageurl|e }}"/>
         <meta name="giscus:backlink" content="{{ pageurl|e }}">
         {%- endif %}
 
@@ -77,6 +73,15 @@
             {%- endfor %}
         </aside>
         <main>
+            {% if parents %}
+            <nav class="parents">
+                {%- for parent in parents %}
+                <a href="{{ parent.link|e }}" title="{{ parent.title }}">{{ parent.title }}</a>
+                »
+                {% endfor %}
+                {{ title }}
+            </nav>
+            {% endif %}
             {% block body %} {% endblock %}
             <div class="giscus"></div>
             <nav>

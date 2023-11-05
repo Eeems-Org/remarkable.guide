@@ -18,51 +18,51 @@ Over time the community has requested, and been provided with newer versions of 
 
 - Official 1.8 toolchain installer
    - OS version: 2.5 and lower
-   - `Mirror <https://ipfs.eeems.website/ipfs/QmZmt4UtvyLLA8mLde6WspqvhMAKjzfvJW91R3bEja6y3A>`_
+   - `Mirror <https://ipfs.eeems.website/ipfs/QmZmt4UtvyLLA8mLde6WspqvhMAKjzfvJW91R3bEja6y3A>`__
    - sha256sum: ``6299955721bcd9bef92a87ad3cfe4d31df8e2da95b0c4b2cdded4431aa6748b0``
 - Official 2.1.3 toolchain installer
    - OS version: Unknown
-   - `Mirror <https://ipfs.eeems.website/ipfs/Qmdkdeh3bodwDLM9YvPrMoAi6dFYDDCodAnHvjG5voZxiC>`_
+   - `Mirror <https://ipfs.eeems.website/ipfs/Qmdkdeh3bodwDLM9YvPrMoAi6dFYDDCodAnHvjG5voZxiC>`__
    - sha256sum: ``b44fef4e7c7abe1f6b08a1d3b552ee8122427ef85e7edea912a75a76edd910df``
 - Official 3.1.2 toolchain installer
    - OS Version: 2.6 to 3.5
    - rM1:
-      - `Direct Download <https://storage.googleapis.com/remarkable-codex-toolchain/codex-x86_64-cortexa9hf-neon-rm10x-toolchain-3.1.2.sh>`_
-      - `Mirror <https://ipfs.eeems.website/ipfs/Qmbp5gkWAUr7DqVM6CGJm9U1qKHeeaz1QtYsQENE6PEgzQ>`_
+      - `Direct Download <https://storage.googleapis.com/remarkable-codex-toolchain/codex-x86_64-cortexa9hf-neon-rm10x-toolchain-3.1.2.sh>`__
+      - `Mirror <https://ipfs.eeems.website/ipfs/Qmbp5gkWAUr7DqVM6CGJm9U1qKHeeaz1QtYsQENE6PEgzQ>`__
       - sha256sum: ``da75ebb3451f5a2fd0e05eda6163f397551404200801fc7198e3e6f9cc8f710d``
    - rM2:
-      - `Direct Download <https://storage.googleapis.com/remarkable-codex-toolchain/codex-x86_64-cortexa7hf-neon-rm11x-toolchain-3.1.2.sh>`_
-      - `Mirror <https://ipfs.eeems.website/ipfs/QmU5H2Gmr9xqHAWAsFyWzWBpAHe7oWF6WBfYbK752H3CCM>`_
+      - `Direct Download <https://storage.googleapis.com/remarkable-codex-toolchain/codex-x86_64-cortexa7hf-neon-rm11x-toolchain-3.1.2.sh>`__
+      - `Mirror <https://ipfs.eeems.website/ipfs/QmU5H2Gmr9xqHAWAsFyWzWBpAHe7oWF6WBfYbK752H3CCM>`__
       - sha256sum: ``0ed50b016021e4c541af30cd564c4edfd92a48a6b066065634148f3ccca87aae``
 - Official 3.1.15 toolchain installer
    - OS Version: 2.11 to 3.5
    - rM1:
-      - `Direct Download <https://storage.googleapis.com/remarkable-codex-toolchain/codex-x86_64-cortexa9hf-neon-rm10x-toolchain-3.1.15.sh>`_
-      - `Mirror <https://ipfs.eeems.website/ipfs/QmUZ6bunzbS1GDjHAyaz4zLGHg4kddE8oqpyG8uc4epyW3>`_
+      - `Direct Download <https://storage.googleapis.com/remarkable-codex-toolchain/codex-x86_64-cortexa9hf-neon-rm10x-toolchain-3.1.15.sh>`__
+      - `Mirror <https://ipfs.eeems.website/ipfs/QmUZ6bunzbS1GDjHAyaz4zLGHg4kddE8oqpyG8uc4epyW3>`__
       - sha256sum: ``07cb35950a76b8b3d368252f633be5b7fd51540256e891941f6f409f158f4fc1``
    - rM2:
-      - `Direct Download <https://storage.googleapis.com/remarkable-codex-toolchain/codex-x86_64-cortexa7hf-neon-rm11x-toolchain-3.1.15.sh>`_
-      - `Mirror <https://ipfs.eeems.website/ipfs/Qmdw66tZo2ZPRqicK4dtiUUskdHnDFZNpRAKBS5iYKKDTw>`_
+      - `Direct Download <https://storage.googleapis.com/remarkable-codex-toolchain/codex-x86_64-cortexa7hf-neon-rm11x-toolchain-3.1.15.sh>`__
+      - `Mirror <https://ipfs.eeems.website/ipfs/Qmdw66tZo2ZPRqicK4dtiUUskdHnDFZNpRAKBS5iYKKDTw>`__
       - sha256sum: ``1a9a5b4f9bebb6798f890ad91bdba0eddc11e8afee18d5d79e40da193e66411f``
 - Official 4.0.177 toolchain installer
    - OS Version: 3.6.0.1865 and higher
    - rM1:
-      - `Direct Download <https://storage.googleapis.com/remarkable-codex-toolchain/remarkable-platform-image-4.0.117-1-rm1-public-x86_64-toolchain.sh>`_
-      - `Mirror <https://ipfs.eeems.website/ipfs/QmWD1Us3yTByABYNjP3rYhnZzYr3Lbp8roieBHLqAdt9J9>`_
+      - `Direct Download <https://storage.googleapis.com/remarkable-codex-toolchain/remarkable-platform-image-4.0.117-1-rm1-public-x86_64-toolchain.sh>`__
+      - `Mirror <https://ipfs.eeems.website/ipfs/QmWD1Us3yTByABYNjP3rYhnZzYr3Lbp8roieBHLqAdt9J9>`__
       - sha256sum: ``52c3bec1b3cd744d39b2865d6f41d2edfaf337ae053acd48ee995c863a3afcc3``
    - rM2:
-      - `Direct Download <https://storage.googleapis.com/remarkable-codex-toolchain/remarkable-platform-image-4.0.117-1-rm2-public-x86_64-toolchain.sh>`_
-      - `Mirror <https://ipfs.eeems.website/ipfs/QmRvFmCe5evv8StwHANsq6xaGNiTEyGyL97ZoPzKCJzP9D>`_
+      - `Direct Download <https://storage.googleapis.com/remarkable-codex-toolchain/remarkable-platform-image-4.0.117-1-rm2-public-x86_64-toolchain.sh>`__
+      - `Mirror <https://ipfs.eeems.website/ipfs/QmRvFmCe5evv8StwHANsq6xaGNiTEyGyL97ZoPzKCJzP9D>`__
       - sha256sum: ``780d5cc28eb555134d832f67121412232991d04eb44b586f70998d8da75a1533``
 - Official 4.0.117-1 toolchain installer
    - OS Version: 3.6.1.1894 and higher
    - rM1:
-      - `Direct Download <https://storage.googleapis.com/remarkable-codex-toolchain/remarkable-platform-image-4.0.117-rm1-public-x86_64-toolchain.sh>`_
-      - `Mirror <https://ipfs.eeems.website/ipfs/QmaxFeNZ7VoBgfjaB8LL3AFxsVViYeXFe86JhTbELJYf4m>`_
+      - `Direct Download <https://storage.googleapis.com/remarkable-codex-toolchain/remarkable-platform-image-4.0.117-rm1-public-x86_64-toolchain.sh>`__
+      - `Mirror <https://ipfs.eeems.website/ipfs/QmaxFeNZ7VoBgfjaB8LL3AFxsVViYeXFe86JhTbELJYf4m>`__
       - sha256sum: ``5ea2b8fe96e30604456c207c5dc4fe10ca8cdca664ab8cc241cc97f1028e7849``
    - rM2:
-      - `Direct Download <https://storage.googleapis.com/remarkable-codex-toolchain/remarkable-platform-image-4.0.117-rm2-public-x86_64-toolchain.sh>`_
-      - `Mirror <https://ipfs.eeems.website/ipfs/QmSDp52dwAoi4FTvHsZpjGuxLkLETTtVYu6kMdxQUiwJQu>`_
+      - `Direct Download <https://storage.googleapis.com/remarkable-codex-toolchain/remarkable-platform-image-4.0.117-rm2-public-x86_64-toolchain.sh>`__
+      - `Mirror <https://ipfs.eeems.website/ipfs/QmSDp52dwAoi4FTvHsZpjGuxLkLETTtVYu6kMdxQUiwJQu>`__
       - sha256sum: ``29779c80db2a025126d52faad88d553cadda09fff31fb4138a9df1d5b7e8a247``
 
 After the toolchain has been installed, you'll need to source it to load the appropriate environment variables for it's use.
