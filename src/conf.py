@@ -54,5 +54,6 @@ html_js_files = [
 # The expectation is that we explicitely add references
 extensions = [
     "sphinxcontrib.fulltoc",
+    "sphinxext.opengraph",
     "breathe",
 ]
