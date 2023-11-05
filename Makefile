@@ -5,9 +5,9 @@ VENV=$(CURDIR)/.venv
 BUILD=$(CURDIR)/.build
 
 texSvgFiles := $(wildcard $(IMAGES)/*.svg.tex)
-svgFiles := $(texSvgFiles:$(IMAGES)/%.svg.tex=$(SRC)/_static/images/%.svg)
+svgFiles := $(texSvgFiles:$(IMAGES)/%.svg.tex=$(SRC)/images/_generated/%.svg)
 texPngFiles := $(wildcard $(IMAGES)/*.png.tex)
-pngFiles := $(texPngFiles:$(IMAGES)/%.png.tex=$(SRC)/_static/images/%.png)
+pngFiles := $(texPngFiles:$(IMAGES)/%.png.tex=$(SRC)/images/_generated/%.png)
 
 .PHONY: all prod images dev dev-images clean
 
@@ -21,7 +21,7 @@ $(VENV)/bin/activate:
 	python -m pip install wheel; \
 	python -m pip install -r requirements.txt
 
-$(SRC)/_static/images/%.svg: $(IMAGES)/%.svg.tex
+$(SRC)/images/_generated/%.svg: $(IMAGES)/%.svg.tex
 	mkdir -p $(BUILD)/images
 	cd $(IMAGES) && pdflatex \
 	    -shell-escape \
@@ -30,11 +30,10 @@ $(SRC)/_static/images/%.svg: $(IMAGES)/%.svg.tex
 	    -interaction nonstopmode \
 	    -output-directory=$(BUILD)/images \
 	    $*.svg.tex
-	pdf2svg $(BUILD)/images/$*.svg.pdf $(SRC)/_static/images/$*.svg
+	pdf2svg $(BUILD)/images/$*.svg.pdf $(SRC)/images/_generated/$*.svg
 
-$(SRC)/_static/images/%.png: $(IMAGES)/%.png.tex
-	mkdir -p $(SRC)/_static/images
-	mkdir -p $(BUILD)/images
+$(SRC)/images/_generated/%.png: $(IMAGES)/%.png.tex
+	mkdir -p $(BUILD)/images/_generated
 	cd $(IMAGES) && pdflatex \
 	    -shell-escape \
 	    -halt-on-error \
@@ -44,10 +43,11 @@ $(SRC)/_static/images/%.png: $(IMAGES)/%.png.tex
 	    $*.png.tex
 	cd $(BUILD)/images && \
 	    pdf2svg $*.png.pdf $*.svg && \
-	    rsvg-convert $*.svg -o $(SRC)/_static/images/$*.png
+	    rsvg-convert $*.svg -o $(SRC)/images/_generated/$*.png
 
-$(SRC)/_static/images/favicon.png: $(SRC)/_static/images/favicon.svg
-	rsvg-convert -h 180 $(SRC)/_static/images/favicon.svg -o $(SRC)/_static/images/favicon.png
+$(SRC)/_static/images/favicon.png: $(SRC)/images/_generated/favicon.svg
+	mkdir -p $(SRC)/images/_generated
+	rsvg-convert -h 180 $(SRC)/images/_generated/favicon.svg -o $(SRC)/_static/images/favicon.png
 
 images: $(svgFiles) $(pngFiles) $(SRC)/_static/images/favicon.png
 
@@ -86,4 +86,5 @@ dev-images:
 
 clean:
 	rm -rf $(DIST) $(VENV) $(BUILD)
-	rm -f $(SRC)/_static/images/*.png $(SRC)/_static/images/*.svg
+	rm -f $(SRC)/images/_generated/*.png $(SRC)/images/_generated/*.svg
+	rm -f $(SRC)/_static/images/favicon.png

@@ -2,18 +2,11 @@
 SSH Access
 ==========
 
-.. raw:: html
-
-  <div class="warning">
-    ⚠️ Make sure you write down your SSH password. ⚠️
-
+:raw-html:`<div class="warning">⚠️ Make sure you write down your SSH password. ⚠️`
 If you don't write down your password and lose access to the UI, you will be unable to access your device. An :doc:`../../tech/recovery` will be required.
 
 It is also recommended to setup a `ssh-key`_ instead of using password authentication.
-
-.. raw:: html
-
-  </div>
+:raw-html:`</div>`
 
 .. contents:: Contents
    :local:
@@ -74,20 +67,14 @@ Depending on your network configuration, your reMarkable may also be available v
 Setting Up a SSH Key
 ====================
 
-.. raw:: html
-
-  <div class="warning">
-    ⚠️ You may need to enable ssh-rsa keys. ⚠️
+:raw-html:`<div class="warning">⚠️ You may need to enable ssh-rsa keys. ⚠️`
 
 If you encounter the following error when attempting to use a SSH key:
 
   Unable to negotiate with 10.11.99.1 port 22: no matching host key type found. Their offer: ssh-rsa
 
 You will need to enable ssh-rsa keys. See :ref:`enable-ssh-rsa` for more information.
-
-.. raw:: html
-
-  </div>
+:raw-html:`</div>`
 
 Creating a SSH Key
 -------------------
@@ -105,10 +92,7 @@ The following command will generate a private and public SSH key pair:
     -N ''
 
 
-.. raw:: html
-
-  <div class="warning">
-    ⚠️ The generated SSH key will not have a password. ⚠️
+:raw-html:`<div class="warning">⚠️ The generated SSH key will not have a password. ⚠️`
 
 This is a minor security concern, as anybody who can access the file will be able to use it to access your device. You can generate one with a password by using the following command instead:
 
@@ -116,9 +100,7 @@ This is a minor security concern, as anybody who can access the file will be abl
 
   ssh-keygen -f ~/.ssh/id_rsa_remarkable
 
-.. raw:: html
-
-  </div>
+:raw-html:`</div>`
 
 Installing a SSH Key on Your Device
 -----------------------------------
@@ -135,10 +117,7 @@ The following command will install your SSH public key on your device:
     -i ~/.ssh/id_rsa_remarkable \
     root@10.11.99.1
 
-.. raw:: html
-
-  <div class="warning">
-    ⚠️ This will not work properly until OpenSSH 9.4. ⚠️
+:raw-html:`<div class="warning">⚠️ This will not work properly until OpenSSH 9.4. ⚠️`
 
 Due to a bug in ssh-copy-id this installs to the wrong location on the device on versions of OpenSSH older than 9.4. You can check your version of OpenSSH with the following command on your computer:
 
@@ -161,9 +140,7 @@ Due to a bug in ssh-copy-id this installs to the wrong location on the device on
   ssh root@10.11.99.1 \
     chmod 600 /home/root/.ssh/authorized_keys
 
-.. raw:: html
-
-  </div>
+:raw-html:`</div>`
 
 .. _ssh_config:
 

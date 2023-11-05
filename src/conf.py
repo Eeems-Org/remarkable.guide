@@ -69,3 +69,8 @@ extensions = [
     "sphinxext.opengraph",
     "breathe",
 ]
+
+rst_prolog = """
+.. role:: raw-html(raw)
+    :format: html
+"""
