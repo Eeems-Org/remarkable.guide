@@ -26,7 +26,7 @@ The following command will backup the existing system splash screens.
 
   changescrn -b
 
-The backed up files are stored to ``/opt/usr/share/backupscrns``. Backing up a second time will overwrite the initial backup, so only run it once after installing or :ref:`reenabling toltec after a system upgrade <toltec-reenable>`.
+The backed up files are stored to ``/opt/usr/share/backupscrns``. This is done automatically when installing changescrn with toltec. Backing up a second time will overwrite the initial backup, so you should only do this if there is something wrong with your existing backup, and you know your current splash screens are stock.
 
 Restoring System Splash Screens from Backup
 ===========================================
@@ -57,3 +57,22 @@ The following command will change a system splash screen to the newly specified 
   changescrn -c suspended my-file.png
 
 See :doc:`../access/file-transfer` for more information on how to copy files to the device.
+
+Changing a System Splash Screen to one in Toltec
+================================================
+
+`Toltec contains splash screens <https://toltec-dev.org/stable/#section-splashscreens>`_ that can be installed using :ref:`opkg <opkg>`.
+
+.. code-block:: bash
+
+  opkg install splashscreen-suspended-barnsley_fern
+
+Removing a Splash Screen from Toltec
+====================================
+
+Splash screens installed using :ref:`opkg <opkg>` can be removed like any other package:
+
+.. code-block:: shell
+
+  opkg remove splashscreen-suspended-barnsley_fern
+
