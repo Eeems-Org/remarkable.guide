@@ -28,7 +28,7 @@ For other third party software, they may provide an uninstall script, or they ma
 Can I downgrade to a different OS version?
 ==========================================
 
-Yes! You can use `codexctl <https://github.com/Jayy001/codexctl>`_ to install different OS versions on your device.
+Yes! You can use `codexctl <https://github.com/Jayy001/codexctl>`_ to download and install different OS versions on your device.
 
 The file format used to store lines you draw in notebooks/pdfs/epubs sometimes changes between versions. This means that if you downgrade, you may not be able to open one, or all, of your notebooks until you upgrade again.
 
