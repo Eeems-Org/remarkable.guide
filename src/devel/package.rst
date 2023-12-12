@@ -63,7 +63,7 @@ The following example github action will compile a package and upload it as a bu
       name: Build and package
       runs-on: ubuntu-latest
       steps:
-        - uses: actions/checkout@v3
+        - uses: actions/checkout@v4
         - name: Setup Python
           uses: actions/setup-python@v4
           with:
@@ -78,7 +78,7 @@ The following example github action will compile a package and upload it as a bu
           uses: actions/upload-artifact@v3
           with:
             name: packages
-            path: release
+            path: dist/rm*/*.ipk
 
 External Links
 ==============
