@@ -100,8 +100,7 @@ Download the xochitl log file found at ``/home/root/log.txt``.
 External links
 ==============
 
-- Make the usb web interface available after the usb cable has been disconnected: `webinterface-persist-ip <https://github.com/rM-self-serve/webinterface-persist-ip>`_
 - Make the usb web interface available immediately after starting the device: `webinterface-onboot <https://github.com/rM-self-serve/webinterface-onboot>`_
 - Make the usb web interface available over wifi: `webinterface-wifi <https://github.com/rM-self-serve/webinterface-wifi>`_
-- Add an upload button to the usb web interface: `upload_button <https://github.com/rM-self-serve/upload_button>`_
+- Add an upload button to the usb web interface: `webinterface-upload-button <https://github.com/rM-self-serve/webinterface-upload-button>`_
 - The usb web interface is likely using this to serve itself: `reMarkable/qtwebapp <https://github.com/reMarkable/qtwebapp>`_
