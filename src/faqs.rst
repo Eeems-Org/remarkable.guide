@@ -14,6 +14,8 @@ Is it safe to factory reset my device?
 
 Not exactly. The factory reset mechanism isn't a true factory reset. It will wipe your data partition, but it doesn't do anything to the root partition where the OS is installed. This can soft brick your device if you have toltec installed, or other third party software. The :doc:`tech/factory-reset` page contains instructions on how to properly factory reset your device.
 
+There have been instances where factory resetting without third party software installed results in the SSH password no longer displaying on the "Copyright and licenses" screen. This appears to be due to the root partition running out of space. See `My device is connected to wifi, but can't sync or check for updates, how can I fix this?`_ for more information on resolving this.
+
 How do I remove all third party software from my device?
 ========================================================
 
