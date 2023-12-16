@@ -2,7 +2,7 @@
 SSH Access
 ==========
 
-:raw-html:`<div class="warning">⚠️ Make sure you write down your SSH password. ⚠️`
+:raw-html:`<div class="warning">⚠️ Make sure you write down your SSH password. ⚠️<br/>`
 If you don't write down your password and lose access to the UI, you will be unable to access your device. An :doc:`../../tech/recovery` will be required.
 
 It is also recommended to setup a `ssh-key`_ instead of using password authentication.
