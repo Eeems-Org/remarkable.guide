@@ -69,5 +69,7 @@ External Links
 
 - Fork of upgrade_engine source (Original was made private)
    https://github.com/Eeems/update_engine
+- Archive of what appears to be the update server
+   https://github.com/reMarkable/omaha-server-legacy
 - It seems to be based off of the update-engine for chrome os
    https://chromium.googlesource.com/aosp/platform/system/update_engine/
