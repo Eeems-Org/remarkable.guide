@@ -2,7 +2,7 @@
 rMlib
 =====
 
-rMlib is a library that provides a declaritive UI framework based on Flutter.
+rMlib is a library that provides a declarative UI framework based on Flutter.
 
 Pros
 ====

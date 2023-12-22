@@ -13,7 +13,7 @@ See :ref:`upgrade` for information on how to downgrade to a supported OS version
 
 :raw-html:`</div>`
 
-Toltec is a community-maintained repository of free software for the `reMarkable tablet <https://remarkable.com/>`_. It is the recommended way to install software on the device. While you can manually install software on your device, this is fraught with compatibility issues, as well as different standards that may not be compatibile. Toltec makes sure that software works together and applies standards that work together for all the packages it contains.
+Toltec is a community-maintained repository of free software for the `reMarkable tablet <https://remarkable.com/>`_. It is the recommended way to install software on the device. While you can manually install software on your device, this is fraught with compatibility issues, as well as different standards that may not be compatible. Toltec makes sure that software works together and applies standards that work together for all the packages it contains.
 
 .. contents:: Contents
    :local:
@@ -68,7 +68,7 @@ The following commands will upgrade all the packages on your system to the lates
 Uninstall Toltec
 ----------------
 
-The following command will uninstall totlec from your device. This includes removing any modifications to the root partition.
+The following command will uninstall toltec from your device. This includes removing any modifications to the root partition.
 
 .. code-block:: shell
 
@@ -79,7 +79,7 @@ The following command will uninstall totlec from your device. This includes remo
 Reenable Toltec After A System Upgrade
 --------------------------------------
 
-After a system upgrade, the root partition has been completly replaced with a stock OS. Toltec will need to be reenabled, which will recreate the necessary modifications to the root partition.
+After a system upgrade, the root partition has been completely replaced with a stock OS. Toltec will need to be reenabled, which will recreate the necessary modifications to the root partition.
 
 .. code-block:: shell
 
@@ -103,4 +103,4 @@ You can switch back to stable with the following command:
 
   toltecctl switch-branch stable
 
-This will not downgrade any pacakges you have installed from the testing repository, so you may need to :ref:`remove them <opkg-remove>` first.
+This will not downgrade any packages you have installed from the testing repository, so you may need to :ref:`remove them <opkg-remove>` first.

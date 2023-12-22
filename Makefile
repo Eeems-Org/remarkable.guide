@@ -51,7 +51,11 @@ $(SRC)/_static/images/favicon.png: $(SRC)/images/_generated/favicon.svg
 
 images: $(svgFiles) $(pngFiles) $(SRC)/_static/images/favicon.png
 
-$(DIST): $(VENV)/bin/activate images
+spelling: $(VENV)/bin/activate images
+	. $(VENV)/bin/activate; \
+	    sphinx-build -a -n -E -b spelling $(SRC) $(DIST)
+
+$(DIST): $(VENV)/bin/activate images spelling
 	. $(VENV)/bin/activate; \
 	    sphinx-build -a -n -E -b html $(SRC) $(DIST)
 	# Clean unused files inherited from default theme

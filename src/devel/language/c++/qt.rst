@@ -19,8 +19,8 @@ Cons
 - Not compatible with the Qt framework that can be installed through toltec.
 - Can have a larger memory footprint than other frameworks.
 
-Extenal Links
-=============
+External Links
+==============
 
 - Qt 5 Documentation
    https://doc.qt.io/qt-5/

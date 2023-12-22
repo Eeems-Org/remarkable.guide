@@ -2,7 +2,7 @@
 Liboxide
 ========
 
-Liboxide is the library that all the inernal applications for :ref:`oxide-launcher` use. It was built to simplify code sharing between these applications, but also grew to create simplified interfaces for various tasks required by applications on the device. It's largely assumed that appliations are built using the :doc:`qt` that use liboxide.
+Liboxide is the library that all the internal applications for :ref:`oxide-launcher` use. It was built to simplify code sharing between these applications, but also grew to create simplified interfaces for various tasks required by applications on the device. It's largely assumed that applications are built using the :doc:`qt` that use liboxide.
 
 .. code-block:: console
 

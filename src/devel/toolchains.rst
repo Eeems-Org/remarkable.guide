@@ -86,7 +86,7 @@ You will still need to source the toolchain when running scripts inside the cont
 Toltec Toolchain
 ================
 
-Toltec provides it's own `toolchain in the form of docker images <https://github.com/toltec-dev/toolchain>`_. These can be used manually, but they are indended to be used in conjunction with the `toltecmk <https://pypi.org/project/toltecmk/>`_ tool to generate a toltec package.
+Toltec provides it's own `toolchain in the form of docker images <https://github.com/toltec-dev/toolchain>`_. These can be used manually, but they are intended to be used in conjunction with the `toltecmk <https://pypi.org/project/toltecmk/>`_ tool to generate a toltec package.
 
 .. code-block:: console
 

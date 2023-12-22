@@ -1,6 +1,6 @@
-=========================
-Frequenty Asked Questions
-=========================
+==========================
+Frequently Asked Questions
+==========================
 .. contents::
    :depth: 1
    :local:
@@ -67,6 +67,13 @@ I updated my OS, but now I can't SSH into my device. How do I fix it?
 =====================================================================
 
 Every time you update your OS, the cryptographic key used to identify the device over SSH is regenerated. This means that the software you are using to SSH into your device will no longer trust it and refuse to connect. To resolve this you need to remove the entry for the reMarkable in your ``known_hosts`` file on your computer. This is usually located in the ``.ssh`` folder in your home directory. The software you use to SSH may have these values stored elsewhere.
+
+What happens to third party software when I update or downgrade my OS?
+======================================================================
+
+When you update or downgrade your OS, the entire root partition is replaced with the new OS. Only the data partition, which is all files under ``/home`` is left untouched. This means that any third party software that relies on modifying files outside of ``/home`` will need to be reapplied.
+
+For software with toltec you just need to follow the instructions in :ref:`toltec-reenable`. For third party software installed with other methods, you will need to check their instructions.
 
 I noticed something incorrect on this site, how do I get that fixed?
 ====================================================================
