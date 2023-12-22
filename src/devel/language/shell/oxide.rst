@@ -6,8 +6,8 @@ Oxide Utils
 
 .. code-block:: console
 
-  $ opkg intall rot
-  $ opkg intall oxide-utils
+  $ opkg install rot
+  $ opkg install oxide-utils
   $ opkg install inject_evdev
 
 Pros
