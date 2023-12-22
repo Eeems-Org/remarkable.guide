@@ -65,12 +65,15 @@ ogp_custom_meta_tags = [
 # Do not enable sphinx.ext.autosectionlabel
 # The expectation is that we explicitely add references
 extensions = [
-    "sphinxcontrib.fulltoc",
-    "sphinxext.opengraph",
     "breathe",
+    "sphinxcontrib.fulltoc",
+    "sphinxcontrib.spelling",
+    "sphinxext.opengraph",
 ]
 
 rst_prolog = """
 .. role:: raw-html(raw)
     :format: html
 """
+
+spelling_word_list_filename = "spelling_wordlist.txt"

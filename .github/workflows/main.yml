@@ -35,7 +35,7 @@ jobs:
     - name: Apt-Cache-Action
       uses: Eeems-Org/apt-cache-action@v1
       with:
-        packages: texlive-base texlive-latex-extra
+        packages: texlive-base texlive-latex-extra enchant-2
     - name: Build website
       shell: bash
       run: make -j $(nproc) prod

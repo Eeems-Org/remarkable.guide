@@ -20,7 +20,7 @@ Cons
 - Can have a larger memory footprint than other frameworks.
 
 External Links
-=============
+==============
 
 - Qt 5 Documentation
    https://doc.qt.io/qt-5/
