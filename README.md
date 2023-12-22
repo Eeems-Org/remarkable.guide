@@ -16,12 +16,15 @@ You will need the following installed:
 - python
 - texlive-base
 - texlive-latex-extra
+- enchant
 
 At which point in time you can build the site with `make`.
 
 If you would like to have the site automatically update as you change files in [src](src), you can run `make dev`. This will open the build
 of the site in your browser, and auto update the page when you make changes. If you would like to automatically update
 [src/_static/images](src/_static/images) as you make changes to [images](images), you can run `make dev-images`.
+
+You can run `make spelling` to just check spelling of the guide.
 
 ### How do I add a page to the site?
 Create a new `*.rst` file in [src](src).

@@ -68,7 +68,7 @@ The following commands will upgrade all the packages on your system to the lates
 Uninstall Toltec
 ----------------
 
-The following command will uninstall totlec from your device. This includes removing any modifications to the root partition.
+The following command will uninstall toltec from your device. This includes removing any modifications to the root partition.
 
 .. code-block:: shell
 
