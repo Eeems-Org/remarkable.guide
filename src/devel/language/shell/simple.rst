@@ -6,7 +6,7 @@ Simple app script is a tool that allows scripts to easily create an interactable
 
 .. code-block:: console
 
-  $ opkg intall simple
+  $ opkg install simple
 
 Pros
 ====

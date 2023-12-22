@@ -6,7 +6,7 @@ A small tool & library to print text & images to an eInk Linux framebuffer.
 
 .. code-block:: console
 
-  $ opkg intall fbink
+  $ opkg isntall fbink
 
 Pros
 ====
