@@ -6,7 +6,7 @@ Due to the cross platform nature of modern .NET, no porting was required to get 
 
 .. code-block:: console
 
-  $ opkg intall dotnet-sdk
+  $ opkg install dotnet-sdk
 
 Pros
 ====
