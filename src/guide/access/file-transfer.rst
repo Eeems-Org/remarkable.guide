@@ -1,6 +1,6 @@
-=================
-Transfering Files
-=================
+==================
+Transferring Files
+==================
 
 :raw-html:`<div class="warning">⚠️ Try to keep your files inside /home/root ⚠️`
 

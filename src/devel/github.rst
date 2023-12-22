@@ -7,7 +7,7 @@ The community has several best practices for remarkable related github repositor
 remarkable-tablet topic
 =======================
 
-In order to make new repositories more discouverable, they should be added to the `remarkable-tablet <https://github.com/topics/remarkable-tablet>`_ topic.
+In order to make new repositories more discoverable, they should be added to the `remarkable-tablet <https://github.com/topics/remarkable-tablet>`_ topic.
 
 License
 =======

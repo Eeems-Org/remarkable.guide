@@ -1,6 +1,6 @@
-=========================
-Frequenty Asked Questions
-=========================
+==========================
+Frequently Asked Questions
+==========================
 .. contents::
    :depth: 1
    :local:

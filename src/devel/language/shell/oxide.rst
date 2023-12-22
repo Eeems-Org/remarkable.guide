@@ -30,5 +30,5 @@ External Links
    https://oxide.eeems.codes/documentation/01_usage.html#cli-tool-rot
 - Oxide API Documentation
    https://oxide.eeems.codes/documentation/api/00_overview.html
-- Tutorial writing a script that uses oxide's comand line tools
+- Tutorial writing a script that uses oxide's command line tools
    https://eeems.website/writing-a-simple-oxide-application/

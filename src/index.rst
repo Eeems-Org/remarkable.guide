@@ -19,7 +19,7 @@ This guide will:
 - :doc:`Provide more in depth technical guides for your device <tech/index>`
 - :doc:`Give you tips and tricks for using your device <tips/index>`
 - :doc:`Provide information on developing software for your device <devel/index>`
-- :doc:`Answer Frequenty Asked Questions <faqs>`
+- :doc:`Answer Frequently Asked Questions <faqs>`
 
 Other Resources
 ===============
