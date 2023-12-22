@@ -16,7 +16,7 @@ You will need the following installed:
 - python
 - texlive-base
 - texlive-latex-extra
-- enchant
+- enchant-2
 
 At which point in time you can build the site with `make`.
 
