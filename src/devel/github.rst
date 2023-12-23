@@ -19,6 +19,8 @@ Github Actions
 
 In order to reduce friction for users who want to use your application, it's best to include automated builds using github actions. Our recommendation would be to use toltecmk to :doc:`build a toltec package <package>`, and include it as a release artifact.
 
+If you are writing your own action meant to assist with developing applications for the reMarkable tablet, please include the `action <https://github.com/topics/action>`_ and `remarkable-tablet <https://github.com/topics/remarkable-tablet>`_ topics to your repository. Users can then easily find all the available github actions with with `a simple search <https://github.com/search?q=topic%3Aaction+topic%3Aremarkable-tablet&type=repositories>`_.
+
 Badges
 ======
 
