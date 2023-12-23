@@ -4,7 +4,11 @@ Picking A Toolchain
 
 When building applications, you'll need a toolchain that allows you to cross compile for the device. There are several toolchains currently available.
 
-`Old Wiki Article <https://web.archive.org/web/20230129144348/https://remarkablewiki.com/devel/toolchain>`_
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+- `Old Wiki Article <https://web.archive.org/web/20230129144348/https://remarkablewiki.com/devel/toolchain>`_
 
 Official Toolchain
 ==================

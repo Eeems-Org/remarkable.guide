@@ -30,12 +30,12 @@ jobs:
       uses: awalsh128/cache-apt-pkgs-action@latest
       with:
         execute_install_scripts: true
-        packages: graphviz libgraphviz-dev librsvg2-bin pdf2svg
+        packages: graphviz libgraphviz-dev librsvg2-bin pdf2svg enchant-2
         version: 1.0
     - name: Apt-Cache-Action
       uses: Eeems-Org/apt-cache-action@v1
       with:
-        packages: texlive-base texlive-latex-extra enchant-2
+        packages: texlive-base texlive-latex-extra
     - name: Build website
       shell: bash
       run: make -j $(nproc) prod
