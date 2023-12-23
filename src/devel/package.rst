@@ -60,25 +60,20 @@ The following example github action will compile a package and upload it as a bu
     pull_request:
   jobs:
     build:
-      name: Build and package
-      runs-on: ubuntu-latest
+      name: Build package
+      runs-on: ubuntu-20.04
       steps:
-        - uses: actions/checkout@v4
-        - name: Setup Python
-          uses: actions/setup-python@v4
-          with:
-            python-version: '3.11'
-        - name: Install toltecmk
-          run: pip install toltecmk
+        - name: Checkout the Git repository
+          uses: actions/checkout@v4
+        - name: Create source tarball
+          run: tar -czvf src.tar.gz src
         - name: Build package
-          run: |
-            tar -czvf src.tar.gz src
-            toltecmk
+          uses: toltec-dev/build-action@v1
         - name: Save packages
           uses: actions/upload-artifact@v3
           with:
             name: packages
-            path: dist/rm*/*.ipk
+            path: dist/**/*.ipk
 
 External Links
 ==============
