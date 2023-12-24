@@ -25,3 +25,5 @@ External Links
 
 - Repository
    https://github.com/Jayy001/Carta
+- Template for reMarkable Carta applications
+   https://github.com/Eeems-Org/remarkable-template-python-carta-app
