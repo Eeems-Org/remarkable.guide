@@ -13,10 +13,35 @@ Backing Up Your Documents
 
 Documents managed by the built in software (xochitl) are stored in ``/home/root/.local/share/remarkable/xochitl/`` and you can use the following to back them up to your computer:
 
-.. code-block:: shell
+.. tabs::
 
-  mkdir -p remarkable-backup/files
-  scp -r root@remarkable:/home/root/.local/share/remarkable/xochitl/ remarkable-backup/files/
+  .. code-tab:: bash Linux
+
+    mkdir -p remarkable-backup/files
+    scp -r \
+      root@remarkable:/home/root/.local/share/remarkable/xochitl/ \
+      remarkable-backup/files/
+
+  .. code-tab:: bash macOS
+
+    mkdir -p remarkable-backup/files
+    scp -r \
+      root@remarkable:/home/root/.local/share/remarkable/xochitl/ \
+      remarkable-backup/files/
+
+  .. code-tab:: bat Windows (CMD)
+
+    mkdir -p remarkable-backup/files
+    scp -r ^
+      root@remarkable:/home/root/.local/share/remarkable/xochitl/ ^
+      remarkable-backup/files/
+
+  .. code-tab:: pwsh Windows (PowerShell)
+
+    mkdir -p remarkable-backup/files
+    scp -r `
+      root@remarkable:/home/root/.local/share/remarkable/xochitl/ `
+      remarkable-backup/files/
 
 
 Backing Up Your Configuration
@@ -24,10 +49,35 @@ Backing Up Your Configuration
 
 Xochitl's configuration is stored in ``/home/root/.config/remarkable/xochitl.conf``. This contains the root password in plain text, assuming you haven't changed it on the device.
 
-.. code-block:: shell
+.. tabs::
 
-  mkdir -p remarkable-backup
-  scp -r root@remarkable:/home/root/.config/remarkable/xochitl.conf remarkable-backup/
+  .. code-tab:: bash Linux
+
+    mkdir -p remarkable-backup
+    scp -r \
+      root@remarkable:/home/root/.config/remarkable/xochitl.conf \
+      remarkable-backup/
+
+  .. code-tab:: bash macOS
+
+    mkdir -p remarkable-backup
+    scp -r \
+      root@remarkable:/home/root/.config/remarkable/xochitl.conf \
+      remarkable-backup/
+
+  .. code-tab:: bat Windows (CMD)
+
+    mkdir -p remarkable-backup
+    scp -r ^
+      root@remarkable:/home/root/.config/remarkable/xochitl.conf ^
+      remarkable-backup/
+
+  .. code-tab:: pwsh Windows (PowerShell)
+
+    mkdir -p remarkable-backup
+    scp -r `
+      root@remarkable:/home/root/.config/remarkable/xochitl.conf
+      remarkable-backup/
 
 Backing Up Other Data
 =====================

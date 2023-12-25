@@ -24,17 +24,76 @@ OpenSSH
 
 If you have OpenSSH installed, you can use `scp <https://www.man7.org/linux/man-pages/man1/scp.1.html>`_ from the command line to copy files to and from the device:
 
-.. code-block:: shell
 
-  scp ./file.txt root@10.11.99.1:/home/root/file.txt
-  scp root@10.11.99.1:/home/root/file.txt ./file.txt
+.. tabs::
+
+  .. code-tab:: bash Linux
+
+   scp \
+      ./file.txt \
+      root@10.11.99.1:/home/root/file.txt
+   scp \
+      root@10.11.99.1:/home/root/file.txt \
+      ./file.txt
+
+  .. code-tab:: bash macOS
+
+   scp \
+      ./file.txt \
+      root@10.11.99.1:/home/root/file.txt
+   scp \
+      root@10.11.99.1:/home/root/file.txt \
+      ./file.txt
+
+  .. code-tab:: bat Windows (CMD)
+
+   scp ^
+      ./file.txt ^
+      root@10.11.99.1:/home/root/file.txt
+   scp ^
+      root@10.11.99.1:/home/root/file.txt ^
+      ./file.txt
+
+  .. code-tab:: pwsh Windows (PowerShell)
+
+   scp `
+      ./file.txt `
+      root@10.11.99.1:/home/root/file.txt
+   scp `
+      root@10.11.99.1:/home/root/file.txt `
+      ./file.txt
 
 You can also use `sftp <https://www.man7.org/linux/man-pages/man1/sftp.1.html>`_ from the command line to copy files to and from the device:
 
-.. code-block:: shell
+.. tabs::
 
-  echo put file.txt | sftp root@10.11.99.1
-  echo get file.txt | sftp root@10.11.99.1
+  .. code-tab:: bash Linux
+
+   echo put file.txt \
+   | sftp root@10.11.99.1
+   echo get file.txt \
+   | sftp root@10.11.99.1
+
+  .. code-tab:: bash macOS
+
+   echo put file.txt \
+   | sftp root@10.11.99.1
+   echo get file.txt \
+   | sftp root@10.11.99.1
+
+  .. code-tab:: bat Windows (CMD)
+
+   echo put file.txt ^
+   | sftp root@10.11.99.1
+   echo get file.txt ^
+   | sftp root@10.11.99.1
+
+  .. code-tab:: pwsh Windows (PowerShell)
+
+   echo put file.txt `
+   | sftp root@10.11.99.1
+   echo get file.txt `
+   | sftp root@10.11.99.1
 
 PuTTY
 -----

@@ -103,3 +103,26 @@ Ideally you don't add stub pages, but sometimes it's better to just add a page a
 This page is just a stub that needs to be completed. You can `open a PR on the repo <https://github.com/Eeems-Org/remarkable.guide>`_ to add more content to the page.
 :raw-html:`</div>`
 ```
+
+### How do I add grouped tabs with examples of commands for different shells?
+
+```rst
+.. tabs::
+
+  .. code-tab:: bash Linux
+
+    ssh root@10.11.99.1
+
+  .. code-tab:: bash macOS
+
+    ssh root@10.11.99.1
+
+  .. code-tab:: bat Windows (CMD)
+
+    ssh root@10.11.99.1
+
+  .. code-tab:: pwsh Windows (PowerShell)
+
+    ssh root@10.11.99.1
+
+```
