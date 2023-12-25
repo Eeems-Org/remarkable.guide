@@ -9,7 +9,7 @@ svgFiles := $(texSvgFiles:$(IMAGES)/%.svg.tex=$(SRC)/images/_generated/%.svg)
 texPngFiles := $(wildcard $(IMAGES)/*.png.tex)
 pngFiles := $(texPngFiles:$(IMAGES)/%.png.tex=$(SRC)/images/_generated/%.png)
 
-.PHONY: all prod images dev dev-images clean
+.PHONY: all prod images spelling linkcheck doctest dev dev-images clean
 
 all: prod
 
@@ -53,11 +53,32 @@ images: $(svgFiles) $(pngFiles) $(SRC)/_static/images/favicon.png
 
 spelling: $(VENV)/bin/activate images
 	. $(VENV)/bin/activate; \
-	    sphinx-build -a -n -E -b spelling $(SRC) $(DIST)
+	    sphinx-build \
+	        -anEb spelling \
+	        $(SRC) \
+	        $(DIST)
+
+linkcheck: $(VENV)/bin/activate images
+	. $(VENV)/bin/activate; \
+	    sphinx-build \
+	        -anEb linkcheck \
+	        $(SRC) \
+	        $(DIST)
+
+
+doctest: $(VENV)/bin/activate images
+	. $(VENV)/bin/activate; \
+	    sphinx-build \
+	        -anEb doctest \
+	        $(SRC) \
+	        $(DIST)
 
 $(DIST): $(VENV)/bin/activate images spelling
 	. $(VENV)/bin/activate; \
-	    sphinx-build -a -n -E -b html $(SRC) $(DIST)
+	    sphinx-build \
+	        -anEWb html \
+	        $(SRC) \
+	        $(DIST)
 	# Clean unused files inherited from default theme
 	rm -rf $(DIST)/.doctrees \
 	    $(DIST)/.buildinfo \
@@ -76,11 +97,17 @@ $(DIST): $(VENV)/bin/activate images spelling
 	    $(DIST)/_static/searchtools.js \
 	    $(DIST)/_static/underscore-1.13.1.js \
 
-prod: $(DIST)
+prod: $(DIST) linkcheck
 
 dev: $(VENV)/bin/activate $(SRC)/_static/images/favicon.png $(svgFiles)
 	. $(VENV)/bin/activate; \
-	    sphinx-autobuild -a $(SRC) $(DIST) --host 0.0.0.0 --port=0 --open-browser
+	sphinx-autobuild \
+	    --host 0.0.0.0 \
+	    --port=0 \
+	    --open-browser \
+	    -a \
+	    $(SRC) \
+	    $(DIST)
 
 dev-images:
 	while inotifywait -e close_write,create $(IMAGES) $(IMAGES)/*.tex;do \
