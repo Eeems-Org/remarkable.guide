@@ -13,7 +13,7 @@ pngFiles := $(texPngFiles:$(IMAGES)/%.png.tex=$(SRC)/images/_generated/%.png)
 
 all: prod
 
-$(VENV)/bin/activate:
+$(VENV)/bin/activate: requirements.txt
 	@echo "Setting up development virtual env in .venv"
 	python -m venv .venv; \
 	. .venv/bin/activate; \
