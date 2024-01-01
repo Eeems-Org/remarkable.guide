@@ -67,7 +67,7 @@ Command Line Interface
 Update File Format
 ==================
 
-The `protobuf <https://protobuf.dev/>`_ definition of the update file format can be found in `update_metadata.proto </_static/update_metadata.proto>`_.
+The `protobuf <https://protobuf.dev/>`_ definition of the update file format can be found in :download:`update_metadata.proto <update_metadata.proto>`.
 
 .. code-block:: c
 
