@@ -66,6 +66,6 @@ Access the USB Web Interface over Tailscale
 ===========================================
 Information regarding the :doc:`USB Web Interface <usb-web-interface>`.
 
-.. code-block:: shell
+.. code-block:: bash
 
    tailscale serve 10.11.99.1:80
