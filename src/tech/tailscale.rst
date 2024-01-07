@@ -61,3 +61,11 @@ The recommended way to configure this is via OpenSSH's `config files <https://ww
     HostName my.host.name
     Port 1234
     ProxyCommand /opt/bin/tailscale nc %h %p
+
+Access the USB Web Interface over Tailscale
+===========================================
+Information regarding the :doc:`USB Web Interface <usb-web-interface>`.
+
+.. code-block:: bash
+
+   tailscale serve 10.11.99.1:80
