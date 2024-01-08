@@ -49,7 +49,7 @@ Over time the community has requested, and been provided with newer versions of 
       - `Mirror <https://ipfs.eeems.website/ipfs/Qmdw66tZo2ZPRqicK4dtiUUskdHnDFZNpRAKBS5iYKKDTw>`__
       - sha256sum: ``1a9a5b4f9bebb6798f890ad91bdba0eddc11e8afee18d5d79e40da193e66411f``
 - Official 4.0.177 toolchain installer
-   - OS Version: 3.6.0.1865 and higher
+   - OS Version: 3.6.0.1865 to 3.8.3.1976
    - rM1:
       - `Direct Download <https://storage.googleapis.com/remarkable-codex-toolchain/remarkable-platform-image-4.0.117-1-rm1-public-x86_64-toolchain.sh>`__
       - `Mirror <https://ipfs.eeems.website/ipfs/QmWD1Us3yTByABYNjP3rYhnZzYr3Lbp8roieBHLqAdt9J9>`__
@@ -59,7 +59,7 @@ Over time the community has requested, and been provided with newer versions of 
       - `Mirror <https://ipfs.eeems.website/ipfs/QmRvFmCe5evv8StwHANsq6xaGNiTEyGyL97ZoPzKCJzP9D>`__
       - sha256sum: ``780d5cc28eb555134d832f67121412232991d04eb44b586f70998d8da75a1533``
 - Official 4.0.117-1 toolchain installer
-   - OS Version: 3.6.1.1894 and higher
+   - OS Version: 3.6.1.1894 to 3.8.3.1976
    - rM1:
       - `Direct Download <https://storage.googleapis.com/remarkable-codex-toolchain/remarkable-platform-image-4.0.117-rm1-public-x86_64-toolchain.sh>`__
       - `Mirror <https://ipfs.eeems.website/ipfs/QmaxFeNZ7VoBgfjaB8LL3AFxsVViYeXFe86JhTbELJYf4m>`__
