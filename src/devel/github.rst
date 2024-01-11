@@ -61,7 +61,7 @@ This badge is used to indicate what the package name is in toltec, so users know
   :alt: rM2 supported
   :target: https://toltec-dev.org/
 
-Replace ``<name`` with the name of the package in toltec.
+Replace ``<name>`` with the name of the package in toltec.
 
 .. code-block:: markdown
 
