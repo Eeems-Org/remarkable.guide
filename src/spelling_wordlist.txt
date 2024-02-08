@@ -17,6 +17,8 @@ distro
 distros
 dotnet
 Dropbear
+dualboot
+dualbooting
 eInk
 entware
 epubs
@@ -50,6 +52,7 @@ reimplements
 reMarkable
 remux
 rM
+rmfakecloud
 rmKit
 rMlib
 rsa
@@ -70,6 +73,7 @@ Unregister
 usb
 userspace
 utils
+wget
 wifi
 wpa
 xochitl

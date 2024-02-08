@@ -5,7 +5,7 @@ Dualbooting the reMarkable
 :raw-html:`<div class="warning">⚠️ Make sure you have backed up your SSH password. ⚠️<br/>`
 
 If you didn't write down your password and something goes terribly wrong, you will be unable to access your device. An :doc:`../tech/recovery` will be required.
-It is also recommended to setup a `SSH Key <../guide/access/ssh.html#ssh-key>`_ instead of using password authentication.
+It is also recommended to setup a :doc:`../guide/access/ssh#ssh_key` instead of using password authentication.
 
 When SSHing to a different OS version, you will get a cryptographic key mismatch. This is normal, and you can safely remove the offending line from your ~/.ssh/known_hosts file.
 :raw-html:`</div>`
@@ -120,7 +120,7 @@ Setting it manually
 If you are not running toltec, you can edit the ``/etc/systemd/system/xochitl.service`` file and add the following content **right before** ``ExecStart=/usr/bin/xochitl/system``
 
 .. code-block:: shell
-  
+
   Environment=QML_DISK_CACHE_PATH="/home/root/.qml"
 
 The following is an example of the modified service
