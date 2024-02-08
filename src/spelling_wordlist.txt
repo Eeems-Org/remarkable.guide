@@ -6,6 +6,8 @@ bugfixes
 Carta
 changescrn
 chroot
+codex
+codexctl
 config
 cryptographic
 DBus

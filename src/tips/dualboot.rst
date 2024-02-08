@@ -2,10 +2,14 @@
 Dualbooting the reMarkable
 ==========================
 
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
 :raw-html:`<div class="warning">⚠️ Make sure you have backed up your SSH password. ⚠️<br/>`
 
 If you didn't write down your password and something goes terribly wrong, you will be unable to access your device. An :doc:`../tech/recovery` will be required.
-It is also recommended to setup a :doc:`../guide/access/ssh#ssh_key` instead of using password authentication.
+It is also recommended to setup a :doc:`../guide/access/ssh` - :ref:`ssh-key` instead of using password authentication.
 
 When SSHing to a different OS version, you will get a cryptographic key mismatch. This is normal, and you can safely remove the offending line from your ~/.ssh/known_hosts file.
 :raw-html:`</div>`
@@ -102,20 +106,21 @@ There are two ways around this problem:
 - Changing the ``QML_DISK_CACHE_PATH`` variable on the other partition (recommended)
 
 Editing the ``QML_DISK_CACHE_PATH`` variable
-============================================
+--------------------------------------------
 
 The QML_DISK_CACHE_PATH variable specifies the cache path of a QT Application (like  xochitl). It can be set in different ways, depending if you are on toltec or not
 
 Setting it on toltec
-====================
+____________________
+
 If you are running toltec on the second partition (i.e. the one without rM-hacks), you can just create the ``/home/root/.qml`` folder and create a new file in ``/opt/etc/xochitl.env.d``, called for example ``99-xochitl.sh``, with the following content:
 
 .. code-block:: shell
 
   export QML_DISK_CACHE_PATH="/home/root/.qml"
 
-Setting it manually
-===================
+Setting it without toltec
+_________________________
 
 If you are not running toltec, you can edit the ``/etc/systemd/system/xochitl.service`` file and add the following content **right before** ``ExecStart=/usr/bin/xochitl/system``
 
