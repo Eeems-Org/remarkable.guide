@@ -111,6 +111,7 @@ Setting it on toltec
 If you are running toltec on the second partition (i.e. the one without rM-hacks), you can just create the ``/home/root/.qml`` folder and create a new file in ``/opt/etc/xochitl.env.d``, called for example ``99-xochitl.sh``, with the following content:
 
 .. code-block:: shell
+
   export QML_DISK_CACHE_PATH="/home/root/.qml"
 
 Setting it manually
@@ -119,6 +120,7 @@ Setting it manually
 If you are not running toltec, you can edit the ``/etc/systemd/system/xochitl.service`` file and add the following content **right before** ``ExecStart=/usr/bin/xochitl/system``
 
 .. code-block:: shell
+  
   Environment=QML_DISK_CACHE_PATH="/home/root/.qml"
 
 The following is an example of the modified service
