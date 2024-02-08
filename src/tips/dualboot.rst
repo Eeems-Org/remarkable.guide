@@ -102,6 +102,47 @@ There are two ways around this problem:
 - Changing the ``QML_DISK_CACHE_PATH`` variable on the other partition (recommended)
 
 Editing the ``QML_DISK_CACHE_PATH`` variable
----------------------------------------------
+============================================
 
-WIP
+The QML_DISK_CACHE_PATH variable specifies the cache path of a QT Application (like  xochitl). It can be set in different ways, depending if you are on toltec or not
+
+Setting it on toltec
+====================
+If you are running toltec on the second partition (i.e. the one without rM-hacks), you can just create the ``/home/root/.qml`` folder and create a new file in ``/opt/etc/xochitl.env.d``, called for example ``99-xochitl.sh``, with the following content:
+
+.. code-block:: shell
+  export QML_DISK_CACHE_PATH="/home/root/.qml"
+
+Setting it manually
+===================
+
+If you are not running toltec, you can edit the ``/etc/systemd/system/xochitl.service`` file and add the following content **right before** ``ExecStart=/usr/bin/xochitl/system``
+
+.. code-block:: shell
+  Environment=QML_DISK_CACHE_PATH="/home/root/.qml"
+
+The following is an example of the modified service
+
+.. code-block:: console
+
+  [Unit]
+  Description=reMarkable main application
+  StartLimitIntervalSec=600
+  StartLimitBurst=4
+  OnFailure=remarkable-fail.service
+  After=home.mount
+  Wants=rm-sync.service
+
+  [Service]
+  Environment=QML_DISK_CACHE_PATH="/home/root/.qml"
+  ExecStart=/usr/bin/xochitl --system
+  Restart=on-failure
+  WatchdogSec=60
+
+  [Install]
+  WantedBy=multi-user.target
+
+Using rmfakecloud
+=================
+
+The cloud must be configured on both partitions, as it will otherwise get disconnected at every reboot due to an invalid login token.
