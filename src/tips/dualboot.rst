@@ -9,7 +9,7 @@ Dualbooting the reMarkable
 :raw-html:`<div class="warning">⚠️ Make sure you have backed up your SSH password. ⚠️<br/>`
 
 If you didn't write down your password and something goes terribly wrong, you will be unable to access your device. An :doc:`../tech/recovery` will be required.
-It is also recommended to setup a :doc:`../guide/access/ssh` - :ref:`ssh-key` instead of using password authentication.
+It is also recommended to :ref:`setup a SSH key <ssh-key>` instead of using password authentication.
 
 When SSHing to a different OS version, you will get a cryptographic key mismatch. This is normal, and you can safely remove the offending line from your ~/.ssh/known_hosts file.
 :raw-html:`</div>`
