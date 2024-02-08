@@ -8,7 +8,6 @@ If you don't write down your password and lose access to the UI, you will be una
 It is also recommended to setup a `ssh-key`_ instead of using password authentication.
 :raw-html:`</div>`
 
-
 .. contents:: Contents
    :local:
    :backlinks: none
