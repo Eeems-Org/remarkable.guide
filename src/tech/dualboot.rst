@@ -113,7 +113,7 @@ The QML_DISK_CACHE_PATH variable specifies the cache path of a QT Application (l
 Setting it on toltec
 ____________________
 
-If you are running toltec on the second partition (i.e. the one without rM-hacks), you can just create the ``/home/root/.qml`` folder and create a new file in ``/opt/etc/xochitl.env.d``, called for example ``99-xochitl.sh``, with the following content:
+If you are running toltec on the second partition (i.e. the one without rM-hacks), you can just create the ``/home/root/.qml`` folder and create a new file ending in .env in ``/opt/etc/xochitl.env.d``, called for example ``99-xochitl.env``, with the following content:
 
 .. code-block:: shell
 
