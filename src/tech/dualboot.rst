@@ -21,9 +21,9 @@ For downgrading, refer to :ref:`upgrade`
 
 :raw-html:`</div>`
 
-Before starting, you should know what versions to dualboot, depending on hat you want to do. For toltec, it is recommended to follow `the toltec website <https://toltec-dev.org/>`_, while for rM hacks, you should read `the table on their github repo <https://gthub.com/mb1986/rm-hacks>`_.
+Before starting, you should know what versions to dualboot, depending on hat you want to do. For toltec, it is recommended to follow :doc:`this guide <../guide/software/toltec>`, while for rM hacks, you should read `the table on their github repo <https://github.com/mb1986/rm-hacks>`_.
 
-Here, I'll be using 2.15.1189 (for Toltec) and 3.9 (for rm-hacks)
+Here, I'll be using 2.15.1189 (for Toltec) and 3.9.4 (for rm-hacks)
 
 Updating to the first OS
 ========================
