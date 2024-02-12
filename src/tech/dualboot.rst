@@ -6,20 +6,19 @@ Dualbooting the reMarkable
    :local:
    :backlinks: none
 
-:raw-html:`<div class="warning">⚠️ Make sure you have backed up your SSH password. ⚠️<br/>`
+:raw-html:`<div class="warning">⚠️ Before starting ⚠️<br/>`
 
-If you didn't write down your password and something goes terribly wrong, you will be unable to access your device. An :doc:`../tech/recovery` will be required.
-It is also recommended to :ref:`setup a SSH key <ssh-key>` instead of using password authentication.
+This guide requires :doc:`../guide/access/ssh`
 
-When SSHing to a different OS version, you will get a cryptographic key mismatch. This is normal, and you can safely remove the offending line from your ~/.ssh/known_hosts file.
 :raw-html:`</div>`
 
 Choosing the versions
 =====================
 
-:raw-html:`<div class="warning">⚠️ Documents warning. ⚠️`
+:raw-html:`<div class="warning">⚠️ Note for downgrading ⚠️`
 
-All documents opened on 3.x can't be opened in previous versions because of the new .lines format, which adds infinite scrolling and typed text.
+For downgrading, refer to :ref:`upgrade`
+
 :raw-html:`</div>`
 
 Before starting, you should know what versions to dualboot, depending on hat you want to do. For toltec, it is recommended to follow `the toltec website <https://toltec-dev.org/>`_, while for rM hacks, you should read `the table on their github repo <https://gthub.com/mb1986/rm-hacks>`_.
