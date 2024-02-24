@@ -29,7 +29,7 @@ Installing the switch service
 
 While this is already a dualboot, it is very impractical, as you need to use `switch.sh <https://github.com/ddvk/remarkable-update/tree/main?tab=readme-ov-file#to-switch-the-partition-ie-boot-the-previous-version>`_ every time. 
 
-To fix this, you can use `a simple systemd service <https://github.com/FouzR/rM_dualboot/>`_.
+`FouzR/rM_dualboot <https://github.com/FouzR/rM_dualboot>`_ handles setting up both partitions to automatically run ``switch.sh`` every time the device is rebooted.
 
 Installing rM-hacks
 ===================
