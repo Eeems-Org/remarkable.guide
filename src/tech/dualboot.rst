@@ -59,11 +59,19 @@ If you are running toltec on the second partition (i.e. the one without rM-hacks
 Setting it without toltec
 _________________________
 
-If you are not running toltec, you can override the xochitl ``QML_CACHE_PATH`` using ``systemctl edit xochitl``. 
+If you are not running toltec, you can override the xochitl ``QML_CACHE_PATH`` using systemd override files. 
 
 .. code-block:: shell
-  Environment=QML_DISK_CACHE_PATH="/home/root/.qml"
-
+  # Create overrides folder
+  mkdir /etc/systemd/system/xochitl.service.d
+  # Create override
+  cat > /etc/systemd/system/xochitl.service.d/cache.conf << EOF
+  [Service]
+  Environment=QML_DISK_CACHE_PATH="/home/root/.qml/"
+  EOF
+  # Reload units
+  systemctl daemon-reload
+  # Restart xochitl
 
 
 Using rmfakecloud
