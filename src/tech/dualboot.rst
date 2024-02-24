@@ -22,7 +22,7 @@ In this example we are assuming that 2.15.1189 is being used for Toltec, and tha
 Downgrading/Upgrading the OS
 ============================
 
-To download (and install) a specific OS version, follow :ref:`these instructions <upgrade>`
+For more information on how to install a specific OS version see :ref:`upgrade`.
 
 Installing the switch service
 =============================
@@ -59,34 +59,14 @@ If you are running toltec on the second partition (i.e. the one without rM-hacks
 Setting it without toltec
 _________________________
 
-If you are not running toltec, you can edit the ``/etc/systemd/system/xochitl.service`` file and add the following content **right before** ``ExecStart=/usr/bin/xochitl/system``
+If you are not running toltec, you can override the xochitl ``QML_CACHE_PATH`` using ``systemctl edit xochitl``. 
 
 .. code-block:: shell
-
   Environment=QML_DISK_CACHE_PATH="/home/root/.qml"
 
-The following is an example of the modified service
 
-.. code-block:: console
-
-  [Unit]
-  Description=reMarkable main application
-  StartLimitIntervalSec=600
-  StartLimitBurst=4
-  OnFailure=remarkable-fail.service
-  After=home.mount
-  Wants=rm-sync.service
-
-  [Service]
-  Environment=QML_DISK_CACHE_PATH="/home/root/.qml"
-  ExecStart=/usr/bin/xochitl --system
-  Restart=on-failure
-  WatchdogSec=60
-
-  [Install]
-  WantedBy=multi-user.target
 
 Using rmfakecloud
 =================
 
-The cloud must be configured on both partitions, as it will otherwise get disconnected at every reboot due to an invalid login token.
+The cloud must be `configured <https://ddvk.github.io/rmfakecloud/remarkable/setup>` on both partitions, as it will otherwise get disconnected at every reboot due to an invalid login token.
