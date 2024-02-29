@@ -82,11 +82,11 @@ Over time the community has requested, and been provided with newer versions of 
    - OS Version: to
    - rM1:
       - `Direct Download <https://storage.googleapis.com/remarkable-codex-toolchain/remarkable-platform-image-4.0.367-rm1-public-x86_64-toolchain.sh>`__
-      - `Mirror <https://ipfs.eeems.website/ipfs/>`__
+      - `Mirror <https://ipfs.eeems.website/ipfs/QmUVLbq949yAyqWSepzH7S1415kLFdLuR7qnNN7K6yX9Hv>`__
       - sha256sum: ``314d535ee8dfc7f7811969cd0c16c718e2f5caef6b74a64d18e6b0c97a253381``
    - rM2:
       - `Direct Download <https://storage.googleapis.com/remarkable-codex-toolchain/remarkable-platform-image-4.0.367-rm2-public-x86_64-toolchain.sh>`__
-      - `Mirror <https://ipfs.eeems.website/ipfs/>`__
+      - `Mirror <https://ipfs.eeems.website/ipfs/QmRS3fpSX9oeSZtEFhMs98XXdCKbLcByUYgeJU13dviskm>`__
       - sha256sum: ``43e9fb449b6e50fdff6b6110ea8fff167049b829628641537cb41738bd710eeb``
 
 After the toolchain has been installed, you'll need to source it to load the appropriate environment variables for it's use.
