@@ -72,21 +72,21 @@ Over time the community has requested, and been provided with newer versions of 
    - OS Version: 3.8.3.1976 to 
    - rM1:
       - `Direct Download <https://storage.googleapis.com/remarkable-codex-toolchain/remarkable-platform-image-4.0.258-rm1-public-x86_64-toolchain.sh>`__
-      - `Mirror <>`__
+      - `Mirror <https://ipfs.eeems.website/ipfs/Qme2Hx8C5sYox4xzoJN9Jy2PCk4mEaGtbLHxFVTFTikC4E>`__
       - sha256sum: ``0b0112917ff5c06c3ce34e6b81d5c6edca772323d28eea0f2e19b76f9fcb943a``
    - rM2:
       - `Direct Download <https://storage.googleapis.com/remarkable-codex-toolchain/remarkable-platform-image-4.0.258-rm2-public-x86_64-toolchain.sh>`__
-      - `Mirror <>`__
+      - `Mirror <https://ipfs.eeems.website/ipfs/QmeFkFUgPsVGKHNvKo87nYGLp8tR8HujeVFTB8JB4TqbS6>`__
       - sha256sum: ``44717d3e14327b87bfd66fc61c3a7d585feafc91b639e43e31fbf3e1557f6bd1``
 - Official 4.0.367 toolchain installer
    - OS Version: to
    - rM1:
       - `Direct Download <https://storage.googleapis.com/remarkable-codex-toolchain/remarkable-platform-image-4.0.367-rm1-public-x86_64-toolchain.sh>`__
-      - `Mirror <>`__
+      - `Mirror <https://ipfs.eeems.website/ipfs/>`__
       - sha256sum: ``314d535ee8dfc7f7811969cd0c16c718e2f5caef6b74a64d18e6b0c97a253381``
    - rM2:
       - `Direct Download <https://storage.googleapis.com/remarkable-codex-toolchain/remarkable-platform-image-4.0.367-rm2-public-x86_64-toolchain.sh>`__
-      - `Mirror <>`__
+      - `Mirror <https://ipfs.eeems.website/ipfs/>`__
       - sha256sum: ``43e9fb449b6e50fdff6b6110ea8fff167049b829628641537cb41738bd710eeb``
 
 After the toolchain has been installed, you'll need to source it to load the appropriate environment variables for it's use.
