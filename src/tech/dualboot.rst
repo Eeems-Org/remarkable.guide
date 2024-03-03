@@ -67,7 +67,7 @@ If you are not running toltec, you can override the xochitl ``QML_CACHE_PATH`` u
   # Create overrides folder
   mkdir /etc/systemd/system/xochitl.service.d
   # Create override
-  cat > /etc/systemd/system/xochitl.service.d/cache.conf << EOF
+  cat > /etc/systemd/system/xochitl.service.d/override-qmlcache.conf << EOF
   [Service]
   Environment=QML_DISK_CACHE_PATH="/home/root/.qml/"
   EOF
