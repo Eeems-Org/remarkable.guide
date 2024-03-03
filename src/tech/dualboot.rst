@@ -34,13 +34,8 @@ While this is already a dualboot, it is very impractical, as you need to use `sw
 Installing rM-hacks
 ===================
 
-reMarkable Hacks can be installed normally but, when loading xochitl from a version without the hacks, at the next reboot, they will disappear.
-
-There are two ways around this problem:
-
-- Bind mounting ``/home/root/.cache/remarkable/xochitl/qmlcache/`` somewhere where it does not get overwritten
-
-- Changing the ``QML_DISK_CACHE_PATH`` variable on the other partition (recommended)
+To install rm-hacks, follow the `rm-hacks installation instructions` <https://github.com/mb1986/rm-hacks?tab=readme-ov-file#installation>`_. After this, you will need to make changes to ensure that it doesn't get removed when you reboot into the other partition. There are two ways to handle this. The recommended way is to change the ``QML_DISK_CACHE_PATH`` environment variable. The other option would be to bind mount 
+``/home/root/.cache/remarkable/xochitl/qmlcache/`` to a different location.
 
 Editing the ``QML_DISK_CACHE_PATH`` variable
 --------------------------------------------
