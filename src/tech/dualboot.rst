@@ -50,11 +50,13 @@ The ``QML_DISK_CACHE_PATH`` variable specifies the `QML <https://doc.qt.io/qt-5/
 Setting it on toltec
 ____________________
 
-If you are running toltec on the second partition (i.e. the one without rM-hacks), you can just create the ``/home/root/.qml`` folder and create a new file ending in .env in ``/opt/etc/xochitl.env.d``, called for example ``99-xochitl.env``, with the following content:
+If you are running toltec on the second partition you can create an environment override for xochitl that will set the ``QML_DISK_CACHE_PATH``.
 
 .. code-block:: shell
-
-  export QML_DISK_CACHE_PATH="/home/root/.qml"
+mkdir -p /home/root/.cache/qmlcache
+cat > /opt/etc/xochitl.env.d/99-override-qmldir.env << EOF
+export QML_DISK_CACHE_PATH="/home/root/.cache/qmlcache"
+EOF
 
 Setting it without toltec
 _________________________
