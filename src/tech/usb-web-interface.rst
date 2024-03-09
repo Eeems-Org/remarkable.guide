@@ -65,7 +65,7 @@ Download the PDF for a specific document.
     -I "http://10.11.99.1/download/$guid/placeholder"
 
 ``GET http://10.11.99.1/download/{guid}/rmdoc``
----------------------------------
+-----------------------------------------------
 
 Download the raw notebook file(.rmdoc) for a specific document.(New in version 3.10)
 
