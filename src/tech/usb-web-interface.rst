@@ -67,7 +67,7 @@ Download the PDF for a specific document.
 ``GET http://10.11.99.1/download/{guid}/rmdoc``
 -----------------------------------------------
 
-Download the raw notebook file(.rmdoc) for a specific document.(New in version 3.10)
+Download the raw notebook file(.rmdoc) for a specific document.(From v3.9)
 
 **Example:**
 
