@@ -41,7 +41,7 @@ Connecting via SSH
 Picking a SSH client
 --------------------
 
-Newer versions of windows already come with OpenSSH installed. If it is not installed you can `install OpenSSH for windows <https://learn.microsoft.com/en-us/windows-server/administration/openssh/openssh_install_firstuse?tabs=gui>`_ (Only the OpenSSH client is needed). You may also use `PuTTY <https://putty.org/>`_.
+Newer versions of windows already come with OpenSSH installed. If it is not installed you can `install OpenSSH for windows <https://learn.microsoft.com/en-us/windows-server/administration/openssh/openssh_install_firstuse?tabs=gui>`_ (Only the OpenSSH client is needed). You may also use `PuTTY <https://www.chiark.greenend.org.uk/~sgtatham/putty/>`_.
 
 On MacOS and Linux you will have OpenSSH or a compatible SSH client installed already that can be used.
 
@@ -140,7 +140,7 @@ Creating a SSH Key
 
 A SSH key allows you to connect to your device over SSH without having to use the password.
 
-If you are using `PuTTY <https://putty.org/>`_, you will need to use `PuTTYgen <https://the.earth.li/~sgtatham/putty/0.78/htmldoc/Chapter8.html#pubkey-puttygen>`_ to generate your SSH key instead.
+If you are using `PuTTY <https://www.chiark.greenend.org.uk/~sgtatham/putty/>`_, you will need to use `PuTTYgen <https://the.earth.li/~sgtatham/putty/0.78/htmldoc/Chapter8.html#pubkey-puttygen>`_ to generate your SSH key instead.
 
 The following command will generate a private and public SSH key pair:
 
@@ -205,7 +205,7 @@ Installing a SSH Key on Your Device
 
 After you've created your SSH key private and public key pair, you'll need to install your public key to your device. This way it will trust the private key used by your computer when it attempts to connect over SSH.
 
-If you are using `PuTTY <https://putty.org/>`_, you will need to follow the `PuTTYgen documentation <https://the.earth.li/~sgtatham/putty/0.78/htmldoc/Chapter8.html#pubkey-gettingready>`_ for installing your SSH key instead.
+If you are using `PuTTY <https://www.chiark.greenend.org.uk/~sgtatham/putty/>`_, you will need to follow the `PuTTYgen documentation <https://the.earth.li/~sgtatham/putty/0.78/htmldoc/Chapter8.html#pubkey-gettingready>`_ for installing your SSH key instead.
 
 The following command will install your SSH public key on your device:
 
