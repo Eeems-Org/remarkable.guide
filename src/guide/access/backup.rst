@@ -31,14 +31,14 @@ Documents managed by the built in software (xochitl) are stored in ``/home/root/
 
   .. code-tab:: bat Windows (CMD)
 
-    mkdir -p remarkable-backup/files
+    if not exist remarkable-backup\files mkdir remarkable-backup\files
     scp -r ^
       root@remarkable:/home/root/.local/share/remarkable/xochitl/ ^
       remarkable-backup/files/
 
   .. code-tab:: pwsh Windows (PowerShell)
 
-    mkdir -p remarkable-backup/files
+    New-Item -ItemType Directory -Force -Path remarkable-backup/files
     scp -r `
       root@remarkable:/home/root/.local/share/remarkable/xochitl/ `
       remarkable-backup/files/
@@ -67,16 +67,16 @@ Xochitl's configuration is stored in ``/home/root/.config/remarkable/xochitl.con
 
   .. code-tab:: bat Windows (CMD)
 
-    mkdir -p remarkable-backup
+    if not exist remarkable-backup mkdir remarkable-backup
     scp -r ^
       root@remarkable:/home/root/.config/remarkable/xochitl.conf ^
       remarkable-backup/
 
   .. code-tab:: pwsh Windows (PowerShell)
 
-    mkdir -p remarkable-backup
+    New-Item -ItemType Directory -Force -Path remarkable-backup
     scp -r `
-      root@remarkable:/home/root/.config/remarkable/xochitl.conf
+      root@remarkable:/home/root/.config/remarkable/xochitl.conf `
       remarkable-backup/
 
 Backing Up Other Data
