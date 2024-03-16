@@ -90,9 +90,9 @@ You can also use `sftp <https://www.man7.org/linux/man-pages/man1/sftp.1.html>`_
 
   .. code-tab:: pwsh Windows (PowerShell)
 
-   echo put file.txt `
+   echo "put file.txt" `
    | sftp root@10.11.99.1
-   echo get file.txt `
+   echo "get file.txt" `
    | sftp root@10.11.99.1
 
 PuTTY
