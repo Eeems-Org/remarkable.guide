@@ -18,7 +18,17 @@ This will cause you to lose access to your device, unless you have an :ref:`SSH 
 In order to factory reset the device you will need to do the following steps:
 
 1. Uninstall any manually added third party software or modifications.
-2. Uninstall toltec: ``toltecctl uninstall``
-3. Ensure that xochitl is enabled: ``systemctl enable --now xochitl``
+2. Uninstall toltec:
+
+.. code-block:: shell
+
+  toltecctl uninstall
+
+3. Ensure that xochitl is enabled:
+
+.. code-block:: shell
+
+  systemctl enable --now xochitl
+
 4. Perform two :ref:`system upgrades <upgrade>`.
 5. Perform a factory reset through the UI.

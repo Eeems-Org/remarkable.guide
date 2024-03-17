@@ -69,6 +69,7 @@ extensions = [
     "sphinxcontrib.spelling",
     "sphinxext.opengraph",
     "sphinx.ext.doctest",
+    "sphinx_tabs.tabs",
 ]
 
 rst_prolog = """
@@ -89,5 +90,6 @@ linkcheck_allowed_redirects = {
     r"https://support\.remarkable\.com": "https://support.remarkable.com/s/",
     r"https://discord\.gg/ATqQGfu": "https://discord.com/invite/ATqQGfu",
 }
-
 linkcheck_retries = 5
+
+sphinx_tabs_valid_builders = ["linkcheck"]
