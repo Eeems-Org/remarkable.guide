@@ -29,7 +29,7 @@ html_js_files = [
             "crossorigin": "anonymous",
         },
     ),
-    f"oxide.js?_t={time.time()}",
+    "oxide.js",
     (
         "https://giscus.app/client.js",
         {
@@ -65,10 +65,11 @@ ogp_custom_meta_tags = [
 # Do not enable sphinx.ext.autosectionlabel
 # The expectation is that we explicitely add references
 extensions = [
-    "breathe",
     "sphinxcontrib.fulltoc",
     "sphinxcontrib.spelling",
     "sphinxext.opengraph",
+    "sphinx.ext.doctest",
+    "sphinx_tabs.tabs",
 ]
 
 rst_prolog = """
@@ -77,3 +78,18 @@ rst_prolog = """
 """
 
 spelling_word_list_filename = "spelling_wordlist.txt"
+
+linkcheck_anchors_ignore_for_url = [
+    r"https://docs\.ackee\.electerious\.com/.*",
+    r"https://github\.com/.*",
+]
+linkcheck_ignore = [
+    r"https://web.archive.org/.*",
+]
+linkcheck_allowed_redirects = {
+    r"https://support\.remarkable\.com": "https://support.remarkable.com/s/",
+    r"https://discord\.gg/ATqQGfu": "https://discord.com/invite/ATqQGfu",
+}
+linkcheck_retries = 5
+
+sphinx_tabs_valid_builders = ["linkcheck"]

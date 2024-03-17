@@ -5,10 +5,13 @@ behaviour
 bugfixes
 Carta
 changescrn
+chroot
 config
 cryptographic
 DBus
 ddvk
+debian
+dev
 discoverable
 distro
 distros
@@ -17,6 +20,7 @@ Dropbear
 eInk
 entware
 epubs
+executables
 fb
 filesystem
 framebuffer
@@ -32,6 +36,7 @@ Libremarkable
 linux
 lockscreen
 nc
+nuitka
 pdfs
 pogo
 pre

@@ -54,10 +54,18 @@ Tailscale has a basic built in "nc" which tunnels traffic over the tailnet.
 
 The recommended way to configure this is via OpenSSH's `config files <https://www.ssh.com/academy/ssh/config#format-of-ssh-client-config-file-ssh_config>`_:
 
-.. code-block:: console
+.. code-block:: text
 
   Host myalias
     User myuser
     HostName my.host.name
     Port 1234
     ProxyCommand /opt/bin/tailscale nc %h %p
+
+Access the USB Web Interface over Tailscale
+===========================================
+Information regarding the :doc:`USB Web Interface <usb-web-interface>`.
+
+.. code-block:: bash
+
+   tailscale serve 10.11.99.1:80
