@@ -167,7 +167,7 @@ The following command will generate a private and public SSH key pair:
   .. code-tab:: bat Windows (CMD)
 
     ssh-keygen ^
-      -f %userprofile%/.ssh/id_rsa_remarkable ^
+      -f %userprofile%\.ssh\id_rsa_remarkable ^
       -N ''
 
   .. code-tab:: pwsh Windows (PowerShell)
@@ -192,7 +192,7 @@ This is a minor security concern, as anybody who can access the file will be abl
 
   .. code-tab:: bat Windows (CMD)
 
-    ssh-keygen -f ~/.ssh/id_rsa_remarkable
+    ssh-keygen -f %userprofile%\.ssh\id_rsa_remarkable
 
   .. code-tab:: pwsh Windows (PowerShell)
 
@@ -225,15 +225,23 @@ The following command will install your SSH public key on your device:
 
   .. code-tab:: bat Windows (CMD)
 
-    ssh-copy-id ^
-      -i ~/.ssh/id_rsa_remarkable ^
-      root@10.11.99.1
+    ssh root@10.11.99.1 ^
+      mkdir -p -m 700 /home/root/.ssh
+    type %userprofile%\.ssh\id_rsa_remarkable.pub ^
+    | ssh root@10.11.99.1 ^
+      tee -a /home/root/.ssh/authorized_keys
+    ssh root@10.11.99.1 ^
+      chmod 600 /home/root/.ssh/authorized_keys
 
   .. code-tab:: pwsh Windows (PowerShell)
 
-    ssh-copy-id `
-      -i ~/.ssh/id_rsa_remarkable `
-      root@10.11.99.1
+    ssh root@10.11.99.1 `
+      mkdir -p -m 700 /home/root/.ssh
+    type ~/.ssh/id_rsa_remarkable.pub `
+    | ssh root@10.11.99.1 `
+      tee -a /home/root/.ssh/authorized_keys
+    ssh root@10.11.99.1 `
+      chmod 600 /home/root/.ssh/authorized_keys
 
 :raw-html:`<div class="warning">⚠️ This will not work properly until OpenSSH 9.4. ⚠️`
 
@@ -288,7 +296,7 @@ Due to a bug in ssh-copy-id this installs to the wrong location on the device on
 
     ssh root@10.11.99.1 ^
       mkdir -p -m 700 /home/root/.ssh
-    type ~/.ssh/id_rsa_remarkable.pub ^
+    type %userprofile%\.ssh\id_rsa_remarkable.pub ^
     | ssh root@10.11.99.1 ^
       tee -a /home/root/.ssh/authorized_keys
     ssh root@10.11.99.1 ^
