@@ -15,7 +15,7 @@ This guide requires :doc:`../guide/access/ssh`
 Choosing the versions
 =====================
 
-Before starting, you should know what versions to dualboot, depending on hat you want to do. For toltec, it is recommended to follow :doc:`this guide <../guide/software/toltec>`, while for rM hacks, you should read `the table on their github repo <https://github.com/mb1986/rm-hacks>`_.
+Before starting, you should know what versions to dualboot, depending on hat you want to do. For toltec, it is recommended to follow :doc:`the toltec guide <../guide/software/toltec>`, while for rM hacks, you should read `the table on their github repo <https://github.com/mb1986/rm-hacks>`_.
 
 Downgrading/Upgrading the OS
 ============================
@@ -32,7 +32,7 @@ While this is already a dualboot, it is very impractical, as you need to use `sw
 Installing rM-hacks
 ===================
 
-To install rm-hacks, follow the `rm-hacks installation instructions` <https://github.com/mb1986/rm-hacks?tab=readme-ov-file#installation>`_. After this, you will need to make changes to ensure that it doesn't get removed when you reboot into the other partition. There are two ways to handle this. The recommended way is to change the ``QML_DISK_CACHE_PATH`` environment variable. The other option would be to bind mount 
+To install rm-hacks, follow the `rm-hacks installation instructions <https://github.com/mb1986/rm-hacks?tab=readme-ov-file#installation>`_. After this, you will need to make changes to ensure that it doesn't get removed when you reboot into the other partition. There are two ways to handle this. The recommended way is to change the ``QML_DISK_CACHE_PATH`` environment variable. The other option would be to bind mount 
 ``/home/root/.cache/remarkable/xochitl/qmlcache/`` to a different location.
 
 Editing the ``QML_DISK_CACHE_PATH`` variable
@@ -74,4 +74,4 @@ If you are not running toltec, you can override the xochitl ``QML_CACHE_PATH`` u
 Using rmfakecloud
 =================
 
-The cloud must be `configured <https://ddvk.github.io/rmfakecloud/remarkable/setup>` on both partitions, as it will otherwise get disconnected at every reboot due to an invalid login token.
+The cloud must be `configured <https://ddvk.github.io/rmfakecloud/remarkable/setup>`_ on both partitions, as it will otherwise get disconnected at every reboot due to an invalid login token.
