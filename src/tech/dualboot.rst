@@ -46,10 +46,11 @@ ____________________
 If you are running toltec on the second partition you can create an environment override for xochitl that will set the ``QML_DISK_CACHE_PATH``.
 
 .. code-block:: shell
-mkdir -p /home/root/.cache/qmlcache
-cat > /opt/etc/xochitl.env.d/99-override-qmldir.env << EOF
-export QML_DISK_CACHE_PATH="/home/root/.cache/qmlcache"
-EOF
+
+  mkdir -p /home/root/.cache/qmlcache
+  cat > /opt/etc/xochitl.env.d/99-override-qmldir.env << EOF
+  export QML_DISK_CACHE_PATH="/home/root/.cache/qmlcache"
+  EOF
 
 Setting it without toltec
 _________________________
@@ -57,6 +58,7 @@ _________________________
 If you are not running toltec, you can override the xochitl ``QML_CACHE_PATH`` using systemd override files. 
 
 .. code-block:: shell
+
   # Create overrides folder
   mkdir /etc/systemd/system/xochitl.service.d
   # Create override
