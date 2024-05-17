@@ -168,7 +168,7 @@ The following command will generate a private and public SSH key pair:
 
     ssh-keygen ^
       -f %userprofile%\.ssh\id_rsa_remarkable ^
-      -N ''
+      -N ""
 
   .. code-tab:: pwsh Windows (PowerShell)
 
