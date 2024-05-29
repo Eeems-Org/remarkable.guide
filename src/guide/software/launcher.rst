@@ -67,8 +67,7 @@ Installation
 .. code-block:: shell
 
   opkg install oxide
-  systemctl disable --now xochitl launcher
-  systemctl enable --now tarnish
+  launcherctl switch-launcher --start oxide
 
 Remux
 =====
@@ -100,4 +99,4 @@ Installation
 .. code-block:: shell
 
   opkg install remux
-  systemctl enable --now remux
+  launcherctl switch-launcher --start remux
