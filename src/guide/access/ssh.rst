@@ -173,7 +173,7 @@ The following command will generate a private and public SSH key pair:
   .. code-tab:: pwsh Windows (PowerShell)
 
     ssh-keygen `
-      -f ~/.ssh/id_rsa_remarkable `
+      -f $env:USERPROFILE/.ssh/id_rsa_remarkable `
       -N ''
 
 :raw-html:`<div class="warning">⚠️ The generated SSH key will not have a password. ⚠️`
@@ -196,7 +196,7 @@ This is a minor security concern, as anybody who can access the file will be abl
 
   .. code-tab:: pwsh Windows (PowerShell)
 
-    ssh-keygen -f ~/.ssh/id_rsa_remarkable
+    ssh-keygen -f $env:USERPROFILE/.ssh/id_rsa_remarkable
 
 :raw-html:`</div>`
 
@@ -237,7 +237,7 @@ The following command will install your SSH public key on your device:
 
     ssh root@10.11.99.1 `
       mkdir -p -m 700 /home/root/.ssh
-    type ~/.ssh/id_rsa_remarkable.pub `
+    type $env:USERPROFILE/.ssh/id_rsa_remarkable.pub `
     | ssh root@10.11.99.1 `
       tee -a /home/root/.ssh/authorized_keys
     ssh root@10.11.99.1 `
@@ -306,7 +306,7 @@ Due to a bug in ssh-copy-id this installs to the wrong location on the device on
 
     ssh root@10.11.99.1 `
       mkdir -p -m 700 /home/root/.ssh
-    type ~/.ssh/id_rsa_remarkable.pub `
+    type $env:USERPROFILE/.ssh/id_rsa_remarkable.pub `
     | ssh root@10.11.99.1 `
       tee -a /home/root/.ssh/authorized_keys
     ssh root@10.11.99.1 `
