@@ -22,8 +22,21 @@ Filesystem Layout
 /opt/etc
 --------
 
+/opt/etc/init.d
+---------------
+
+Entware packages will add executable scripts here to manage services that you
+install. Toltec allows you to manage this with ``rcctl``, which is provided by
+the ``entware-rc`` package.
+
 /opt/bin
 --------
+
+/opt/libexec
+------------
+
+/opt/sbin
+---------
 
 /opt/share/remarkable/templates
 -------------------------------
@@ -37,14 +50,25 @@ Executable files in this folder will be treated as possible launchers for
 /opt/share/toltec/reenable.d
 ----------------------------
 
+Contains empty files owned by packages to indicate that they make changes to
+the root partition, and will need to be reinstalled when re-enabling toltec
+after an update.
+
 /opt/usr/share/backupscrns
 --------------------------
+
+Used by ``changescrn`` to backup the stock splashscreens.
 
 /opt/share/remarkable/splashscreens
 -----------------------------------
 
+This directory contains the active splashscreen from an installed toltec package.
+
 /opt/usr/share/kernelctl
 ------------------------
+
+Contains ``tar.bz2`` archives that kernelctl uses to manage the currently
+installed linux kernel.
 
 /opt/usr/share/licenses
 -----------------------
@@ -61,6 +85,18 @@ that the device comes with.
 
 Systemd Services
 ================
+
+entware-rc@.service
+-------------------
+
+opt.mount
+---------
+
+rm2fb.service
+-------------
+
+launcher.service
+----------------
 
 Launcher Application Registration
 =================================

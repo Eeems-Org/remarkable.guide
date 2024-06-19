@@ -1,6 +1,8 @@
 ackee
+analytics
 automagic
 backgrounded
+backupscrns
 behaviour
 bugfixes
 Carta
@@ -8,11 +10,13 @@ changescrn
 chroot
 codex
 codexctl
+commandline
 config
 cryptographic
 DBus
 ddvk
 debian
+decrypt
 dev
 discoverable
 distro
@@ -32,9 +36,12 @@ github
 homescreen
 hostname
 hotspot
+init
 interactable
 js
+kernelctl
 keypair
+launcherctl
 liboxide
 Libremarkable
 linux
@@ -48,6 +55,7 @@ programmatically
 proxying
 pypi
 pySAS
+rcctl
 reenable
 reenabled
 reimplements
@@ -58,6 +66,7 @@ rmfakecloud
 rmKit
 rMlib
 rsa
+runtime
 sftp
 sha
 splashscreens
@@ -74,8 +83,10 @@ toolchains
 Unregister
 usb
 userspace
+usr
 utils
 wget
 wifi
 wpa
 xochitl
+zoneinfo
