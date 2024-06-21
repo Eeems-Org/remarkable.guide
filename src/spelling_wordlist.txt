@@ -18,6 +18,7 @@ ddvk
 debian
 decrypt
 dev
+digitizer
 discoverable
 distro
 distros
@@ -42,10 +43,12 @@ js
 kernelctl
 keypair
 launcherctl
+libexec
 liboxide
 Libremarkable
 linux
 lockscreen
+multitouch
 nc
 nuitka
 pdfs
@@ -55,6 +58,7 @@ programmatically
 proxying
 pypi
 pySAS
+rc
 rcctl
 reenable
 reenabled
@@ -67,8 +71,10 @@ rmKit
 rMlib
 rsa
 runtime
+sbin
 sftp
 sha
+splashscreen
 splashscreens
 systemd
 SystemD
@@ -85,6 +91,7 @@ usb
 userspace
 usr
 utils
+wacom
 wget
 wifi
 wpa
