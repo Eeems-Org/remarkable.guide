@@ -16,11 +16,22 @@ This page is just a stub that needs to be completed. You can `open a PR on the r
 Filesystem Layout
 =================
 
+Toltec uses entware as a base, which means that it tries to follow the filesystem layout that entware uses. Toltec generally tries to follow the same file hierarchy as `archlinux <https://man.archlinux.org/man/file-hierarchy.7.en>`_, when applicable.
+
 /opt
 ----
 
+Entware, and to the most part, toltec, stores all of it's data in a folder that is mounted to ``/opt``. Toltec puts this folder in ``/home/root/.entware``. All packages are compiled with the assumption that they are stored under ``/opt``.
+
 /opt/etc
 --------
+
+Configuration files for packages are generally stored in this directory instead of in ``/etc``.
+
+/opt/etc/draft
+--------------
+
+This directory contains application registrations for draft and remux. See `Launcher Application Registration`_ for more information.
 
 /opt/etc/init.d
 ---------------
@@ -32,20 +43,27 @@ the ``entware-rc`` package.
 /opt/bin
 --------
 
+User executables should be placed in this folder, which makes them available on the user's path.
+
 /opt/libexec
 ------------
+
+Contains executables that have name conflicts with other executables (e.g. ``wget-ssl`` or ``wget-nossl``). The selected version will be symlinked to ``/opt/bin``.
 
 /opt/sbin
 ---------
 
+Some packages place their executables in this directory, which is discouraged. ``/opt/bin`` should be used instead.
+
 /opt/share/remarkable/templates
 -------------------------------
+
+When ``templatectl`` is installed, this contains the current templates used by xochitl, as it's bind mounted over ``/usr/share/remarkable/templates``. Any template packages that are installed will store their files here and use ``templatectl`` to register them.
 
 /opt/share/launcherctl
 ----------------------
 
-Executable files in this folder will be treated as possible launchers for
-``launcherctl``.
+Executable files in this folder will be treated as possible launchers for ``launcherctl``. See `Launcher Registration`_ for more information.
 
 /opt/share/toltec/reenable.d
 ----------------------------
@@ -53,6 +71,11 @@ Executable files in this folder will be treated as possible launchers for
 Contains empty files owned by packages to indicate that they make changes to
 the root partition, and will need to be reinstalled when re-enabling toltec
 after an update.
+
+/opt/usr/share/applications
+---------------------------
+
+This directory contains application registrations for oxide. See `Launcher Application Registration`_ for more information.
 
 /opt/usr/share/backupscrns
 --------------------------
@@ -100,6 +123,9 @@ launcher.service
 
 Launcher Application Registration
 =================================
+
+- `Draft launcher format <https://github.com/dixonary/draft-reMarkable/?tab=readme-ov-file#configuration-files>`_
+- `Oxide application registration <https://oxide.eeems.codes/documentation/03_application_registration_format.html>`_
 
 Launcher Registration
 =====================
