@@ -13,6 +13,8 @@ This page is just a stub that needs to be completed. You can `open a PR on the r
 
     </div>
 
+OS versions up to 3.11.2.5 use the original update mechanism, which is documented below. Newer OS versions have switched to using `SWUpdate <https://sbabic.github.io/swupdate/swupdate.html>`_ to manage their updates, which is served by `Memfault <https://docs.memfault.com/>`_.
+
 Update Systemd Service
 ======================
 
