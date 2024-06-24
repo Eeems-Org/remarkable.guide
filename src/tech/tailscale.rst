@@ -66,6 +66,4 @@ Access the USB Web Interface over Tailscale
 ===========================================
 Information regarding the :doc:`USB Web Interface <usb-web-interface>`.
 
-.. code-block:: bash
-
-   tailscale serve 10.11.99.1:80
+Install `webinterface-localhost <https://toltec-dev.org/stable/>`_ from Toltec, then the USB Web Interface will be accessible on port 80 of the device's Tailscale IP address.
