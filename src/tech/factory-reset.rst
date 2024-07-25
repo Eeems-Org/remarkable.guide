@@ -31,4 +31,4 @@ In order to factory reset the device you will need to do the following steps:
   systemctl enable --now xochitl
 
 4. Perform two :ref:`system upgrades <upgrade>`.
-5. Perform a factory reset through the UI.
+5. `Perform a factory reset through the UI <https://support.remarkable.com/s/article/Performing-a-factory-reset>`_.
