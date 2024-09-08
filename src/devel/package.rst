@@ -60,7 +60,7 @@ The following example github action will compile a package and upload it as a bu
     pull_request:
   jobs:
     build:
-      name: Build package
+      name: Build and test package
       runs-on: ubuntu-20.04
       steps:
         - name: Checkout the Git repository
@@ -69,6 +69,20 @@ The following example github action will compile a package and upload it as a bu
           run: tar -czvf src.tar.gz src
         - name: Build package
           uses: toltec-dev/build-action@v1
+        - name: Test package
+          uses: Eeems-Org/run-in-remarkable-action@v1
+          with:
+            setup: |
+              set -ex
+              echo "src/gz local-rmall file:///opt/tmp/src" > /opt/etc/opkg.conf.d/16-local.conf
+            run: |
+              set -ex
+              echo Y | toltecctl generate-opkg-conf
+              opkg update
+              opkg install my-package
+              # Add steps here to test app
+              opkg remove my-package
+            path: dist/rmall
         - name: Save packages
           uses: actions/upload-artifact@v3
           with:
