@@ -124,3 +124,9 @@ To allow ssh-rsa keys, add the following lines to your :ref:`ssh_config`:
 
   PubkeyAcceptedKeyTypes +ssh-rsa
   HostKeyAlgorithms +ssh-rsa
+
+
+Why would I use SSH over USB instead of wifi?
+=============================================
+
+SSH over USB on the device is much faster than SSH over wifi.
