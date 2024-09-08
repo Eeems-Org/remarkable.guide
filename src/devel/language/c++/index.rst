@@ -13,7 +13,7 @@ Pros
 Cons
 ====
 
-- Only one UI framework available currently.
+- C++ can result in complex to maintain applications.
 
 Further Reading
 ===============
