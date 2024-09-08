@@ -9,11 +9,12 @@ Pros
 
 - Low level access.
 - If the code is well written, it will perform extremely well.
+- Large existing ecosystem can be leveraged.
 
 Cons
 ====
 
-- Only one UI framework is currently available.
+- Rust can have a steep learning curve.
 
 Further Reading
 ===============
