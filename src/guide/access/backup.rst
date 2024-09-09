@@ -87,7 +87,7 @@ The ``/home/root`` folder contains data that persists across system upgrades. Th
 GUI Tools
 =========
 
-- `reMarkable Connection Utility <http://www.davisr.me/projects/rcu/>`_ is a paid tool to manage your reMarkable. This includes making backups of the device.
+- `reMarkable Connection Utility <https://www.davisr.me/projects/rcu/>`_ is a paid tool to manage your reMarkable. This includes making backups of the device.
 - `rMExplorer <https://github.com/bruot/pyrmexplorer/wiki>`_ is a tool that allows you to transfer files to and from your device without needing the cloud. This allows you to backup your data.
 - `reMarkable HyUtilities <https://github.com/moovida/remarkable-hyutilities>`_ is a tool for managing templates, splashscreens, and backups of your device.
 

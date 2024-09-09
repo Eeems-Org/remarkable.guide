@@ -76,6 +76,7 @@ sftp
 sha
 splashscreen
 splashscreens
+symlinked
 systemd
 SystemD
 tailnet
