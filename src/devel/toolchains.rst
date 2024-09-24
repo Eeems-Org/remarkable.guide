@@ -88,6 +88,12 @@ Over time the community has requested, and been provided with newer versions of 
       - `Direct Download <https://storage.googleapis.com/remarkable-codex-toolchain/remarkable-platform-image-4.0.367-rm2-public-x86_64-toolchain.sh>`__
       - `Mirror <https://ipfs.eeems.website/ipfs/QmRS3fpSX9oeSZtEFhMs98XXdCKbLcByUYgeJU13dviskm>`__
       - sha256sum: ``43e9fb449b6e50fdff6b6110ea8fff167049b829628641537cb41738bd710eeb``
+- Official 4.0.813 toolchain installer
+   - OS Version: 3.14.1.10 to 3.14.3.0
+   - rM Paper Pro:
+      - `Direct Download <https://storage.googleapis.com/remarkable-codex-toolchain/3.14.3.0/meta-toolchain-remarkable-4.0.813-ferrari-public-x86_64-toolchain.sh>`__
+      - `Mirror <https://ipfs.eeems.website/ipfs/QmQpagE9boGRLDv2iUuY9huxFZepDqivgb9uAW5BEArN1C>`__
+      - sha256sum: ``29e2cce4280dbde182937c9614681a59a14aca8a18e06957bf66f8aeb0f3b968``
 
 After the toolchain has been installed, you'll need to source it to load the appropriate environment variables for it's use.
 
