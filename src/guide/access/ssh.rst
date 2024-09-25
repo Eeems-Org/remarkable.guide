@@ -33,6 +33,30 @@ If your device version is 3.9 or higher
 5. Select "Copyright and licenses".
 6. You will find your password and the IP addresses you can use to access your device underneath the "GPLv3 Compliance" header.
 
+
+For reMarkable Papaer Pro Users
+-------------------------------
+The reMarkable Paper Pro requires enabling Developer Mode to enable SSH acces
+:raw-html:`<div class="warning">⚠️ Enabling Developer Mode will require a factory reset. ⚠️<br/>`
+
+Make sure all files are synced to the cloud, or backed up via the :doc:`../../tech/usb-web-interface`
+:raw-html:`</div>`
+To enable Developer Mode and access the username/password
+1. On your device, open the Menu from the main page.
+2. Select "Settings".
+3. Select the Software Version option under "Software".
+4. Select "Advanced".
+5. Select "Developer mode".
+6. Select "Accept".
+7. Enter your passcode(if enabled).
+8. Select "Continue" to finish the factory reset and enabling "Developer mode".
+9. After the factory reset is complete, open the Menu.
+10. Select "Settings".
+11. Select "About".
+12. Select "Copyrights and licenses".
+13. You will find your password and the IP addresses you can use to access your device underneath the "GPLv3 Compliance" header.
+
+
 Connecting via SSH
 ==================
 
