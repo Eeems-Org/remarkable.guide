@@ -34,7 +34,7 @@ If your device version is 3.9 or higher
 6. You will find your password and the IP addresses you can use to access your device underneath the "GPLv3 Compliance" header.
 
 
-For reMarkable Papaer Pro Users
+For reMarkable Paper Pro Users
 -------------------------------
 The reMarkable Paper Pro requires enabling `Developer Mode <https://support.remarkable.com/s/article/Developer-mode>`_  to enable SSH acces
 :raw-html:`<div class="warning">⚠️ Enabling Developer Mode will require a factory reset. ⚠️<br/>`
