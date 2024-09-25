@@ -41,6 +41,7 @@ The reMarkable Paper Pro requires enabling `Developer Mode <https://support.rema
 
 Make sure all files are synced to the cloud, or backed up via the :doc:`../../tech/usb-web-interface`
 :raw-html:`</div>`
+
 To enable Developer Mode and access the username/password
 1. On your device, open the Menu from the main page.
 2. Select "Settings".
