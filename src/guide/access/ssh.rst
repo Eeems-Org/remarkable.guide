@@ -36,7 +36,7 @@ If your device version is 3.9 or higher
 
 For reMarkable Papaer Pro Users
 -------------------------------
-The reMarkable Paper Pro requires enabling Developer Mode to enable SSH acces
+The reMarkable Paper Pro requires enabling `Developer Mode <https://support.remarkable.com/s/article/Developer-mode>`_  to enable SSH acces
 :raw-html:`<div class="warning">⚠️ Enabling Developer Mode will require a factory reset. ⚠️<br/>`
 
 Make sure all files are synced to the cloud, or backed up via the :doc:`../../tech/usb-web-interface`
