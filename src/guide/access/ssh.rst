@@ -52,12 +52,8 @@ To enable Developer Mode and access the username/password
 6. Select "Accept".
 7. Enter your passcode(if enabled).
 8. Select "Continue" to finish the factory reset and enabling "Developer mode".
-9. After the factory reset is complete, open the Menu.
-10. Select "Settings".
-11. Select "About".
-12. Select "Copyrights and licenses".
-13. You will find your password and the IP addresses you can use to access your device underneath the "GPLv3 Compliance" header.
 
+After the factory reset is complete, you can continue from :ref: 'If your device version is 3.9 or higher'.
 
 Connecting via SSH
 ==================
