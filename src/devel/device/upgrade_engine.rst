@@ -1,6 +1,6 @@
-===============
-System Upgrades
-===============
+==========================
+(Outdated) System Upgrades
+==========================
 
 .. raw:: html
 
@@ -13,7 +13,7 @@ This page is just a stub that needs to be completed. You can `open a PR on the r
 
     </div>
 
-OS versions up to 3.11.2.5 use the original update mechanism, which is documented below. Newer OS versions have switched to using `SWUpdate <https://sbabic.github.io/swupdate/swupdate.html>`_ to manage their updates, which is served by `Memfault <https://docs.memfault.com/>`_.
+.. versionremoved:: 3.11.2.5 See :doc:`upgrades` for the latest documentation
 
 Update Systemd Service
 ======================
@@ -322,3 +322,5 @@ External Links
    https://chromium.googlesource.com/aosp/platform/system/update_engine/
 - Tool to mount update files using FUSE
    https://pypi.org/project/remarkable-update-fuse/
+- Python module for reading update files as a block device
+   https://github.com/Eeems/remarkable-update-image

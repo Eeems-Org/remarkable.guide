@@ -34,6 +34,7 @@ fb
 filesystem
 framebuffer
 github
+hawkBit
 homescreen
 hostname
 hotspot
@@ -48,6 +49,7 @@ liboxide
 Libremarkable
 linux
 lockscreen
+Memfault
 multitouch
 nc
 nuitka
