@@ -3,6 +3,7 @@ SSH Access
 ==========
 
 :raw-html:`<div class="warning">⚠️ Make sure you write down your SSH password. ⚠️<br/>`
+
 If you don't write down your password and lose access to the UI, you will be unable to access your device. An :doc:`../../tech/recovery` will be required.
 
 It is also recommended to setup a `ssh-key`_ instead of using password authentication.
@@ -15,6 +16,11 @@ It is also recommended to setup a `ssh-key`_ instead of using password authentic
 Finding Your Device Password and IP Addresses
 =============================================
 
+:raw-html:`<div class="warning">⚠️ reMarkable Paper Pro requires Developer Mode ⚠️<br/>`
+
+Please reference :doc:`../../tech/developer-mode` for more information on how to enable it.
+:raw-html:`</div>`
+
 If your device version is 3.8 or lower
 --------------------------------------
 1. Connect your device to Wifi, or with a USB cable to your computer.
@@ -23,6 +29,8 @@ If your device version is 3.8 or lower
 4. Select "Help".
 5. Select "Copyright and licenses".
 6. You will find your password and the IP addresses you can use to access your device underneath the "GPLv3 Compliance" header.
+
+.. _ssh_info_3_9:
 
 If your device version is 3.9 or higher
 ---------------------------------------
@@ -33,27 +41,6 @@ If your device version is 3.9 or higher
 5. Select "Copyright and licenses".
 6. You will find your password and the IP addresses you can use to access your device underneath the "GPLv3 Compliance" header.
 
-
-For reMarkable Paper Pro Users
--------------------------------
-The reMarkable Paper Pro requires enabling `Developer Mode <https://support.remarkable.com/s/article/Developer-mode>`_  to enable SSH acces
-:raw-html:`<div class="warning">⚠️ Enabling Developer Mode will require a factory reset. ⚠️<br/>`
-
-Make sure all files are synced to the cloud, or backed up via the :doc:`../../tech/usb-web-interface`
-:raw-html:`</div>`
-
-To enable Developer Mode and access the username/password
-
-1. On your device, open the Menu from the main page.
-2. Select "Settings".
-3. Select the Software Version option under "Software".
-4. Select "Advanced".
-5. Select "Developer mode".
-6. Select "Accept".
-7. Enter your passcode(if enabled).
-8. Select "Continue" to finish the factory reset and enabling "Developer mode".
-
-After the factory reset is complete, you can continue from :ref: 'If your device version is 3.9 or higher'.
 
 Connecting via SSH
 ==================
