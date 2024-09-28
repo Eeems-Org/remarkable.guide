@@ -30,3 +30,4 @@ Other Resources
 - `Awesome reMarkable <https://github.com/reHackable/awesome-reMarkable>`_ - A curated list of projects related to the reMarkable tablet.
 - `rmkit <https://rmkit.dev/>`_ - A site about remarkable application development.
 - `remarkable-tablet topic on GitHub <https://github.com/topics/remarkable-tablet>`_ - List of projects on GitHub that indicate they are for the reMarkable.
+- https://remarkable.jms1.info - Site with in depth looks into how the reMarkable works (May be outdated at times),
