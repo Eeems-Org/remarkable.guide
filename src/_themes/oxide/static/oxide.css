@@ -396,6 +396,12 @@ img.fullscreen{
   cursor: pointer;
 }
 
+div.page-timestamp{
+  width: 100%;
+  text-align: right;
+  font-size: calc(var(--text-size) * 0.5);
+}
+
 /* Small screens */
 
 @media (max-width: 1024px) {

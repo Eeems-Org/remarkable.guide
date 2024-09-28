@@ -70,6 +70,8 @@ extensions = [
     "sphinxext.opengraph",
     "sphinx.ext.doctest",
     "sphinx_tabs.tabs",
+    "sphinx_copybutton",
+    "sphinx_gitstamp",
 ]
 
 rst_prolog = """
