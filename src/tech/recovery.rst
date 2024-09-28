@@ -16,6 +16,8 @@ You can use `remarkable2-recovery <https://github.com/ddvk/remarkable2-recovery>
 
 This process requires building a custom pogo connector for the device, and to short the SBU1 and SBU2 pins of the USB-c connector. This is `detected on boot to put the device into recovery mode <https://github.com/reMarkable/uboot/blob/zero-sugar/board/reMarkable/zero-sugar/serial_download_trap.c>`_.
 
+.. _recovery_rmpp:
+
 reMarkable Paper Pro Recovery
 =============================
 

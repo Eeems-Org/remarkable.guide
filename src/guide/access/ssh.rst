@@ -3,6 +3,7 @@ SSH Access
 ==========
 
 :raw-html:`<div class="warning">⚠️ Make sure you write down your SSH password. ⚠️<br/>`
+
 If you don't write down your password and lose access to the UI, you will be unable to access your device. An :doc:`../../tech/recovery` will be required.
 
 It is also recommended to setup a `ssh-key`_ instead of using password authentication.
@@ -15,6 +16,11 @@ It is also recommended to setup a `ssh-key`_ instead of using password authentic
 Finding Your Device Password and IP Addresses
 =============================================
 
+:raw-html:`<div class="warning">⚠️ reMarkable Paper Pro requires Developer Mode ⚠️<br/>`
+
+Please reference :doc:`../../tech/developer-mode` for more information on how to enable it.
+:raw-html:`</div>`
+
 If your device version is 3.8 or lower
 --------------------------------------
 1. Connect your device to Wifi, or with a USB cable to your computer.
@@ -24,6 +30,8 @@ If your device version is 3.8 or lower
 5. Select "Copyright and licenses".
 6. You will find your password and the IP addresses you can use to access your device underneath the "GPLv3 Compliance" header.
 
+.. _ssh_info_3_9:
+
 If your device version is 3.9 or higher
 ---------------------------------------
 1. Connect your device to Wifi, or with a USB cable to your computer.
@@ -32,6 +40,7 @@ If your device version is 3.9 or higher
 4. Select "About".
 5. Select "Copyright and licenses".
 6. You will find your password and the IP addresses you can use to access your device underneath the "GPLv3 Compliance" header.
+
 
 Connecting via SSH
 ==================
