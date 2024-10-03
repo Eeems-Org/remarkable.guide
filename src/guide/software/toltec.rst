@@ -65,6 +65,8 @@ The following commands will upgrade all the packages on your system to the lates
   opkg update
   opkg upgrade
 
+Make sure to keep an eye on the `toltec release notes <https://github.com/toltec-dev/toltec/releases>`__ to see if there is any manual intervention required, every so often an upgrade may require extra steps to avoid soft-bricking your device.
+
 Uninstall Toltec
 ----------------
 
