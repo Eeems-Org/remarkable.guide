@@ -4,6 +4,7 @@ automagic
 backgrounded
 backupscrns
 behaviour
+bluetooth
 bugfixes
 Carta
 changescrn
