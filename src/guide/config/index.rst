@@ -7,4 +7,3 @@ Configuring Your Device
   timezone
   datetime
   locale
-  backlight
