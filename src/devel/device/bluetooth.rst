@@ -13,16 +13,10 @@ Enabling bluetooth
   bluetoothctl show
 
 
-.. raw:: html
+:raw-html:`<div class="warning">⚠️ FIXME. ⚠️`
 
-    <div class="warning">
-        ⚠️ Experimental. ⚠️
-
-The following information is from individual user experimentation, where information is still being gathered 
-
-.. raw:: html
-
-    </div>
+This page is just a stub that needs to be completed. You can `open a PR on the repo <https://github.com/Eeems-Org/remarkable.guide>`_ to add more content to the page.
+:raw-html:`</div>`
 
 
 Connecting a Device
@@ -30,43 +24,26 @@ Connecting a Device
 
 .. code-block:: shell
 
-  [bluetooth]# power on
-  Changing power on succeeded
-  [CHG] Controller 00:10:20:30:40:50 Powered: yes
-  
-  [bluetooth]# scan on
-  Discovery started
-  [CHG] Controller 00:10:20:30:40:50 Discovering: yes
-  [NEW] Device 00:12:34:56:78:90 device name
-  [CHG] Device 00:12:34:56:78:90 LegacyPairing: yes
-  
-  [bluetooth]# pair 00:12:34:56:78:90
-  Attempting to pair with 00:12:34:56:78:90
-  [CHG] Device 00:12:34:56:78:90 Connected: yes
-  [CHG] Device 00:12:34:56:78:90 Connected: no
-  [CHG] Device 00:12:34:56:78:90 Connected: yes
-  Request PIN code
-  [agent] Enter PIN code: 1234
-  [CHG] Device 00:12:34:56:78:90 Paired: yes
-  Pairing successful
-  [CHG] Device 00:12:34:56:78:90 Connected: no
-  
-  [bluetooth]# connect 00:12:34:56:78:90
-  Attempting to connect to 00:12:34:56:78:90
-  [CHG] Device 00:12:34:56:78:90 Connected: yes
-  Connection successful
+  bluetoothctl
+
+ This will drop you into an interactive prompt for running bluetoothctl commands.
+ 
+ .. code-block:: shell
+   power on
+   scan on
+   # Wait for the mac address for the device you are interested to show up
+   pair <mac-address>
+   # You will be prompted to enter a PIN code for the device
+   connect <mac-address>
+   trust <mac-address>
 
 
 External Links
 ==============
 
-- Arch-Wiki on Bluetooth
+- ArchWiki article on Bluetooth
    https://wiki.archlinux.org/title/Bluetooth
-- Arch-Wiki on Bluetooth section on Pairing
-   https://wiki.archlinux.org/title/Bluetooth#Pairing
-- Arch-Wiki on Bluetooth section on Configuration
-   https://wiki.archlinux.org/title/Bluetooth#Configuration
 - Kernel Module documentation in the i.MX knowledge base
    https://community.nxp.com/t5/i-MX-Processors-Knowledge-Base/Bluetooth-NXP-UART-Driver-Linux-BSP-6-1-22-btnxpuart/ta-p/1708588
-- Bluez (bluetoothctl) homepage
-   https://www.bluez.org/
+- Documentation for bluetoothctl and related commands
+   https://man.archlinux.org/listing/extra/bluez-utils/
