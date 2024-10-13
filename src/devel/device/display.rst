@@ -22,14 +22,14 @@ reMarkable 2 Framebuffer
 
 https://github.com/ddvk/remarkable2-framebuffer
 
-=============================
+
 Changing the Device Backlight
 =============================
 
 The reMarkable Paper Pro has a backlight that can be adjusted to make the screen easier to read in different lighting conditions.
 
 Adjusting in the UI
-============================
+-------------------
 Xochitl provides 5 presets of backlight brightness, which can be accessed by swiping down from the top-right of the screen to open the `quick settings menu <https://support.remarkable.com/s/article/Quick-settings>`_
 
 The Xochitl backlight presets are as follows:
@@ -41,7 +41,7 @@ The Xochitl backlight presets are as follows:
 #. 1734 (84%)
 
 Adjusting programmatically
-=========================
+--------------------------
 
 :raw-html:`<div class="warning">⚠️ Warning. ⚠️<br>`
 Setting the brightness outside of the range you can select in xochitl will make the battery drain faster, and may have unintended side effects that could damage the device.
