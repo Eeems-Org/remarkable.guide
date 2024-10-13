@@ -30,7 +30,7 @@ The reMarkable Paper Pro has a backlight that can be adjusted to make the screen
 
 Adjusting in the UI
 ============================
-Xochitl provides 5 presets of backlight brightness, which can be accessed by swiping down from the top-right of the screen to open the `quick settings menu <https://support.remarkable.com/s/article/Quick-settings>.
+Xochitl provides 5 presets of backlight brightness, which can be accessed by swiping down from the top-right of the screen to open the `quick settings menu <https://support.remarkable.com/s/article/Quick-settings>`_
 
 The Xochitl backlight presets are as follows:
 
