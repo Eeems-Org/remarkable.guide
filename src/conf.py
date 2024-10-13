@@ -87,6 +87,7 @@ linkcheck_anchors_ignore_for_url = [
 ]
 linkcheck_ignore = [
     r"https://web.archive.org/.*",
+    r"https://github.com/search\\?.*",
 ]
 linkcheck_allowed_redirects = {
     r"https://support\.remarkable\.com": "https://support.remarkable.com/s/",
