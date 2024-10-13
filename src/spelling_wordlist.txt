@@ -4,6 +4,8 @@ automagic
 backgrounded
 backupscrns
 behaviour
+bluetooth
+bluetoothctl
 bugfixes
 Carta
 changescrn
@@ -51,6 +53,7 @@ linux
 lockscreen
 Memfault
 multitouch
+MX
 nc
 nuitka
 pdfs
