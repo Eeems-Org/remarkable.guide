@@ -131,3 +131,22 @@ Why would I use SSH over USB instead of wifi?
 =============================================
 
 SSH over USB on the device is much faster than SSH over wifi.
+
+I can't connect on the SSH via USB
+==================================
+
+If your attempt to connect logs:
+
+.. code-block:: bash
+   ssh root@10.11.99.1
+   Connection closed by 10.11.99.1 port 22
+
+You might have a problem with SSH server keys.
+
+The `~/.ssh/known_hosts` has already registered another server key on a previous connection on the same IP address, `10.11.99.1` (you might have connected to a previous and different reMarkable device).
+So you need to delete the incriminated line storing the old key.
+
+.. code-block:: bash
+   ssh-keygen -R "10.11.99.1"
+
+Then, you should be able to connect to USB again.
