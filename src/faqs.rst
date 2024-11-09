@@ -25,6 +25,15 @@ If you installed ddvk-hacks with it's automagic script, it also provides `anothe
 
 For other third party software, they may provide an uninstall script, or they may not. If they don't, you'll need to either ask the author for instructions, or to work through what the installation script does and undo it.
 
+What can I install on the reMarkable Paper Pro?
+===============================================
+
+As of November 2024, given the Paper Pro's recent release, third party development for the device is still ongoing.  At present, you can `SSH into the device <https://remarkable.guide/guide/access/ssh.html>`_ by `enabling developer mode <https://remarkable.guide/tech/developer-mode.html>`_, and you can `perform a recovery on your device if necessary <https://remarkable.guide/tech/recovery.html>`.
+
+The reMarkable Paper Pro uses a different CPU architecture than that used in the reMarkable 1 and reMarkable 2.  At minimum, existing programs for the reMarkable 1 and 2 will need to be recompiled in order to be made compatible with the Paper Pro.
+
+You can see more technical information regarding the Paper Pro in `this Github issue <https://github.com/Eeems-Org/remarkable.guide/issues/74>`_.
+
 .. _upgrade:
 
 Can I downgrade to a different OS version?
