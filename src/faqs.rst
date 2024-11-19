@@ -36,25 +36,6 @@ You can see more technical information regarding the Paper Pro in `this Github i
 
 .. _upgrade:
 
-Why do some changes not persist on the reMarkable Paper Pro?
-========================================================================
-
-The Paper Pro has a virtual file system (overlay) mimicking the actual filesystem sitting below it. And the actual filesystem is also mounted as read only. So to make any lasting changes on the parts covered by the overlay (that being /etc), it should first be unmounted. This can be done with:
-
-     .. code-block:: shell
-
-        umount -l /etc
-
-and then, to remount root as read-write:
-
-     .. code-block:: shell
-
-        mount -o remount,rw /
-
-Do note that depending on what exactly you are doing, you may only need to remount root.
-
-After making your changes and rebooting you should see your changes persist. But the overlay will be back and the filesystem will be read-only again.
-
 Can I downgrade to a different OS version?
 ==========================================
 
@@ -154,8 +135,32 @@ To allow ssh-rsa keys, add the following lines to your :ref:`ssh_config`:
   PubkeyAcceptedKeyTypes +ssh-rsa
   HostKeyAlgorithms +ssh-rsa
 
-
 Why would I use SSH over USB instead of wifi?
 =============================================
 
 SSH over USB on the device is much faster than SSH over wifi.
+
+Why do some changes not persist on the reMarkable Paper Pro?
+============================================================
+
+The reMarkable Paper Pro has the root filesystem marked as read only, and certain folders have `overlays <https://en.wikipedia.org/wiki/OverlayFS>`_ where any changes will not persist between reboots.
+
+To make the root filesystem read-write:
+
+.. code-block:: shell
+
+   mount -o remount,rw /
+
+If you need to make a change to a folder that is mounted as an overlay, you can just unmount the overlay. For example:
+
+.. code-block:: shell
+
+  umount -l /etc
+     
+To see a full list of folders that have an overlay you can run the following command:
+
+.. code-block:: shell
+
+  mount | grep overlay
+
+After making your changes and rebooting you should see your changes persist. But the overlay will be back and the filesystem will be read-only again.
