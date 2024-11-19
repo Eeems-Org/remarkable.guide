@@ -36,6 +36,25 @@ You can see more technical information regarding the Paper Pro in `this Github i
 
 .. _upgrade:
 
+Why do some changes not persist on the reMarkable Paper Pro?
+========================================================================
+
+The Paper Pro has a virtual file system (overlay) mimicking the actual filesystem sitting below it. And the actual filesystem is also mounted as read only. So to make any lasting changes on the parts covered by the overlay (that being /etc), it should first be unmounted. This can be done with:
+
+     .. code-block:: shell
+
+        umount -l /etc
+
+and then, to remount root as read-write:
+
+     .. code-block:: shell
+
+        mount -o remount,rw /
+
+Do note that depending on what exactly you are doing, you may only need to remount root.
+
+After making your changes and rebooting you should see your changes persist. But the overlay will be back and the filesystem will be read-only again.
+
 Can I downgrade to a different OS version?
 ==========================================
 
