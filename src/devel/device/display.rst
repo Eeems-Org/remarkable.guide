@@ -47,10 +47,10 @@ Adjusting programmatically
 Setting the brightness outside of the range you can select in xochitl will make the battery drain faster, and may have unintended side effects that could damage the device.
 :raw-html:`</div>`
 
-The backlight can also be adjusted programmatically by writing to the `/sys/class/backlight/backlight/brightness` file.
+The backlight can also be adjusted programmatically by writing to the `/sys/class/backlight/rm_frontlight/brightness` file.
 The value written to this file should be between 0 and 2047, where 0 is completely off and 2047 is the maximum brightness.
 
 .. code-block:: shell
 
-  echo 1734 > /sys/class/backlight/backlight/brightness
+  echo 1734 > /sys/class/backlight/rm_frontlight/brightness
 
