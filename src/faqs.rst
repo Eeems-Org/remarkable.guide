@@ -151,11 +151,12 @@ To make the root filesystem read-write:
 
    mount -o remount,rw /
 
-If you need to make a change to a folder that is mounted as an overlay, you can just unmount the overlay. For example:
+If you need to make a change to a folder that is mounted as an overlay, you can just unmount the overlay (and remount the ssh host keys so you will be able to reconnect). For example:
 
 .. code-block:: shell
 
-  umount -l /etc
+  umount -R /etc
+  mount -t bind /home/root/.dropbear /etc/dropbear
 
 To see a full list of folders that have overlays you can run the following command:
 
@@ -170,7 +171,8 @@ If you don't want to reboot, you can set the filesystems back to their normal st
 .. code-block:: shell
 
   mount -o remount,ro /
+  umount /etc/dropbear
   mount -o rw,relatime,lowerdir=/etc,upperdir=/var/volatile/etc,workdir=/var/volatile/.etc-work -t overlay overlay /etc
-  mount -o bind /home/root/.dropbear /etc/dropbear
+  mount -t bind /home/root/.dropbear /etc/dropbear
 
-Note that you can get the value of the `-o` option in the second command by running the `mount | grep overlay` command noted above, *before* un-mounting anything.
+Note that you can get the value of the ``-o`` option in the second ``mount`` command by running the ``mount | grep overlay`` command noted above, *before* un-mounting anything.
