@@ -151,19 +151,12 @@ To make the root filesystem read-write:
 
    mount -o remount,rw /
 
-If you need to make a change to a folder that is mounted as an overlay, you can just unmount the overlay. For example:
+If you need to make a change to a folder that is mounted as an overlay, you can just unmount the overlay (and remount the ssh host keys so you will be able to reconnect). For example:
 
 .. code-block:: shell
 
   umount -R /etc
-
-    Note: this command will unmount ``/etc/dropbear`` before unmounting ``/etc``. The ``/etc/dropbear`` directory is a "bind-mount" to ``/home/root/.dropbear``, which contains the tablet's SSH host keys. (This is why the rMPP's SSH host keys don't change when the OS is upgraded.)
-
-    If you need to be able to SSH into the tablet while the ``/etc`` overlay is un-mounted, you should mount ``/etc/dropbear`` again, the way it normally is:
-
-    .. code-block:: shell
-
-    mount -t bind /home/root/.dropbear /etc/dropbear
+  mount -t bind /home/root/.dropbear /etc/dropbear
 
 To see a full list of folders that have overlays you can run the following command:
 
