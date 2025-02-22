@@ -94,6 +94,7 @@ Over time the community has requested, and been provided with newer versions of 
       - `Direct Download <https://storage.googleapis.com/remarkable-codex-toolchain/3.14.3.0/meta-toolchain-remarkable-4.0.813-ferrari-public-x86_64-toolchain.sh>`__
       - `Mirror <https://ipfs.eeems.website/ipfs/QmQpagE9boGRLDv2iUuY9huxFZepDqivgb9uAW5BEArN1C>`__
       - sha256sum: ``29e2cce4280dbde182937c9614681a59a14aca8a18e06957bf66f8aeb0f3b968``
+ - For newer versions refer to the `reMarkable developer site <https://developer.remarkable.com/links#remarkable-software-development-kits>`__
 
 After the toolchain has been installed, you'll need to source it to load the appropriate environment variables for it's use.
 
