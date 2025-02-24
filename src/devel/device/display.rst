@@ -54,3 +54,8 @@ The value written to this file should be between 0 and 2047, where 0 is complete
 
   echo 1734 > /sys/class/backlight/rm_frontlight/brightness
 
+External Links
+==============
+
+- Linux FrameBuffer API
+   https://www.kernel.org/doc/html/latest/fb/api.html
