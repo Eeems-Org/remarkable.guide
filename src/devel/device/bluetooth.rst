@@ -26,9 +26,11 @@ Connecting a Device
 
   bluetoothctl
 
- This will drop you into an interactive prompt for running bluetoothctl commands.
+
+This will drop you into an interactive prompt for running bluetoothctl commands.
  
- .. code-block:: shell
+.. code-block:: shell
+
    power on
    scan on
    # Wait for the mac address for the device you are interested to show up
@@ -36,6 +38,33 @@ Connecting a Device
    # You will be prompted to enter a PIN code for the device
    connect <mac-address>
    trust <mac-address>
+
+
+Troubleshooting
+---------------
+If a ``Failed to set power on: org.bluez.Error.Busy`` error is shown after trying to run the command ``bluetoothctl power on``, or if a ``Failed to start discovery: org.bluez.Error.NotReady`` is shown when running the command ``bluetooth scan on``, the ``bluetooth.service`` might be having issues with the access to its configuration.
+
+To verify if the service is having issues, check the bluetooth service first:
+
+.. code-block:: shell
+
+  systemctl status bluetooth
+
+
+If a line with this text is shown, you have an issue on the service:
+
+.. code-block:: shell
+
+  ConfigurationDirectory 'bluetooth' already exists but the mode is different. (File system: 755 ConfigurationDirectoryMode: 555)
+
+
+To fix it stop the bluetooth service, change the configuration folder permissions, and start the service again.
+
+.. code-block:: shell
+
+  systemctl stop bluetooth
+  chmod 555 /etc/bluetooth
+  systemctl start bluetooth
 
 
 External Links
