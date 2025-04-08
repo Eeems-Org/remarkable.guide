@@ -33,7 +33,7 @@ jobs:
         packages: graphviz libgraphviz-dev librsvg2-bin pdf2svg enchant-2
         version: 1.0
     - name: Apt-Cache-Action
-      uses: Eeems-Org/apt-cache-action@v1
+      uses: Eeems-Org/apt-cache-action@v1.4
       with:
         packages: texlive-base texlive-latex-extra
     - name: Build website
