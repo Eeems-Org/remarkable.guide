@@ -30,6 +30,7 @@ Connecting a Device
 This will drop you into an interactive prompt for running bluetoothctl commands.
  
 .. code-block:: shell
+
    power on
    scan on
    # Wait for the mac address for the device you are interested to show up
@@ -46,6 +47,7 @@ If a ``Failed to set power on: org.bluez.Error.Busy`` error is shown after tryin
 To verify if the service is having issues, check the bluetooth service first:
 
 .. code-block:: shell
+
   systemctl status bluetooth
 
 
