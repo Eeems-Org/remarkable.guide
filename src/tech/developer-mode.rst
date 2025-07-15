@@ -19,5 +19,7 @@ You can leave Developer Mode by using :ref:`recovery_rmpp`.
 External Resources
 ==================
 
-- Official Support Article
+- Official support article
    https://support.remarkable.com/s/article/Developer-mode
+- Official developer site article
+   https://developer.remarkable.com/documentation/developer-mode
