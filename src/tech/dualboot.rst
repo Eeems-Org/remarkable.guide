@@ -38,7 +38,7 @@ To install rm-hacks, follow the `rm-hacks installation instructions <https://git
 Editing the ``QML_DISK_CACHE_PATH`` variable
 --------------------------------------------
 
-The ``QML_DISK_CACHE_PATH`` variable specifies the `QML <https://doc.qt.io/qt-5/qmlapplications.html>`_ cache path of a `Qt application <https://doc.qt.io/qt-5/index.html>`_. This caches the code that is used to generate the xochitl GUI and handle many of it's interactions. When a version of xochitl is launched that does not match the current cache, it is removed and a new cache generated. This will wipe rm-hacks when dual booting, so we will need to setup a new location for the cache.
+The ``QML_DISK_CACHE_PATH`` variable specifies the `QML <https://doc.qt.io/archives/qt-5.15/qmlapplications.html>`_ cache path of a `Qt application <https://doc.qt.io/archives/qt-5.15/index.html>`_. This caches the code that is used to generate the xochitl GUI and handle many of it's interactions. When a version of xochitl is launched that does not match the current cache, it is removed and a new cache generated. This will wipe rm-hacks when dual booting, so we will need to setup a new location for the cache.
 
 Setting it on toltec
 ____________________

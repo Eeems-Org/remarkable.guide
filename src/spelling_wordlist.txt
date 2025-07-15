@@ -2,6 +2,7 @@ ackee
 analytics
 automagic
 backgrounded
+backlight
 backupscrns
 behaviour
 bluetooth
@@ -34,6 +35,7 @@ epubs
 executables
 fb
 filesystem
+filesystems
 framebuffer
 github
 hawkBit
@@ -92,6 +94,8 @@ toltec
 toltecmk
 toolchain
 toolchains
+unmount
+unmounting
 Unregister
 usb
 userspace

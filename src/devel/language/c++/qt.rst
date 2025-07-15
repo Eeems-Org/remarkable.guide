@@ -23,7 +23,7 @@ External Links
 ==============
 
 - Qt 5 Documentation
-   https://doc.qt.io/qt-5/
+   https://doc.qt.io/archives/qt-5.15/
 - Template for reMarkable Qt applications
    https://github.com/Eeems-Org/remarkable-template-qt-app
 - Template for reMarkable Qt Oxide applications

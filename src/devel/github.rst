@@ -26,11 +26,11 @@ This badge is used to indicate that the application supports the reMarkable 1 ta
 
 .. image:: https://img.shields.io/badge/rM1-supported-green
   :alt: rM1 supported
-  :target: https://remarkable.com/store/remarkable
+  :target: https://remarkable.com/products/remarkable-1
 
 .. code-block:: markdown
 
-  [![rm1](https://img.shields.io/badge/rM1-supported-green)](https://remarkable.com/store/remarkable)
+  [![rm1](https://img.shields.io/badge/rM1-supported-green)](https://remarkable.com/products/remarkable-1)
 
 reMarkable 2 support
 --------------------
@@ -39,11 +39,11 @@ This badge is used to indicate that the application supports the reMarkable 2 ta
 
 .. image:: https://img.shields.io/badge/rM2-supported-green
   :alt: rM2 supported
-  :target: https://remarkable.com/store/remarkable-2
+  :target: https://remarkable.com/products/remarkable-2
 
 .. code-block:: markdown
 
-  [![rm2](https://img.shields.io/badge/rM2-supported-green)](https://remarkable.com/store/remarkable-2)
+  [![rm2](https://img.shields.io/badge/rM2-supported-green)](https://remarkable.com/products/remarkable-2)
 
 reMarkable Paper Pro support
 ----------------------------
@@ -52,11 +52,11 @@ This badge is used to indicate that the application supports the reMarkable Pape
 
 .. image:: https://img.shields.io/badge/rMPP-supported-green
   :alt: rMPP supported
-  :target: https://remarkable.com/store/overview/remarkable-paper-pro
+  :target: https://remarkable.com/shop/all/remarkable-paper-pro
 
 .. code-block:: markdown
 
-  [![rmpp](https://img.shields.io/badge/rMPP-supported-green)](https://remarkable.com/store/overview/remarkable-paper-pro)
+  [![rmpp](https://img.shields.io/badge/rMPP-supported-green)](https://remarkable.com/shop/all/remarkable-paper-pro)
 
 Toltec package name
 -------------------

@@ -1,4 +1,5 @@
 """sphinx configuration"""
+
 import time
 from datetime import datetime
 
@@ -88,10 +89,12 @@ linkcheck_anchors_ignore_for_url = [
 linkcheck_ignore = [
     r"https://web.archive.org/.*",
     r"https://github.com/search\\?.*",
+    r"https://forgejo.sny.sh/sun/rmFM",
 ]
 linkcheck_allowed_redirects = {
     r"https://support\.remarkable\.com": "https://support.remarkable.com/s/",
     r"https://discord\.gg/ATqQGfu": "https://discord.com/invite/ATqQGfu",
+    r"https://hub.docker.com/.*": "https://login.docker.com/u/login/identifier",
 }
 linkcheck_retries = 5
 

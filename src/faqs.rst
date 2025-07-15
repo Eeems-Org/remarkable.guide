@@ -175,4 +175,4 @@ If you don't want to reboot, you can set the filesystems back to their normal st
   mount -o rw,relatime,lowerdir=/etc,upperdir=/var/volatile/etc,workdir=/var/volatile/.etc-work -t overlay overlay /etc
   mount -t bind /home/root/.dropbear /etc/dropbear
 
-Note that you can get the value of the ``-o`` option in the second ``mount`` command by running the ``mount | grep overlay`` command noted above, *before* un-mounting anything.
+Note that you can get the value of the ``-o`` option in the second ``mount`` command by running the ``mount | grep overlay`` command noted above, *before* unmounting anything.
