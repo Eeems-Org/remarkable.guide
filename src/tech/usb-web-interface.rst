@@ -110,6 +110,32 @@ Download the xochitl log file found at ``/home/root/log.txt``.
     --remote-header-name \
     'http://10.11.99.1/log.txt'
 
+``GET http://10.11.99.1/thumbnail/{guid}``
+-------------------------------------------
+
+Download the thumbnail for a specific document (latest page opened).
+
+**Example:**
+
+.. code:: bash
+
+  guid=fd2c4b2c-3849-46c3-bf2d-9c80994cc985
+  curl \
+    -I "http://10.11.99.1/thumbnail/$guid"
+
+``POST 'http://10.11.99.1/search/{keyword}'``
+
+Search for documents matching a specific keyword. This endpoint is currently under development, and may not work as expected.
+
+**Example:**
+
+.. code:: bash
+
+  keyword="planning"
+  curl \
+    -X POST \
+    "http://10.11.99.1/search/$keyword"
+
 External links
 ==============
 
