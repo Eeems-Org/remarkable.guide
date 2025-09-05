@@ -52,11 +52,24 @@ This badge is used to indicate that the application supports the reMarkable Pape
 
 .. image:: https://img.shields.io/badge/rMPP-supported-green
   :alt: rMPP supported
-  :target: https://remarkable.com/shop/all/remarkable-paper-pro
+  :target: https://remarkable.com/products/remarkable-paper/pro
 
 .. code-block:: markdown
 
-  [![rmpp](https://img.shields.io/badge/rMPP-supported-green)](https://remarkable.com/shop/all/remarkable-paper-pro)
+  [![rmpp](https://img.shields.io/badge/rMPP-supported-green)](https://remarkable.com/products/remarkable-paper/pro)
+
+reMarkable Paper Pro Move support
+---------------------------------
+
+This badge is used to indicate that the application supports the reMarkable Paper Pro Move tablet.
+
+.. image:: https://img.shields.io/badge/rMPPM-supported-green
+  :alt: rMPPM supported
+  :target: https://remarkable.com/products/remarkable-paper/pro-move
+
+.. code-block:: markdown
+
+  [![rmppm](https://img.shields.io/badge/rMPPM-supported-green)](https://remarkable.com/products/remarkable-paper/pro-move)
 
 Toltec package name
 -------------------
