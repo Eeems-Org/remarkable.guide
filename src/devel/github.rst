@@ -59,7 +59,7 @@ This badge is used to indicate that the application supports the reMarkable Pape
   [![rmpp](https://img.shields.io/badge/rMPP-supported-green)](https://remarkable.com/products/remarkable-paper/pro)
 
 reMarkable Paper Pro Move support
-----------------------------
+---------------------------------
 
 This badge is used to indicate that the application supports the reMarkable Paper Pro Move tablet.
 
