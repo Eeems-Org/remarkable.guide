@@ -32,9 +32,9 @@ As of September 2025, third party development for these devices is still ongoing
 
 The reMarkable Paper Pro and Paper Pro Move use a different CPU architecture than that used in the reMarkable 1 and reMarkable 2.  At minimum, existing programs for the reMarkable 1 and 2 will need to be recompiled in order to be made compatible with the Paper Pro and Paper Pro Move.
 
-You can see more technical information regarding the Paper Pro in `this Github issue <https://github.com/Eeems-Org/remarkable.guide/issues/74>`_.
+You can see more technical information regarding the Paper Pro in `this Github issue for Paper Pro <https://github.com/Eeems-Org/remarkable.guide/issues/74>`_.
 
-You can see more technical information regarding the Paper Pro Move in `this Github issue <https://github.com/Eeems-Org/remarkable.guide/issues/99>`_.
+You can see more technical information regarding the Paper Pro Move in `this Github issue for Paper Pro Move <https://github.com/Eeems-Org/remarkable.guide/issues/99>`_.
 
 .. _upgrade:
 
