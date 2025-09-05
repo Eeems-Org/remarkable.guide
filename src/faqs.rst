@@ -26,7 +26,7 @@ If you installed ddvk-hacks with it's automagic script, it also provides `anothe
 For other third party software, they may provide an uninstall script, or they may not. If they don't, you'll need to either ask the author for instructions, or to work through what the installation script does and undo it.
 
 What can I install on the reMarkable Paper Pro or Paper Pro Move?
-===============================================
+=================================================================
 
 As of September 2025, third party development for these devices is still ongoing.  At present, you can `SSH into the device <https://remarkable.guide/guide/access/ssh.html>`_ by `enabling developer mode <https://remarkable.guide/tech/developer-mode.html>`_, and you can `perform a recovery on your device if necessary <https://remarkable.guide/tech/recovery.html>`.
 
@@ -143,7 +143,7 @@ Why would I use SSH over USB instead of wifi?
 SSH over USB on the device is much faster than SSH over wifi.
 
 Why do some changes not persist on the reMarkable Paper Pro or Paper Pro Move?
-============================================================
+==============================================================================
 
 The reMarkable Paper Pro and Paper Pro Move have the root filesystem marked as read only, and certain folders have `overlays <https://en.wikipedia.org/wiki/OverlayFS>`_ where any changes will not persist between reboots.
 

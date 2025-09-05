@@ -19,6 +19,6 @@ This process requires building a custom pogo connector for the device, and to sh
 .. _recovery_rmpp:
 
 reMarkable Paper Pro & Paper Pro Move Recovery
-=============================
+==============================================
 
 You can follow the official documentation for how to perform recovery on your rM Paper Pro or Paper Pro Move: https://support.remarkable.com/s/article/Software-recovery
