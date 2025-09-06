@@ -2,7 +2,7 @@
 Bluetooth
 =========
 
-The reMarkable 1 and 2 do not have bluetooth. The reMarkable Paper Pro does have bluetooth hardware, but the driver is not loaded by default.
+The reMarkable 1 and 2 do not have bluetooth. The reMarkable Paper Pro and Paper Pro Move do have bluetooth hardware, but the driver is not loaded by default.
 
 Enabling bluetooth
 ------------------

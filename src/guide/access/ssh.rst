@@ -16,7 +16,7 @@ It is also recommended to setup a `ssh-key`_ instead of using password authentic
 Finding Your Device Password and IP Addresses
 =============================================
 
-:raw-html:`<div class="warning">⚠️ reMarkable Paper Pro requires Developer Mode ⚠️<br/>`
+:raw-html:`<div class="warning">⚠️ reMarkable Paper Pro and Paper Pro Move require Developer Mode ⚠️<br/>`
 
 Please reference :doc:`../../tech/developer-mode` for more information on how to enable it.
 :raw-html:`</div>`
@@ -81,6 +81,19 @@ From your computer you can now use your SSH client to connect to your reMarkable
 
 Connecting over Wifi
 --------------------
+
+Under the following conditions, an additional step is required to enable SSH access over Wifi:
+
+- reMarkable Paper Pro and Paper Pro Move devices on any OS version
+- reMarkable 2 devices on OS versions above 3.20
+
+To enable, ssh into the device over USB and run:
+
+.. code-block:: shell
+
+  rm-ssh-over-wlan on
+
+This does not need to be re-run after OS updates as it controls a setting which is stored on the home partition.
 
 When your device is connected to Wifi, you can connect to it with SSH using the IP address(es) assigned by your router. Replace ``<ip-address>`` in the following command with a valid IP Address for your device. See `Finding Your Device Password and IP Addresses`_ for information on how to find the IP address.
 
