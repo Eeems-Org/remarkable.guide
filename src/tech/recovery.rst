@@ -18,6 +18,8 @@ This process requires building a custom pogo connector for the device, and to sh
 
 .. _recovery_rmpp:
 
+.. _remarkable-paper-pro-recovery:
+
 reMarkable Paper Pro & Paper Pro Move Recovery
 ==============================================
 

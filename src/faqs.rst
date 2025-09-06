@@ -25,6 +25,8 @@ If you installed ddvk-hacks with it's automagic script, it also provides `anothe
 
 For other third party software, they may provide an uninstall script, or they may not. If they don't, you'll need to either ask the author for instructions, or to work through what the installation script does and undo it.
 
+.. _what-can-i-install-on-the-remarkable-paper-pro:
+
 What can I install on the reMarkable Paper Pro or Paper Pro Move?
 =================================================================
 
@@ -141,6 +143,8 @@ Why would I use SSH over USB instead of wifi?
 =============================================
 
 SSH over USB on the device is much faster than SSH over wifi.
+
+.. _why-do-some-changes-not-persist-on-the-remarkable-paper-pro:
 
 Why do some changes not persist on the reMarkable Paper Pro or Paper Pro Move?
 ==============================================================================
