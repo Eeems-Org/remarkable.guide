@@ -12,7 +12,7 @@ Make sure all files are synced to the cloud, or backed up via the :doc:`../../te
 https://support.remarkable.com/s/article/Limited-Warranty-Policy
 :raw-html:`</div>`
 
-The reMarkable Paper Pro requires enabling Developer Mode to enable :doc:`../guide/access/ssh`.
+The reMarkable Paper Pro and Paper Pro Move require enabling Developer Mode to enable :doc:`../guide/access/ssh`.
 
 You can leave Developer Mode by using :ref:`recovery_rmpp`.
 
