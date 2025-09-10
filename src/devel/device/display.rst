@@ -23,18 +23,19 @@ reMarkable 2 Framebuffer
 https://github.com/ddvk/remarkable2-framebuffer
 
 
-Changing the Device Backlight
-=============================
+Changing the Device Frontlight
+==============================
+.. _changing_the_device_backlight:
 
-The reMarkable Paper Pro and Paper Pro Move have backlights that can be adjusted to make the screens easier to read in different lighting conditions.
+The reMarkable Paper Pro and Paper Pro Move have frontlights that can be adjusted to make the screens easier to read in different lighting conditions.
 
 Adjusting in the UI
 -------------------
-Xochitl provides 5 presets of backlight brightness, which can be accessed by swiping down from the top-right of the screen to open the `quick settings menu <https://support.remarkable.com/s/article/Quick-settings>`_
+Xochitl provides 5 presets of frontlight brightness, which can be accessed by swiping down from the top-right of the screen to open the `quick settings menu <https://support.remarkable.com/s/article/Quick-settings>`_
 
 OS version 3.19 introduced a "Light Boost" toggle available in Settings > Display > Extra Bright.
 
-The Xochitl backlight presets are as follows:
+The Xochitl frontlight presets are as follows:
 
 .. list-table:: reMarkable Paper Pro
    :header-rows: 1
@@ -89,7 +90,7 @@ Adjusting programmatically
 Setting the brightness outside of the range you can select in xochitl will make the battery drain faster, and may have unintended side effects that could damage the device.
 :raw-html:`</div>`
 
-The backlight can also be adjusted programmatically by writing to the `/sys/class/backlight/rm_frontlight/brightness` file.
+The frontlight can also be adjusted programmatically by writing to the `/sys/class/backlight/rm_frontlight/brightness` file.
 The value written to this file should be between 0 and 2047, where 0 is completely off and 2047 is the maximum brightness.
 
 .. code-block:: shell
