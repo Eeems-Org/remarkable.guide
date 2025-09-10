@@ -8,6 +8,23 @@ System splash screens on the device be found in ``/usr/share/remarkable/``. You 
    :local:
    :backlinks: none
 
+Xochitl Configuration
+=====================
+
+For sleep screens, it is possible to set a png path by adding a line in ``/home/root/.config/remarkable/xochitl.conf`` under the General section:
+
+.. code-block:: ini
+
+  [General]
+  SleepScreenPath=/home/root/yourcustomfile.png
+
+If the png path is in the /home/root directory, this change will persist across OS updates without requiring any additional action.
+
+This configuration did not take affect from OS versions 3.13 to 3.20.
+
+Restarting xochitl (or the tablet) is required to pick up the configuration change.
+
+
 Changescrn
 ==========
 
