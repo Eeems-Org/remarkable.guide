@@ -13,7 +13,7 @@ System splash screens on the device be found in ``/usr/share/remarkable/``. You 
 
 .. _changescrn:
 
-`changescrn <https://github.com/pr0fsmith/rMscreens>`_ provides a command line tool for managing system splash screens. 
+The `changescrn tool <https://github.com/pr0fsmith/rMscreens>`_ provides a command line utility for managing system splash screens.
 
 To install it via Toltec:
 
