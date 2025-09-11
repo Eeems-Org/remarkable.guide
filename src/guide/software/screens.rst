@@ -13,21 +13,13 @@ System splash screens on the device be found in ``/usr/share/remarkable/``. You 
 
 .. _changescrn:
 
-The `changescrn tool <https://github.com/pr0fsmith/rMscreens>`_ provides a command line utility for managing system splash screens.
+The `changescrn tool <https://github.com/pr0fsmith/rMscreens>`_ provides a command line utility for managing system splash screens. It can be downloaded directly from the GitHub repo or installed as a Toltec package.
 
 To install it via Toltec:
 
 .. code-block:: shell
 
   opkg install changescrn
-
-To download from GitHub:
-
-.. code-block:: shell
-
-  wget https://raw.githubusercontent.com/pr0fsmith/rMscreens/refs/heads/main/changescrn
-
-
 
 .. contents:: Contents
    :local:
@@ -97,8 +89,10 @@ Changing a System Splash Screen
 ===============================
 
 Configuration File for Sleep Screen
-----------------------------------------
-Supported Versions: 3.1 - 3.13, 3.20+
+-----------------------------------
+:raw-html:`<div class="warning">⚠️ Does not work on all OS versions. ⚠️`
+This will only work if your OS version is 3.2 to 3.13, or if the OS is 3.20 or newer.
+:raw-html:`</div>`
 
 For the sleep screen, it is possible to set a custom png path by adding a line in ``/home/root/.config/remarkable/xochitl.conf`` under the General section:
 
@@ -106,9 +100,6 @@ For the sleep screen, it is possible to set a custom png path by adding a line i
 
   [General]
   SleepScreenPath=/home/root/yourcustomfile.png
-
-
-This configuration did not take affect from OS versions 3.13 to 3.20.
 
 Restarting the xochitl service (or the tablet) is required to pick up the configuration change.
 
