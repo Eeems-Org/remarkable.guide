@@ -30,7 +30,7 @@ You can run `make spelling` to just check spelling of the guide.
 Create a new `*.rst` file in [src](src).
 
 ### How do I add a link to a page to the sidebar?
-Add it's name to [src/sitemap.rst](src/sitemap.rst).
+Add its name to [src/sitemap.rst](src/sitemap.rst).
 
 ### How do I add a picture to the site?
 Adding an image to the site can be done by adding a `*.png.tex` or `*.svg.tex` file in [images](images), or adding the image itself to

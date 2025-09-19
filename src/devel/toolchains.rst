@@ -96,7 +96,7 @@ Over time the community has requested, and been provided with newer versions of 
       - sha256sum: ``29e2cce4280dbde182937c9614681a59a14aca8a18e06957bf66f8aeb0f3b968``
 - For newer versions refer to the `reMarkable developer site <https://developer.remarkable.com/links#remarkable-software-development-kits>`__
 
-After the toolchain has been installed, you'll need to source it to load the appropriate environment variables for it's use.
+After the toolchain has been installed, you'll need to source it to load the appropriate environment variables for its use.
 
 .. code-block:: console
 
@@ -117,7 +117,7 @@ You will still need to source the toolchain when running scripts inside the cont
 Toltec Toolchain
 ================
 
-Toltec provides it's own `toolchain in the form of docker images <https://github.com/toltec-dev/toolchain>`_. These can be used manually, but they are intended to be used in conjunction with the `toltecmk <https://pypi.org/project/toltecmk/>`_ tool to generate a toltec package.
+Toltec provides its own `toolchain in the form of docker images <https://github.com/toltec-dev/toolchain>`_. These can be used manually, but they are intended to be used in conjunction with the `toltecmk <https://pypi.org/project/toltecmk/>`_ tool to generate a toltec package.
 
 .. code-block:: console
 

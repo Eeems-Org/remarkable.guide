@@ -19,9 +19,9 @@ There have been instances where factory resetting without third party software i
 How do I remove all third party software from my device?
 ========================================================
 
-This all depends on how you installed them. If you installed toltec, it has a simple uninstall command: `toltecctl uninstall`. This will remove toltec and all of it's changes.
+This all depends on how you installed them. If you installed toltec, it has a simple uninstall command: `toltecctl uninstall`. This will remove toltec and all of its changes.
 
-If you installed ddvk-hacks with it's automagic script, it also provides `another script to uninstall the hacks <https://github.com/ddvk/remarkable-hacks#uninstall--removal>`_.
+If you installed ddvk-hacks with its automagic script, it also provides `another script to uninstall the hacks <https://github.com/ddvk/remarkable-hacks#uninstall--removal>`_.
 
 For other third party software, they may provide an uninstall script, or they may not. If they don't, you'll need to either ask the author for instructions, or to work through what the installation script does and undo it.
 

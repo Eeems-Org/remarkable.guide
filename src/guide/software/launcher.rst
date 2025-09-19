@@ -72,7 +72,7 @@ Installation
 Remux
 =====
 
-`Remux <https://rmkit.dev/apps/remux>`_ is a launcher that does it's best to stay out of your way.
+`Remux <https://rmkit.dev/apps/remux>`_ is a launcher that does its best to stay out of your way.
 
 Screenshots
 -----------
