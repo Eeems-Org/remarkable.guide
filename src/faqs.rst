@@ -151,24 +151,43 @@ Why do some changes not persist on the reMarkable Paper Pro or Paper Pro Move?
 
 The reMarkable Paper Pro and Paper Pro Move have the root filesystem marked as read only, and certain folders have `overlays <https://en.wikipedia.org/wiki/OverlayFS>`_ where any changes will not persist between reboots.
 
-To make the root filesystem read-write:
-
-.. code-block:: shell
-
-   mount -o remount,rw /
-
-If you need to make a change to a folder that is mounted as an overlay, you can just unmount the overlay (and remount the ssh host keys so you will be able to reconnect). For example:
-
-.. code-block:: shell
-
-  umount -R /etc
-  mount -t bind /home/root/.dropbear /etc/dropbear
-
 To see a full list of folders that have overlays you can run the following command:
 
 .. code-block:: shell
 
   mount | grep overlay
+
+There are two ways to make changes to those folder. Both start with remounting the root file system as read/write:
+
+.. code-block:: shell
+
+   mount -o remount,rw /
+
+Then, the first method is to access the non-overlaid root file system by
+bind-mounting it somewhere else:
+
+.. code-block:: shell
+
+   mount -t bind / /mnt
+
+The overlay is not visible under ``/mnt``. Thus, you can now modify ``/mnt/etc``. Your changes will be visible in ``/etc``.
+
+Caution: If you changed the same file in your overlaid ``/etc``, the change in ``/mnt/etc`` will stay hidden until you reboot.
+
+When you're done, simply unmount the bind mount and restore read-only mode:
+
+.. code-block:: shell
+
+   umount /mnt
+  mount -o remount,ro /
+
+
+The second way is to temporarily unmount the overlay (and, in case of ``/etc``, remount the ssh host keys so you will be able to reconnect). For example:
+
+.. code-block:: shell
+
+  umount -R /etc
+  mount -t bind /home/root/.dropbear /etc/dropbear
 
 After making your changes and rebooting you should see your changes persist. But the overlay will be back and the filesystem will be read-only again.
 
@@ -182,3 +201,5 @@ If you don't want to reboot, you can set the filesystems back to their normal st
   mount -t bind /home/root/.dropbear /etc/dropbear
 
 Note that you can get the value of the ``-o`` option in the second ``mount`` command by running the ``mount | grep overlay`` command noted above, *before* unmounting anything.
+
+Both methods risk that some program accesses the root file system in a way that causes remounting in read-only mode to fail. You should reboot if that happens.
