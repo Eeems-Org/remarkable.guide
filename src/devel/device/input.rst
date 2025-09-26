@@ -13,4 +13,4 @@ Here is a small list of libraries you can use for handling input:
 - `libevdev <https://www.freedesktop.org/wiki/Software/libevdev/>`_
 - `rust evdev crate <https://docs.rs/evdev/latest/evdev/index.html>`_
 - `python evdev library <https://pypi.org/project/evdev/>`_
-- `node evdev library <https://www.npmjs.com/package/evdev>`_
+- `node evdev library <https://github.com/sdumetz/node-evdev>`_
