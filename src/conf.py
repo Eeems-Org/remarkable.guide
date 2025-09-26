@@ -90,6 +90,7 @@ linkcheck_ignore = [
     r"https://web.archive.org/.*",
     r"https://github.com/search\\?.*",
     r"https://forgejo.sny.sh/sun/rmFM",
+    r"https://www.npmjs.com/.*",
 ]
 linkcheck_allowed_redirects = {
     r"https://support\.remarkable\.com": "https://support.remarkable.com/s/",
