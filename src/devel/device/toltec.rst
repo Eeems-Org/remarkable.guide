@@ -21,7 +21,7 @@ Toltec uses entware as a base, which means that it tries to follow the filesyste
 /opt
 ----
 
-Entware, and to the most part, toltec, stores all of it's data in a folder that is mounted to ``/opt``. Toltec puts this folder in ``/home/root/.entware``. All packages are compiled with the assumption that they are stored under ``/opt``.
+Entware, and to the most part, toltec, stores all of its data in a folder that is mounted to ``/opt``. Toltec puts this folder in ``/home/root/.entware``. All packages are compiled with the assumption that they are stored under ``/opt``.
 
 /opt/etc
 --------
@@ -97,7 +97,7 @@ installed linux kernel.
 -----------------------
 
 Some toltec applications will include their licenses, which will be installed
-to this folder. Entware doesn't include licenses in it's packages, due to
+to this folder. Entware doesn't include licenses in its packages, due to
 potential space constraints on the systems it targets.
 
 /opt/share/zoneinfo
