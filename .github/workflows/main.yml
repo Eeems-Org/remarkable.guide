@@ -9,6 +9,8 @@ on:
 jobs:
   # Build job
   build:
+    permissions:
+      contents: read
     runs-on: ubuntu-latest
     steps:
     - name: Checkout the Git repository
