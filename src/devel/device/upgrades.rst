@@ -25,6 +25,6 @@ External Links
 - hawkBit Direct Device Integration API documentation
    https://eclipse.dev/hawkbit/apis/ddi_api/
 - Tool to mount update files using FUSE
-   https://pypi.org/project/remarkable-update-fuse/
+   https://github.com/Eeems-Org/remarkable-update-fuse
 - Python module for reading update files as a block device
    https://github.com/Eeems/remarkable-update-image
