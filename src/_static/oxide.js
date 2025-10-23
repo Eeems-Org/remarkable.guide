@@ -14,7 +14,7 @@ if(typeof ackeeTracker !== "undefined"){
 if(!dnt){
     if(typeof Sentry !== "undefined"){
         Sentry.init({
-            dsn: "https://f90339133a5c499184570d8c4c64a503@glitchtip.eeems.codes/2",
+            dsn: "https://f90339133a5c499184570d8c4c64a503@glitchtip.eeems.codes/1",
             integrations: [new Sentry.Integrations.BrowserTracing()],
             tracePropagationTargets: ["localhost", "127.0.0.1", "remarkable.guide", /^\//],
             tracesSampleRate: 1.0,
