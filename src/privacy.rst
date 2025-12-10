@@ -11,9 +11,9 @@ not store any `personally identifiable information <https://en.wikipedia.org/wik
 what Ackee collects.
 
 To get information on how well the site is performing, as well as capture any errors so that they
-can be resolved, A self-hosted instance of `Sentry <https://develop.sentry.dev/self-hosted/>`_ is
+can be resolved, A self-hosted instance of `Glitchtip <https://glitchtip.com/>`_ is
 used. No `personally identifiable information <https://en.wikipedia.org/wiki/Personal_data>`_ is
 stored, and any information that is stored is removed after 90 days, or after the issue is resolved.
 
-You can opt-out of performance metrics with `Sentry <https://develop.sentry.dev/self-hosted/>`_ by
+You can opt-out of performance metrics with `Glitchtip <https://glitchtip.com/>`_ by
 enabling `Do Not Track <https://en.wikipedia.org/wiki/Do_Not_Track>`_ in your browser.
