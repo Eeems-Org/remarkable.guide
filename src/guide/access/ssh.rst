@@ -166,12 +166,6 @@ If you are using `PuTTY <https://www.chiark.greenend.org.uk/~sgtatham/putty/>`_,
 
 The following command will generate a private and public SSH key pair:
 
-.. code-block:: shell
-
-  ssh-keygen \
-    -f ~/.ssh/id_rsa_remarkable \
-    -N ''
-
 .. tabs::
 
   .. code-tab:: bash Linux
