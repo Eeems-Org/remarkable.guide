@@ -70,7 +70,8 @@ To fix it stop the bluetooth service, change the configuration folder permission
 Disconnecting devices during use
 ________________________________
 When running on battery power the chipset will automatically power off the bluetooth module, sometimes very quickly, that means the bluetooth connection is broken.
-You can power the chip up again, by touching the screen or interacting some other way with the device. If you want to avoid that, you can craate a *wake lock* by adding to ``/sys/power/wake_lock``:
+You can power the chip up again, by touching the screen or interacting some other way with the device. If you want to avoid that, you can create a *wake lock* by adding to ``/sys/power/wake_lock``:
+
 .. code-block:: shell
 
   echo user.lock >> /sys/power/wake_lock
