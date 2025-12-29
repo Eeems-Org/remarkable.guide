@@ -104,7 +104,6 @@ After adding the ``.rules`` file you need to reload the udev rules, e.g. by
  udevadm trigger
 
 
-
 Note, that this means that your device disables *all* power saving mechanisms (except for sleep) whenever you turn on your bluetooth device.
 
 
