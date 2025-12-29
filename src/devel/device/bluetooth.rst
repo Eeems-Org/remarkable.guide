@@ -97,6 +97,7 @@ This can be automated by using a udev rule, say by creating a file ``/etc/udev/r
 You can find the name of your bluetooth device by running ``udevadm info -a /dev/input/eventX`` where ``/dev/input/eventX/`` is the path of your (connected) bluetooth device.
 
 After adding the ``.rules`` file you need to reload the udev rules, e.g. by
+
 .. code-block:: shell
 
  udevadm control --reload
