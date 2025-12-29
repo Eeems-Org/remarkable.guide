@@ -78,6 +78,7 @@ You can power the chip up again, by touching the screen or interacting some othe
 
 
 The device will still go into sleep mode, but it will not use *any* other power saving modes. You want to remove the wake lock when you are done using bluetooth.
+
 .. code-block:: shell
 
   echo user.lock >> /sys/power/wake_unlock
