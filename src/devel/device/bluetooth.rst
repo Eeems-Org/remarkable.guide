@@ -67,6 +67,44 @@ To fix it stop the bluetooth service, change the configuration folder permission
   systemctl start bluetooth
 
 
+Disconnecting devices during use
+_____________________
+When running on battery power the chipset will automatically power off the bluetooth module, sometimes very quickly, that means the bluetooth connection is broken.
+You can power the chip up again, by touching the screen or interacting some other way with the device. If you want to avoid that, you can craate a *wake lock* by adding to ``/sys/power/wake_lock``:
+.. code-block:: shell
+
+  echo user.lock >> /sys/power/wake_lock
+
+
+The device will still go into sleep mode, but it will not use *any* other power saving modes. You want to remove the wake lock when you are done using bluetooth.
+.. code-block:: shell
+
+  echo user.lock >> /sys/power/wake_unlock
+
+
+The actual string ``user.lock`` does not matter, as long as you pick something unique (and use the same string in both lock and unlock).
+
+This can be automated by using a udev rule, say by creating a file ``/etc/udev/rules.d/99-bluetooth-power.rules`` with this content
+
+.. code-block:: shell
+
+  SUBSYSTEM=="input", ATTRS{name}=="NAME_OF_YOUR_BT_DEVICE", ACTION=="add", RUN+="echo udev.bluetooth >> /sys/power/wake_lock"
+  SUBSYSTEM=="input", ATTRS{name}=="NAME_OF_YOUR_BT_DEVICE", ACTION=="remove", RUN+="echo udev.bluetooth >> /sys/power/wake_unlock"
+
+
+You can find the name of your bluetooth device by running ``udevadm info -a /dev/input/eventX`` where ``/dev/input/eventX/`` is the path of your (connected) bluetooth device.
+
+After adding the ``.rules`` file you need to reload the udev rules, e.g. by
+.. code-block:: shell
+
+ udevadm control --reload
+ udevadm trigger
+
+
+
+Note, that this means that your device disables *all* power saving mechanisms (except for sleep) whenever you turn on your bluetooth device.
+
+
 External Links
 ==============
 
