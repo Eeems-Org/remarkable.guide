@@ -21,9 +21,11 @@ Finding Your Device Password and IP Addresses
 Please reference :doc:`../../tech/developer-mode` for more information on how to enable it.
 :raw-html:`</div>`
 
+.. _if_your_device_version_is_3_8_or_lower:
+
 If your device version is less than 3.9 or greater than 3.18
 --------------------------------------
-1. Connect your device to Wi-Fi, or with a USB cable to your computer.
+1. Connect your device to Wifi, or with a USB cable to your computer.
 2. On your device, open the Menu from the main page.
 3. Select "Settings".
 4. Select "Help" in the sidebar.
@@ -31,10 +33,11 @@ If your device version is less than 3.9 or greater than 3.18
 6. You will find your password and the IP addresses you can use to access your device underneath the "GPLv3 Compliance" header.
 
 .. _ssh_info_3_9:
+.. _if_your_device_version_is_3_9_or_higher:
 
 If your device version is between 3.9 and 3.18
 ---------------------------------------
-1. Connect your device to Wi-Fi, or with a USB cable to your computer.
+1. Connect your device to Wifi, or with a USB cable to your computer.
 2. On your device, open the Menu from the main page.
 3. Select "Settings".
 4. Select "About" in the "Help" section.
