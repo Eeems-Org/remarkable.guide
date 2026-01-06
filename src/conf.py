@@ -102,3 +102,4 @@ linkcheck_allowed_redirects = {
 linkcheck_retries = 5
 
 sphinx_tabs_valid_builders = ["linkcheck"]
+sphinx_tabs_disable_css_loading = True
