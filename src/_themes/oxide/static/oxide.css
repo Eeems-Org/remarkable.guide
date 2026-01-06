@@ -11,7 +11,7 @@
   /* Fonts */
   --font: "-apple-system", "BlinkMacSystemFont", "Helvetica Neue", "Roboto", sans-serif;
   --font-color: #222;
-  --font-color-dim: #b5b2af;
+  --font-color-dim: #767676;
   --font-color-inv: #fcfaf8;
 
   /* Text sizes */
@@ -360,7 +360,13 @@ main {
 }
 
 .sidebar-copyright {
-  color: var(--font-color-dim);
+  color: var(--font-color-inv);
+}
+
+@media (prefers-color-scheme: dark) {
+  .sidebar-copyright {
+    color: var(--font-color-dim);
+  }
 }
 
 /* Content */
