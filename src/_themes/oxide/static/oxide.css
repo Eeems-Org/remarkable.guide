@@ -10,9 +10,9 @@
 
   /* Fonts */
   --font: "-apple-system", "BlinkMacSystemFont", "Helvetica Neue", "Roboto", sans-serif;
-  --font-color: #fcfaf8;
+  --font-color: #222;
   --font-color-dim: #b5b2af;
-  --font-color-inv: #222;
+  --font-color-inv: #fcfaf8;
 
   /* Text sizes */
   --text-size: calc(var(--scaling) * 18px);
@@ -32,15 +32,39 @@
   --sidebar-seam: calc(50% - var(--page-width) / 2 + var(--sidebar-width) + 2 * var(--page-spacing));
 
   /* Colors */
-  --bg-color: #000000;
+  --bg-color: #fcfaf8;
   --bg-color-dim: #212121;
-  --bg-color-inv: #fcfaf8;
-  --accent-color: #4d4542;
-  --accent-color-dim: #ede8de;
+  --bg-color-inv: #000000;
+  --accent-color: #ede8de;
+  --accent-color-dim: #4d4542;
+  --button-text: var(--font-color-inv);
+  --button-bg: var(--accent-color-dim);
+  --button-text-hover: var(--font-color);
+  --button-bg-hover: var(--accent-color);
 
   /* Other */
   --transition: 0.1s ease-out;
   --border-radius: calc(var(--scaling) * 3px);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* Fonts */
+    --font-color: #fcfaf8;
+    --font-color-dim: #b5b2af;
+    --font-color-inv: #222;
+
+    /* Colors */
+    --bg-color: #000000;
+    --bg-color-dim: #212121;
+    --bg-color-inv: #fcfaf8;
+    --accent-color: #4d4542;
+    --accent-color-dim: #ede8de;
+    --button-text: var(--font-color-inv);
+    --button-bg: var(--accent-color-dim);
+    --button-text-hover: var(--font-color-inv);
+    --button-bg-hover: var(--accent-color-dim);
+  }
 }
 
 /* Generic elements */
@@ -164,8 +188,9 @@ h3 {
 
 .button {
   display: inline-block;
-  background-color: var(--accent-color);
-  transition: background-color var(--transition);
+  background-color: var(--button-bg);
+  color: var(--button-text);
+  transition: background-color color var(--transition);
   text-decoration: none;
   padding: 0.5rem 1rem;
   margin-top: 1.5rem;
@@ -199,7 +224,8 @@ h3 {
 }
 
 .button:hover {
-  background-color: var(--accent-color-dim);
+  background-color: var(--button-text-hover);
+  color: var(--button-bg-hover);
 }
 
 dt {
@@ -264,6 +290,13 @@ main {
   align-self: flex-start;
   margin: 0 var(--page-spacing);
   padding-top: calc(1 * var(--text-size));
+  color: var(--font-color-inv);
+}
+
+@media(prefers-color-scheme: dark) {
+  .sidebar {
+    color: var(--font-color);
+  }
 }
 
 /* Sidebar */

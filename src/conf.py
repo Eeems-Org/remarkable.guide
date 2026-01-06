@@ -43,7 +43,6 @@ html_js_files = [
             "data-reactions-enabled": "1",
             "data-emit-metadata": "1",
             "data-input-position": "top",
-            "data-theme": "transparent_dark",
             "data-lang": "en",
             "data-loading": "lazy",
             "crossorigin": "anonymous",
