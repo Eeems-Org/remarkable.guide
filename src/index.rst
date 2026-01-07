@@ -13,7 +13,7 @@ What is This Guide For?
 
 This guide will:
 
-- :doc:`Show you access to your device <guide/access/index>`
+- :doc:`Show you how to access to your device <guide/access/index>`
 - :doc:`Show you how to install software on your device <guide/software/index>`
 - :doc:`Show you how to configure your device <guide/config/index>`
 - :doc:`Provide more in depth technical guides for your device <tech/index>`
