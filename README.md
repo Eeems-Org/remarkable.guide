@@ -3,7 +3,7 @@ A guide for hacking your reMarkable tablet.
 
 ### Can I make changes?
 Pull Requests and Issues are welcome! The site is built with [Sphinx](https://www.sphinx-doc.org) and images are generated with
-[TikZ](https://www.overleaf.com/learn/latex/TikZ_package).
+[TikZ](https://www.overleaf.com/learn/latex/TikZ_package). Make sure to read through the rest of this readme to understand the standards on making changes.
 
 ### How do I build the site?
 You will need the following installed:
@@ -54,6 +54,13 @@ For example, to add the favicon you can use the following:
 
 ### Can I change the text in a header?
 Yes, but you'll need to add a label using the previous text so that old hyperlinks will continue to work: `.. _previous-text:`. Make sure to test this as well.
+
+```rst
+.. _previous-title-text:
+
+New title text
+--------------
+```
 
 ### Can I rename a page?
 Yes, you usually will want to accomplish this by just changing the first header on a page, but if you ever need to change the filename of the page, you will need to recreate the old page and have it redirect to the new page. This way links will continue to work.
