@@ -2,7 +2,9 @@
 Getting Started
 ===============
 
-The community maintained guide for your reMarkable tablet. :raw-html:`<br />`
+The community maintained guide for your reMarkable tablet.
+
+:raw-html:`<br />`
 
 .. image:: /images/_generated/favicon.svg
    :alt: reMarkable Tablet
