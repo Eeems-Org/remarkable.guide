@@ -21,7 +21,7 @@ Sync Systemd Service
 DBus Interface
 --------------
 
-.. code-block xml
+.. code-block:: xml
 
   <!DOCTYPE busconfig PUBLIC "-//freedesktop//DTD D-BUS Bus Configuration 1.0//EN"
     "http://www.freedesktop.org/standards/dbus/1.0/busconfig.dtd">
