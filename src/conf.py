@@ -43,7 +43,6 @@ html_js_files = [
             "data-reactions-enabled": "1",
             "data-emit-metadata": "1",
             "data-input-position": "top",
-            "data-theme": "transparent_dark",
             "data-lang": "en",
             "data-loading": "lazy",
             "crossorigin": "anonymous",
@@ -102,3 +101,4 @@ linkcheck_allowed_redirects = {
 linkcheck_retries = 5
 
 sphinx_tabs_valid_builders = ["linkcheck"]
+sphinx_tabs_disable_css_loading = True
