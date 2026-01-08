@@ -4,7 +4,5 @@ Installing Software
 
 .. toctree::
 
-  toltec
-  launcher
-  templates
-  screens
+  xovi/index
+  toltec/index
