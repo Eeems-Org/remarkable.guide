@@ -16,7 +16,7 @@ Cons
 ====
 
 - The full Qt Framework is not available.
-- Not compatible with the Qt framework that can be installed through toltec.
+- Not compatible with the Qt framework that can be installed through :doc:`../../../guide/software/toltec`.
 - Can have a larger memory footprint than other frameworks.
 
 External Links

@@ -20,7 +20,7 @@ Take a look at the `README on GitHub <https://github.com/Eeems-Org/remarkable.gu
 Is it safe to factory reset my device?
 --------------------------------------
 
-Not exactly. The factory reset mechanism isn't a true factory reset. It will wipe your data partition, but it doesn't do anything to the root partition where the OS is installed. This can soft brick your device if you have toltec installed, or other third party software. The :doc:`tech/factory-reset` page contains instructions on how to properly factory reset your device.
+Not exactly. The factory reset mechanism isn't a true factory reset. It will wipe your data partition, but it doesn't do anything to the root partition where the OS is installed. This can soft brick your device if you have :doc:`guide/software/toltec` installed, or other third party software. The :doc:`tech/factory-reset` page contains instructions on how to properly factory reset your device.
 
 There have been instances where factory resetting without third party software installed results in the SSH password no longer displaying on the "Copyright and licenses" screen. This appears to be due to the root partition running out of space. See `My device is connected to wifi, but can't sync or check for updates, how can I fix this?`_ for more information on resolving this.
 
@@ -72,14 +72,14 @@ You can see more technical information regarding the Paper Pro Move in `this Git
 Can I install toltec on my OS version?
 --------------------------------------
 
-You can find up to date information on what version of the OS is the latest that toltec supports on the `toltec website <https://toltec-dev.org/#install-toltec>`_
+You can find up to date information on what version of the OS is the latest that :doc:`guide/software/toltec` supports on the `toltec website <https://toltec-dev.org/#install-toltec>`_
 
 Can I install toltec before my OS version is supported?
 -------------------------------------------------------
 
-On a reMarkable 2, you **will** soft-brick your device if you install toltec on an unsupported version. Due to how the display is accessed by third party software on a reMarkable 2, your device will **no longer** be able to display anything to the screen until you uninstall toltec. If you know what you are doing, you can provide a custom rm2fb configuration file to resolve this. This requires knowing how to find the values needed. It also may not work if there is a large enough change in this OS release that breaks rm2fb support without code changes.
+On a reMarkable 2, you **will** soft-brick your device if you install :doc:`guide/software/toltec` on an unsupported version. Due to how the display is accessed by third party software on a reMarkable 2, your device will **no longer** be able to display anything to the screen until you uninstall :doc:`guide/software/toltec`. If you know what you are doing, you can provide a custom rm2fb configuration file to resolve this. This requires knowing how to find the values needed. It also may not work if there is a large enough change in this OS release that breaks rm2fb support without code changes.
 
-On a reMarkable 1, you **might** soft-brick your device if there are any breaking changes with the underlying dependencies. This doesn't happen often, but there have been several OS updates that require changes to the toolchain used to build toltec in order for it to work properly.
+On a reMarkable 1, you **might** soft-brick your device if there are any breaking changes with the underlying dependencies. This doesn't happen often, but there have been several OS updates that require changes to the toolchain used to build :doc:`guide/software/toltec` in order for it to work properly.
 
 For both devices, there may be issues with packages (like custom kernels) that could soft brick your device. Packages may have other issues and not work as expected before the OS version is supported.
 
@@ -91,14 +91,14 @@ As part of the `EULA <https://support.remarkable.com/s/article/End-user-agreemen
 Can I install toltec at the same time as ddvk-hacks?
 ----------------------------------------------------
 
-Yes! Toltec even ships with a ddvk-hacks package to handle installation for you. While you can install toltec while using the ddvk-hacks automagic install script, it may not play nice with toltec in the future. It is recommended to use the toltec package instead of the automagic script.
+Yes! Toltec even ships with a ddvk-hacks package to handle installation for you. While you can install :doc:`guide/software/toltec` while using the ddvk-hacks automagic install script, it may not play nice with :doc:`guide/software/toltec` in the future. It is recommended to use the :doc:`guide/software/toltec` package instead of the automagic script.
 
 What happens to third party software when I update or downgrade my OS?
 ----------------------------------------------------------------------
 
 When you update or downgrade your OS, the entire root partition is replaced with the new OS. Only the data partition, which is all files under ``/home`` is left untouched. This means that any third party software that relies on modifying files outside of ``/home`` will need to be reapplied.
 
-For software with toltec you just need to follow the instructions in :ref:`toltec-reenable`. For third party software installed with other methods, you will need to check their instructions.
+For software with :doc:`guide/software/toltec` you just need to follow the instructions in :ref:`toltec-reenable`. For third party software installed with other methods, you will need to check their instructions.
 
 Troubleshooting FAQs
 ====================
@@ -140,7 +140,7 @@ Let the device charge for a few hours and then try to turn it on again. If it st
 How do I resolve the "no matching host key type found. Their offer: ssh-rsa" error when attempting to SSH into my device?
 -------------------------------------------------------------------------------------------------------------------------
 
-Starting with OpenSSH 8.8 ssh-rsa keys are `disabled by default <https://www.openssh.com/txt/release-8.7>`_, which is causing this error. Some Linux distros like Fedora 33 have also disabled weaker ssh-rsa keys independently of OpenSSH. That means you could face the same issue on OpenSSH versions lower than 8.8, depending on the distro you are on.
+Starting with OpenSSH 8.8 ssh-rsa keys are `disabled by default <https://www.openssh.org/txt/release-8.7>`_, which is causing this error. Some Linux distros like Fedora 33 have also disabled weaker ssh-rsa keys independently of OpenSSH. That means you could face the same issue on OpenSSH versions lower than 8.8, depending on the distro you are on.
 
 To allow ssh-rsa keys, add the following lines to your :ref:`ssh_config`:
 

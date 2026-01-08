@@ -43,7 +43,7 @@ The ``QML_DISK_CACHE_PATH`` variable specifies the `QML <https://doc.qt.io/archi
 Setting it on toltec
 ____________________
 
-If you are running toltec on the second partition you can create an environment override for xochitl that will set the ``QML_DISK_CACHE_PATH``.
+If you are running :doc:`../guide/software/toltec` on the second partition you can create an environment override for xochitl that will set the ``QML_DISK_CACHE_PATH``.
 
 .. code-block:: shell
 
@@ -55,7 +55,7 @@ If you are running toltec on the second partition you can create an environment 
 Setting it without toltec
 _________________________
 
-If you are not running toltec, you can override the xochitl ``QML_CACHE_PATH`` using systemd override files. 
+If you are not running :doc:`../guide/software/toltec`, you can override the xochitl ``QML_CACHE_PATH`` using systemd override files.
 
 .. code-block:: shell
 

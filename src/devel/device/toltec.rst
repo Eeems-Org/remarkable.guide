@@ -21,7 +21,7 @@ Toltec uses entware as a base, which means that it tries to follow the filesyste
 /opt
 ----
 
-Entware, and to the most part, toltec, stores all of its data in a folder that is mounted to ``/opt``. Toltec puts this folder in ``/home/root/.entware``. All packages are compiled with the assumption that they are stored under ``/opt``.
+Entware, and to the most part, :doc:`../../../guide/software/toltec`, stores all of its data in a folder that is mounted to ``/opt``. Toltec puts this folder in ``/home/root/.entware``. All packages are compiled with the assumption that they are stored under ``/opt``.
 
 /opt/etc
 --------
@@ -69,7 +69,7 @@ Executable files in this folder will be treated as possible launchers for ``laun
 ----------------------------
 
 Contains empty files owned by packages to indicate that they make changes to
-the root partition, and will need to be reinstalled when re-enabling toltec
+the root partition, and will need to be reinstalled when re-enabling :doc:`../../../guide/software/toltec`
 after an update.
 
 /opt/usr/share/applications
@@ -85,7 +85,7 @@ Used by ``changescrn`` to backup the stock splashscreens.
 /opt/share/remarkable/splashscreens
 -----------------------------------
 
-This directory contains the active splashscreen from an installed toltec package.
+This directory contains the active splashscreen from an installed :doc:`../../../guide/software/toltec` package.
 
 /opt/usr/share/kernelctl
 ------------------------
@@ -96,7 +96,7 @@ installed linux kernel.
 /opt/usr/share/licenses
 -----------------------
 
-Some toltec applications will include their licenses, which will be installed
+Some :doc:`../../../guide/software/toltec` applications will include their licenses, which will be installed
 to this folder. Entware doesn't include licenses in its packages, due to
 potential space constraints on the systems it targets.
 

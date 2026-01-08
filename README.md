@@ -69,6 +69,8 @@ New title text
 Yes, you usually will want to accomplish this by just changing the first header on a page, but if you ever need to change the filename of the page, you will need to recreate the old page and have it redirect to the new page. This way links will continue to work.
 
 ```rst
+:orphan:
+
 This page has been moved to :doc:`new-page-name`.
 
 .. raw:: html

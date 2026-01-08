@@ -6,5 +6,4 @@ Installing Software
 
   toltec
   launcher
-  templates
-  screens
+  xovi

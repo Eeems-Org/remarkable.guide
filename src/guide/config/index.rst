@@ -7,3 +7,5 @@ Configuring Your Device
   timezone
   datetime
   locale
+  screens
+  templates

@@ -5,7 +5,7 @@ on:
       - main
   pull_request:
     branches:
-      - '*'
+      - "*"
 jobs:
   # Build job
   build:
@@ -13,38 +13,39 @@ jobs:
       contents: read
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout the Git repository
-      uses: actions/checkout@v4
-      with:
-        submodules: true
-    - name: Setup Python
-      uses: actions/setup-python@v5
-      with:
-        python-version: '3.11'
-    - name: Cache Python environment
-      uses: actions/cache@v4
-      id: cache-python
-      with:
-        path: .venv
-        key: .venv-${{ hashFiles('requirements.txt') }}
-    - name: Install base Apt packages
-      id: cache-apt
-      uses: awalsh128/cache-apt-pkgs-action@latest
-      with:
-        execute_install_scripts: true
-        packages: graphviz libgraphviz-dev librsvg2-bin pdf2svg enchant-2
-        version: 1.0
-    - name: Apt-Cache-Action
-      uses: Eeems-Org/apt-cache-action@v1.4
-      with:
-        packages: texlive-base texlive-latex-extra
-    - name: Build website
-      shell: bash
-      run: make -j $(nproc) prod
-    - name: Upload artifact
-      uses: actions/upload-pages-artifact@v3
-      with:
-        path: 'dist'
+      - name: Checkout the Git repository
+        uses: actions/checkout@v4
+        with:
+          submodules: true
+          fetch-depth: 0
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Cache Python environment
+        uses: actions/cache@v4
+        id: cache-python
+        with:
+          path: .venv
+          key: .venv-${{ hashFiles('requirements.txt') }}
+      - name: Install base Apt packages
+        id: cache-apt
+        uses: awalsh128/cache-apt-pkgs-action@latest
+        with:
+          execute_install_scripts: true
+          packages: graphviz libgraphviz-dev librsvg2-bin pdf2svg enchant-2
+          version: 1.0
+      - name: Apt-Cache-Action
+        uses: Eeems-Org/apt-cache-action@v1.4
+        with:
+          packages: texlive-base texlive-latex-extra
+      - name: Build website
+        shell: bash
+        run: make -j $(nproc) prod
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: "dist"
 
   deploy:
     needs: build
