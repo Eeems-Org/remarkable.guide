@@ -140,7 +140,7 @@ Let the device charge for a few hours and then try to turn it on again. If it st
 How do I resolve the "no matching host key type found. Their offer: ssh-rsa" error when attempting to SSH into my device?
 -------------------------------------------------------------------------------------------------------------------------
 
-Starting with OpenSSH 8.8 ssh-rsa keys are `disabled by default <https://www.openssh.com/txt/release-8.7>`_, which is causing this error. Some Linux distros like Fedora 33 have also disabled weaker ssh-rsa keys independently of OpenSSH. That means you could face the same issue on OpenSSH versions lower than 8.8, depending on the distro you are on.
+Starting with OpenSSH 8.8 ssh-rsa keys are `disabled by default <https://www.openssh.org/txt/release-8.7>`_, which is causing this error. Some Linux distros like Fedora 33 have also disabled weaker ssh-rsa keys independently of OpenSSH. That means you could face the same issue on OpenSSH versions lower than 8.8, depending on the distro you are on.
 
 To allow ssh-rsa keys, add the following lines to your :ref:`ssh_config`:
 

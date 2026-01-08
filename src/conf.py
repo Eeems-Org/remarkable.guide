@@ -1,6 +1,5 @@
 """sphinx configuration"""
 
-import time
 from datetime import datetime
 from datetime import timezone
 
@@ -99,6 +98,9 @@ linkcheck_allowed_redirects = {
     r"https://discord\.gg/ATqQGfu": "https://discord.com/invite/ATqQGfu",
     r"https://hub.docker.com/.*": "https://login.docker.com/u/login/identifier",
 }
+linkcheck_anchors_ignore = [
+    r"\/.*",
+]
 linkcheck_retries = 5
 
 sphinx_tabs_valid_builders = ["linkcheck"]
