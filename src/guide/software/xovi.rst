@@ -13,7 +13,7 @@ Xovi
 Installation
 ============
 
-Please follow the `official instllation instructions <https://github.com/asivery/rm-xovi-extensions?tab=readme-ov-file#to-install-xovi>`_.
+Please follow the `official installation instructions <https://github.com/asivery/rm-xovi-extensions?tab=readme-ov-file#to-install-xovi>`_.
 
 External Resources
 ==================
