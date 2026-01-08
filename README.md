@@ -85,35 +85,30 @@ This page has been moved to :doc:`new-page-name`.
 
 ### How to I add a warning to a page?
 ```rst
-:raw-html:`<div class="warning">⚠️ Warning title. ⚠️`
+.. warningbox::
+   :title: Warning title.
 
-Warning text.
-:raw-html:`</div>`
+   Warning text.
 ```
 
 ### How do I add screenshots to a page?
 ```rst
-:raw-html:`<div class="gallery">`
+.. gallery::
 
-.. image:: /images/path/to/file-1.png
-  :class: screenshot
-  :alt: First screenshot
+  .. image:: /images/path/to/file-1.png
+    :class: screenshot
+    :alt: First screenshot
 
 
-.. image:: /images/path/to/file-2.png
-  :class: screenshot
-  :alt: Second screenshot
-
-:raw-html:`</div>`
+  .. image:: /images/path/to/file-2.png
+    :class: screenshot
+    :alt: Second screenshot
 ```
 
 ### How do I mark a page as a stub that needs further content written?
 Ideally you don't add stub pages, but sometimes it's better to just add a page and throw a couple links on it for future completion.
 ```rst
-:raw-html:`<div class="warning">⚠️ FIXME. ⚠️`
-
-This page is just a stub that needs to be completed. You can `open a PR on the repo <https://github.com/Eeems-Org/remarkable.guide>`_ to add more content to the page.
-:raw-html:`</div>`
+.. fixme::
 ```
 
 ### How do I add grouped tabs with examples of commands for different shells?

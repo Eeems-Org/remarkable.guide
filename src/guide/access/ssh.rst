@@ -1,13 +1,12 @@
 ==========
 SSH Access
 ==========
+.. warningbox::
+  :title: Make sure you write down your SSH password.
 
-:raw-html:`<div class="warning">⚠️ Make sure you write down your SSH password. ⚠️<br/>`
+  If you don't write down your password and lose access to the UI, you will be unable to access your device. An :doc:`../../tech/recovery` will be required.
 
-If you don't write down your password and lose access to the UI, you will be unable to access your device. An :doc:`../../tech/recovery` will be required.
-
-It is also recommended to setup a `ssh-key`_ instead of using password authentication.
-:raw-html:`</div>`
+  It is also recommended to setup a `ssh-key`_ instead of using password authentication.
 
 .. contents:: Contents
    :local:
@@ -16,10 +15,10 @@ It is also recommended to setup a `ssh-key`_ instead of using password authentic
 Finding Your Device Password and IP Addresses
 =============================================
 
-:raw-html:`<div class="warning">⚠️ reMarkable Paper Pro and Paper Pro Move require Developer Mode ⚠️<br/>`
+.. warningbox::
+  :title: reMarkable Paper Pro and Paper Pro Move require Developer Mode
 
-Please reference :doc:`../../tech/developer-mode` for more information on how to enable it.
-:raw-html:`</div>`
+  Please reference :doc:`../../tech/developer-mode` for more information on how to enable it.
 
 .. _if_your_device_version_is_3_8_or_lower:
 
@@ -152,14 +151,14 @@ Depending on your network configuration, your reMarkable may also be available v
 Setting Up a SSH Key
 ====================
 
-:raw-html:`<div class="warning">⚠️ You may need to enable ssh-rsa keys. ⚠️`
+.. warningbox::
+  :title: You may need to enable ssh-rsa keys.
 
-If you encounter the following error when attempting to use a SSH key:
+  If you encounter the following error when attempting to use a SSH key:
 
-  Unable to negotiate with 10.11.99.1 port 22: no matching host key type found. Their offer: ssh-rsa
+    Unable to negotiate with 10.11.99.1 port 22: no matching host key type found. Their offer: ssh-rsa
 
-You will need to enable ssh-rsa keys. See :ref:`enable-ssh-rsa` for more information.
-:raw-html:`</div>`
+  You will need to enable ssh-rsa keys. See :ref:`enable-ssh-rsa` for more information.
 
 Creating a SSH Key
 -------------------
@@ -196,29 +195,28 @@ The following command will generate a private and public SSH key pair:
       -f $env:USERPROFILE/.ssh/id_rsa_remarkable `
       -N ''
 
-:raw-html:`<div class="warning">⚠️ The generated SSH key will not have a password. ⚠️`
+.. warningbox::
+  :title: The generated SSH key will not have a password.
 
-This is a minor security concern, as anybody who can access the file will be able to use it to access your device. You can generate one with a password by using the following command instead:
+  This is a minor security concern, as anybody who can access the file will be able to use it to access your device. You can generate one with a password by using the following command instead:
 
-.. tabs::
+  .. tabs::
 
-  .. code-tab:: bash Linux
+    .. code-tab:: bash Linux
 
-    ssh-keygen -f ~/.ssh/id_rsa_remarkable
+      ssh-keygen -f ~/.ssh/id_rsa_remarkable
 
-  .. code-tab:: bash macOS
+    .. code-tab:: bash macOS
 
-    ssh-keygen -f ~/.ssh/id_rsa_remarkable
+      ssh-keygen -f ~/.ssh/id_rsa_remarkable
 
-  .. code-tab:: bat Windows (CMD)
+    .. code-tab:: bat Windows (CMD)
 
-    ssh-keygen -f %userprofile%\.ssh\id_rsa_remarkable
+      ssh-keygen -f %userprofile%\.ssh\id_rsa_remarkable
 
-  .. code-tab:: pwsh Windows (PowerShell)
+    .. code-tab:: pwsh Windows (PowerShell)
 
-    ssh-keygen -f $env:USERPROFILE/.ssh/id_rsa_remarkable
-
-:raw-html:`</div>`
+      ssh-keygen -f $env:USERPROFILE/.ssh/id_rsa_remarkable
 
 Installing a SSH Key on Your Device
 -----------------------------------
@@ -263,76 +261,74 @@ The following command will install your SSH public key on your device:
     ssh root@10.11.99.1 `
       chmod 600 /home/root/.ssh/authorized_keys
 
-:raw-html:`<div class="warning">⚠️ This will not work properly until OpenSSH 9.4. ⚠️`
+.. warningbox::
+  :title: This will not work properly until OpenSSH 9.4.
 
-Due to a bug in ssh-copy-id this installs to the wrong location on the device on versions of OpenSSH older than 9.4. You can check your version of OpenSSH with the following command on your computer:
+  Due to a bug in ssh-copy-id this installs to the wrong location on the device on versions of OpenSSH older than 9.4. You can check your version of OpenSSH with the following command on your computer:
 
+  .. tabs::
 
-.. tabs::
+    .. code-tab:: bash Linux
 
-  .. code-tab:: bash Linux
+      ssh -V
 
-    ssh -V
+    .. code-tab:: bash macOS
 
-  .. code-tab:: bash macOS
+      ssh -V
 
-    ssh -V
+    .. code-tab:: bat Windows (CMD)
 
-  .. code-tab:: bat Windows (CMD)
+      ssh -V
 
-    ssh -V
+    .. code-tab:: pwsh Windows (PowerShell)
 
-  .. code-tab:: pwsh Windows (PowerShell)
+      ssh -V
 
-    ssh -V
+  .. raw:: html
 
-.. raw:: html
+    <p>For these versions you can use the following commands to install your public key instead:</p>
 
-  <p>For these versions you can use the following commands to install your public key instead:</p>
+  .. tabs::
 
-.. tabs::
+    .. code-tab:: bash Linux
 
-  .. code-tab:: bash Linux
+      ssh root@10.11.99.1 \
+        mkdir -p -m 700 /home/root/.ssh
+      cat ~/.ssh/id_rsa_remarkable.pub \
+      | ssh root@10.11.99.1 \
+        tee -a /home/root/.ssh/authorized_keys
+      ssh root@10.11.99.1 \
+        chmod 600 /home/root/.ssh/authorized_keys
 
-    ssh root@10.11.99.1 \
-      mkdir -p -m 700 /home/root/.ssh
-    cat ~/.ssh/id_rsa_remarkable.pub \
-    | ssh root@10.11.99.1 \
-      tee -a /home/root/.ssh/authorized_keys
-    ssh root@10.11.99.1 \
-      chmod 600 /home/root/.ssh/authorized_keys
+    .. code-tab:: bash macOS
 
-  .. code-tab:: bash macOS
+      ssh root@10.11.99.1 \
+        mkdir -p -m 700 /home/root/.ssh
+      cat ~/.ssh/id_rsa_remarkable.pub \
+      | ssh root@10.11.99.1 \
+        tee -a /home/root/.ssh/authorized_keys
+      ssh root@10.11.99.1 \
+        chmod 600 /home/root/.ssh/authorized_keys
 
-    ssh root@10.11.99.1 \
-      mkdir -p -m 700 /home/root/.ssh
-    cat ~/.ssh/id_rsa_remarkable.pub \
-    | ssh root@10.11.99.1 \
-      tee -a /home/root/.ssh/authorized_keys
-    ssh root@10.11.99.1 \
-      chmod 600 /home/root/.ssh/authorized_keys
+    .. code-tab:: bat Windows (CMD)
 
-  .. code-tab:: bat Windows (CMD)
+      ssh root@10.11.99.1 ^
+        mkdir -p -m 700 /home/root/.ssh
+      type %userprofile%\.ssh\id_rsa_remarkable.pub ^
+      | ssh root@10.11.99.1 ^
+        tee -a /home/root/.ssh/authorized_keys
+      ssh root@10.11.99.1 ^
+        chmod 600 /home/root/.ssh/authorized_keys
 
-    ssh root@10.11.99.1 ^
-      mkdir -p -m 700 /home/root/.ssh
-    type %userprofile%\.ssh\id_rsa_remarkable.pub ^
-    | ssh root@10.11.99.1 ^
-      tee -a /home/root/.ssh/authorized_keys
-    ssh root@10.11.99.1 ^
-      chmod 600 /home/root/.ssh/authorized_keys
+    .. code-tab:: pwsh Windows (PowerShell)
 
-  .. code-tab:: pwsh Windows (PowerShell)
-
-    ssh root@10.11.99.1 `
-      mkdir -p -m 700 /home/root/.ssh
-    type $env:USERPROFILE/.ssh/id_rsa_remarkable.pub `
-    | ssh root@10.11.99.1 `
-      tee -a /home/root/.ssh/authorized_keys
-    ssh root@10.11.99.1 `
-      chmod 600 /home/root/.ssh/authorized_keys
-
-:raw-html:`</div>`
+      ssh root@10.11.99.1 `
+        mkdir -p -m 700 /home/root/.ssh
+      type $env:USERPROFILE/.ssh/id_rsa_remarkable.pub `
+      | ssh root@10.11.99.1 `
+        tee -a /home/root/.ssh/authorized_keys
+      ssh root@10.11.99.1 `
+        chmod 600 /home/root/.ssh/authorized_keys
 
 .. _ssh_config:
 

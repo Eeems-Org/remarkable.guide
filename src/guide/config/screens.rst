@@ -4,12 +4,12 @@
 Change System Splash Screens
 ============================
 
-:raw-html:`<div class="warning">⚠️ File Persistence ⚠️<br/>`
+.. warningbox::
+  :title: File Persistence
 
-Files stored in ``/usr/share/remarkable/`` will be overwritten with every OS update.
+  Files stored in ``/usr/share/remarkable/`` will be overwritten with every OS update.
 
-reMarkable Paper Pro and Paper Pro Move require :ref:`additional steps <why-do-some-changes-not-persist-on-the-remarkable-paper-pro>` to write to ``/usr/``.
-:raw-html:`</div>`
+  reMarkable Paper Pro and Paper Pro Move require :ref:`additional steps <why-do-some-changes-not-persist-on-the-remarkable-paper-pro>` to write to ``/usr/``.
 
 System splash screens on the device be found in ``/usr/share/remarkable/``. You can manually replace those files to use new splash screens. See :doc:`../access/file-transfer` for more information on how to copy files to the device.
 
@@ -92,9 +92,11 @@ Changing a System Splash Screen
 
 Configuration File for Sleep Screen
 -----------------------------------
-:raw-html:`<div class="warning">⚠️ Does not work on all OS versions. ⚠️`
-This will only work if your OS version is 3.2 to 3.13, or if the OS is 3.20 or newer.
-:raw-html:`</div>`
+
+.. warningbox::
+  :title: Does not work on all OS versions.
+
+  This will only work if your OS version is 3.2 to 3.13, or if the OS is 3.20 or newer.
 
 For the sleep screen, it is possible to set a custom png path by adding a line in ``/home/root/.config/remarkable/xochitl.conf`` under the General section:
 

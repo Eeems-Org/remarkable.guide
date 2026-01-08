@@ -2,15 +2,17 @@
 Developer Mode
 ==============
 
-:raw-html:`<div class="warning">⚠️ Enabling Developer Mode will require a factory reset. ⚠️<br/>`
+.. warningbox::
+   :title: Enabling Developer Mode will require a factory reset.
 
-Make sure all files are synced to the cloud, or backed up via the :doc:`../../tech/usb-web-interface`
-:raw-html:`</div>`
+   Make sure all files are synced to the cloud, or backed up via the :doc:`../../tech/usb-web-interface`
 
-:raw-html:`<div class="warning">⚠️ Errors or defects caused by Developer Mode are not covered under warranty. ⚠️<br/>`
+:raw-html:`<br/>`
 
-https://support.remarkable.com/s/article/Limited-Warranty-Policy
-:raw-html:`</div>`
+.. warningbox::
+   :title: Errors or defects caused by Developer Mode are not covered under warranty.
+
+   https://support.remarkable.com/s/article/Limited-Warranty-Policy
 
 The reMarkable Paper Pro and Paper Pro Move require enabling Developer Mode to enable :doc:`../guide/access/ssh`.
 

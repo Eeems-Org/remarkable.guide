@@ -6,11 +6,10 @@ Dualbooting the reMarkable
    :local:
    :backlinks: none
 
-:raw-html:`<div class="warning">⚠️ Before starting ⚠️<br/>`
+.. warningbox::
+  :title: Before starting
 
-This guide requires :doc:`../guide/access/ssh`
-
-:raw-html:`</div>`
+  This guide requires :doc:`../guide/access/ssh`
 
 Choosing the versions
 =====================

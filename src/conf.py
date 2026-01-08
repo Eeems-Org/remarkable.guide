@@ -1,7 +1,12 @@
 """sphinx configuration"""
 
+import sys
+
+from pathlib import Path
 from datetime import datetime
 from datetime import timezone
+
+sys.path.append(str(Path(".").resolve()))
 
 year = datetime.today().year
 
@@ -73,7 +78,12 @@ extensions = [
     "sphinx_copybutton",
     "sphinx_last_updated_by_git",
     "sphinx_contributors",
+    "_ext",
 ]
+source_suffix = {
+    ".rst": "restructuredtext",
+    ".md": "markdown",
+}
 
 rst_prolog = """
 .. role:: raw-html(raw)
