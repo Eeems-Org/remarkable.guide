@@ -71,16 +71,7 @@ Yes, you usually will want to accomplish this by just changing the first header 
 ```rst
 :orphan:
 
-This page has been moved to :doc:`new-page-name`.
-
-.. raw:: html
-
-  <noscript>
-    <meta http-equiv="refresh" content="0; url=/new-page-name.html"/>
-  </noscript>
-  <script>
-    location.pathname = "/new-page-name.html";
-  </script>
+.. redirect:: new-page-name
 ```
 
 ### How to I add a warning to a page?

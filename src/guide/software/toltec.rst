@@ -3,7 +3,7 @@ Toltec
 ======
 
 .. warningbox::
-  :title: Always refer to the <a href="https://toltec-dev.org">toltec website</a> for up to date information
+  :title: Always refer to the `toltec website <https://toltec-dev.org>`_ for up to date information
 
   The website contains up to date information on what version of the OS is supported, as well as the latest installation steps.
 
