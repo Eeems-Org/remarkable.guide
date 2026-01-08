@@ -72,6 +72,7 @@ extensions = [
     "sphinx_tabs.tabs",
     "sphinx_copybutton",
     "sphinx_last_updated_by_git",
+    "sphinx_contributors",
 ]
 
 rst_prolog = """
