@@ -85,8 +85,8 @@
         </nav>
         {% endif %}
         {% block body %}{% endblock %}
-        {%- if gitstamp %}
-        <div class="page-timestamp">This site was last updated on {{ gitstamp }}.</div>
+        {%- if last_updated %}
+        <div class="page-timestamp">This page was last updated on {{ last_updated }}.</div>
         {%- endif %}
         <nav>
             {% if prev %}

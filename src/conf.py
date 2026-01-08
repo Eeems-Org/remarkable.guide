@@ -2,6 +2,7 @@
 
 import time
 from datetime import datetime
+from datetime import timezone
 
 year = datetime.today().year
 
@@ -59,7 +60,7 @@ ogp_use_first_image = True
 ogp_type = "article"
 ogp_enable_meta_description = True
 ogp_custom_meta_tags = [
-    f'<meta property="og:article:modified_time" content="{datetime.utcnow().isoformat()}" />',
+    f'<meta property="og:article:modified_time" content="{datetime.now(timezone.utc).isoformat()}" />',
 ]
 
 # Do not enable sphinx.ext.autosectionlabel
@@ -71,7 +72,7 @@ extensions = [
     "sphinx.ext.doctest",
     "sphinx_tabs.tabs",
     "sphinx_copybutton",
-    "sphinx_gitstamp",
+    "sphinx_last_updated_by_git",
 ]
 
 rst_prolog = """
