@@ -114,6 +114,8 @@ If you are unable to develop on a linux machine, or would like to avoid installi
 
 You will still need to source the toolchain when running scripts inside the container to make sure it's loaded.
 
+.. _toltec-toolchain:
+
 Toltec Toolchain
 ================
 

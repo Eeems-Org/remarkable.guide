@@ -17,7 +17,7 @@ Pros
 Cons
 ====
 
-- Needs to be installed with pip, which can conflict with toltec python packages
+- Needs to be installed with pip, which can conflict with :doc:`../../../guide/software/toltec/toltec` python packages
 
 External Links
 ==============

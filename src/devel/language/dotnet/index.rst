@@ -2,7 +2,7 @@
 .NET
 ====
 
-Due to the cross platform nature of modern .NET, no porting was required to get it working on the device. The runtime is available as a package in toltec.
+Due to the cross platform nature of modern .NET, no porting was required to get it working on the device. The runtime is available as a package in :doc:`../../../guide/software/toltec/toltec`.
 
 .. code-block:: console
 

@@ -74,13 +74,13 @@ This badge is used to indicate that the application supports the reMarkable Pape
 Toltec package name
 -------------------
 
-This badge is used to indicate what the package name is in toltec, so users know at a glance what to install.
+This badge is used to indicate what the package name is in :doc:`../../guide/software/toltec/toltec`, so users know at a glance what to install.
 
 .. image:: https://img.shields.io/badge/OPKG-oxide-blue
   :alt: rM2 supported
   :target: https://toltec-dev.org/
 
-Replace ``<name>`` with the name of the package in toltec.
+Replace ``<name>`` with the name of the package in :doc:`../../guide/software/toltec/toltec`.
 
 .. code-block:: markdown
 

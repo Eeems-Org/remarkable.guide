@@ -2,7 +2,7 @@
 Node.js
 =======
 
-Node.js is available through toltec. Due to the package build built using the entware toolchain, it is not compatible with the native libraries, or any packages built with the toltec toolchain. This means that it can't interface with the :ref:`rm2fb` server directly. Instead you can use :doc:`../shell/simple` to interact with the screen.
+Node.js is available through :doc:`../../../guide/software/toltec/toltec`. Due to the package build built using the entware toolchain, it is not compatible with the native libraries, or any packages built with the :ref:`toltec-toolchain`. This means that it can't interface with the :ref:`rm2fb` server directly. Instead you can use :doc:`../shell/simple` to interact with the screen.
 
 .. code-block:: console
 

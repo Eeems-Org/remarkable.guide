@@ -18,7 +18,7 @@ This will cause you to lose access to your device, unless you have an :ref:`SSH 
 In order to factory reset the device you will need to do the following steps:
 
 1. Uninstall any manually added third party software or modifications.
-2. Uninstall toltec:
+2. Uninstall :doc:`../guide/software/toltec/toltec`:
 
 .. code-block:: shell
 
