@@ -4,7 +4,7 @@ Picking a Launcher
 
 Launchers allow you to open and switch between applications. Without them there is no way to run third party applications from the user interface. You would have to SSH into your device to launch them every time you wanted to use them.
 
-After :doc:`toltec` you will need to install a launcher. Currently there are `three launchers in toltec <https://toltec-dev.org/stable/#section-launchers>`_. Of which we only recommend two for use: Oxide and Remux.
+After you've installed :doc:`toltec`, you will need to install a launcher. Currently there are `three launchers in toltec <https://toltec-dev.org/stable/#section-launchers>`_. Of which we only recommend two for use: Oxide and Remux. There is also AppLoad, but that will require manual installation until it's included in :doc:`toltec`.
 
 .. contents:: Contents
    :local:
@@ -105,9 +105,6 @@ AppLoad
 =======
 
 `AppLoad <https://github.com/asivery/rm-appload>`_ is a `xovi <https://github.com/asivery/xovi>`_ extension that allows running applications directly in xochitl.
-
-:raw-html:`<div class="gallery">`
-:raw-html:`</div>`
 
 Features
 --------
