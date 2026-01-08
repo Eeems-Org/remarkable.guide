@@ -6,3 +6,4 @@ Installing Software
 
   toltec
   launcher
+  xovi
