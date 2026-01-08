@@ -26,6 +26,9 @@ of the site in your browser, and auto update the page when you make changes. If 
 
 You can run `make spelling` to just check spelling of the guide.
 
+### Should I say reMarkable or rM?
+Avoid using rM, rM1, rM2, etc, always write out the full name. For example: reMarkable Paper Pro.
+
 ### How do I add a page to the site?
 Create a new `*.rst` file in [src](src).
 
