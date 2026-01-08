@@ -15,8 +15,7 @@ class WarningBoxDirective(SphinxDirective):
 
     def run(self) -> list[nodes.Node]:
         return [
-            RawHTML('<div class="warning">'),
-            *self.parse_text_to_nodes(f"⚠️ {self.options['title']} ⚠️"),
+            RawHTML(f'<div class="warning">⚠️ {self.options["title"]} ⚠️'),
             *self.parse_content_to_nodes(),
             RawHTML("</div>"),
         ]
