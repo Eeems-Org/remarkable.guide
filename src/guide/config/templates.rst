@@ -1,5 +1,7 @@
+.. _manage-templates:
+
 ================
-Manage Templates
+Custom Templates
 ================
 
 Templates on the device can be found in ``/usr/share/remarkable/templates/``, and are registered in ``/usr/share/remarkable/templates/templates.json``.

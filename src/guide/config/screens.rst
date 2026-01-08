@@ -1,5 +1,7 @@
+.. _manage-system-splash-screens:
+
 ============================
-Manage System Splash Screens
+Change System Splash Screens
 ============================
 
 :raw-html:`<div class="warning">⚠️ File Persistence ⚠️<br/>`
