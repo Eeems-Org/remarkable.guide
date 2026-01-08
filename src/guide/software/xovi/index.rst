@@ -1,6 +1,0 @@
-====
-Xovi
-====
-
-.. toctree::
-   xovi

@@ -14,4 +14,4 @@ To see all available locales you can use the following command:
 
   localectl list-locales
 
-Unfortunately the device only comes with two locales, and :doc:`../software/toltec/toltec` does not currently expose more locales that can be used by the system.
+Unfortunately the device only comes with two locales, and :doc:`../software/toltec` does not currently expose more locales that can be used by the system.

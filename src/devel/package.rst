@@ -2,7 +2,7 @@
 Creating a Toltec Package
 =========================
 
-Toltec packages are one of the best ways to distribute software for the device. They allow automatic dependency management, as well as automate the majority of the install and uninstall work. They can also be distributed outside of the :doc:`../../guide/software/toltec/toltec` repository itself, either with a custom repository, or directly.
+Toltec packages are one of the best ways to distribute software for the device. They allow automatic dependency management, as well as automate the majority of the install and uninstall work. They can also be distributed outside of the :doc:`../../guide/software/toltec` repository itself, either with a custom repository, or directly.
 
 Toltecmk
 ========
