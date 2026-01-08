@@ -23,7 +23,7 @@ External Links
 - Memfault Documentation
    https://docs.memfault.com/
 - hawkBit Direct Device Integration API documentation
-   https://eclipse.dev/hawkbit/apis/ddi_api/
+   https://hawkbit.eclipse.dev/#/direct-device-integration-api
 - Tool to mount update files using FUSE
    https://github.com/Eeems-Org/remarkable-update-fuse
 - Python module for reading update files as a block device
