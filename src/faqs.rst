@@ -60,7 +60,7 @@ For other third party software, they may provide an uninstall script, or they ma
 What can I install on the reMarkable Paper Pro or Paper Pro Move?
 -----------------------------------------------------------------
 
-As of September 2025, third party development for these devices is still ongoing.  At present, you can `SSH into the device <https://remarkable.guide/guide/access/ssh.html>`_ by `enabling developer mode <https://remarkable.guide/tech/developer-mode.html>`_, and you can `perform a recovery on your device if necessary <https://remarkable.guide/tech/recovery.html>`.
+As of September 2025, third party development for these devices is still ongoing.  At present, you can `SSH into the device <https://remarkable.guide/guide/access/ssh.html>`_ by `enabling developer mode <https://remarkable.guide/tech/developer-mode.html>`_, and you can `perform a recovery on your device if necessary <https://remarkable.guide/tech/recovery.html>`_.
 
 The reMarkable Paper Pro and Paper Pro Move use a different CPU architecture than that used in the reMarkable 1 and reMarkable 2.  At minimum, existing programs for the reMarkable 1 and 2 will need to be recompiled in order to be made compatible with the Paper Pro and Paper Pro Move.
 
@@ -123,7 +123,7 @@ You could attempt the following troubleshooting steps:
 
      .. code-block:: shell
 
-       journalctl --vacuum-size-1
+       journalctl --vacuum-size=1
 
    - If running ``df -h /`` still reports ``Use%`` as ``100%``, you may need to remove other files from your device. If you have installed :doc:`custom templates <guide/software/templates>`, :doc:`splash screens <guide/software/screens>`, or fonts, you may need to remove them.
    - If you still are unable to free up space, ask for help on the `community discord <https://discord.gg/ATqQGfu>`_.
@@ -188,7 +188,7 @@ If you don't want to reboot, you can set the filesystems back to their normal st
 
   mount -o remount,ro /
   umount /etc/dropbear
-  mount -o rw,relatime,lowerdir-/etc,upperdir-/var/volatile/etc,workdir-/var/volatile/.etc-work -t overlay overlay /etc
+  mount -o rw,relatime,lowerdir=/etc,upperdir=/var/volatile/etc,workdir=/var/volatile/.etc-work -t overlay overlay /etc
   mount -t bind /home/root/.dropbear /etc/dropbear
 
 Note that you can get the value of the ``-o`` option in the second ``mount`` command by running the ``mount | grep overlay`` command noted above, *before* unmounting anything.
