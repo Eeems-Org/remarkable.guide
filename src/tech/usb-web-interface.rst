@@ -22,10 +22,12 @@ API
 
 The USB Web Interface exposes the following API endpoints that can be used to interact with the xochitl filesystem.
 
-``POST http://10.11.99.1/documents/``
+.. _post-http-10-11-99-1-documents:
+
+``GET http://10.11.99.1/documents/``
 -------------------------------------
 
-Get the document and folders list for the root folder.
+Get the document and folders list for the root folder. This will also respond to POST requests.
 
 **Example:**
 
@@ -36,10 +38,12 @@ Get the document and folders list for the root folder.
     http://10.11.99.1/documents/ \
   | jq -r 'map({(.ID): {VissibleName,Type}}) | add'
 
-``POST http://10.11.99.1/documents/{guid}``
+.. _post-http-10-11-99-1-documents-guid:
+
+``GET http://10.11.99.1/documents/{guid}``
 -------------------------------------------
 
-Get the documents and folders list for a specific folder.
+Get the documents and folders list for a specific folder. This will also respond to POST requests.
 
 **Example:**
 
@@ -51,8 +55,10 @@ Get the documents and folders list for a specific folder.
     "http://10.11.99.1/documents/$guid" \
   | jq -r 'map({(.ID): {VissibleName,Type}}) | add'
 
-``GET http://10.11.99.1/download/{guid}/placeholder``
------------------------------------------------------
+.. _get-http-10-11-99-1-download-guid-placeholder:
+
+``GET http://10.11.99.1/download/{guid}/pdf``
+---------------------------------------------
 
 Download the PDF for a specific document.
 
@@ -62,7 +68,7 @@ Download the PDF for a specific document.
 
   guid=fd2c4b2c-3849-46c3-bf2d-9c80994cc985
   curl \
-    -I "http://10.11.99.1/download/$guid/placeholder"
+    -I "http://10.11.99.1/download/$guid/pdf"
 
 ``GET http://10.11.99.1/download/{guid}/rmdoc``
 -----------------------------------------------
@@ -135,7 +141,8 @@ Search for documents matching a specific keyword. This endpoint is currently und
   keyword="planning"
   curl \
     -X POST \
-    "http://10.11.99.1/search/$keyword"
+    "http://10.11.99.1/search/$keyword" \
+  | jq -r 'map({(.ID): {VissibleName,Type}}) | add'
 
 External links
 ==============
