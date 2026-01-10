@@ -102,6 +102,20 @@ AppLoad
 
 `AppLoad <https://github.com/asivery/rm-appload>`_ is a `xovi <https://github.com/asivery/xovi>`_ extension that allows running applications directly in xochitl.
 
+.. gallery::
+
+  .. image:: /images/launcher/appload-1.webp
+    :class: screenshot
+    :alt: appload launcher
+
+  .. image:: /images/launcher/appload-2.webp
+    :class: screenshot
+    :alt: appload launcher
+
+  .. image:: /images/launcher/appload-3.webp
+    :class: screenshot
+    :alt: appload launcher
+
 Features
 --------
 
