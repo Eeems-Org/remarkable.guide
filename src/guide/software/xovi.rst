@@ -26,3 +26,5 @@ External Resources
    https://github.com/asivery/rm-xovi-extensions
 - Interface customization section of awesome reMarkable
    https://github.com/reHackable/awesome-reMarkable/?tab=readme-ov-file#interface-customization
+- Unofficial Xovi Guide
+   https://xovi.bearblog.dev/
