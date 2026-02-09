@@ -77,7 +77,7 @@ Toltec package name
 This badge is used to indicate what the package name is in :doc:`../../guide/software/toltec`, so users know at a glance what to install.
 
 .. image:: https://img.shields.io/badge/OPKG-oxide-blue
-  :alt: rM2 supported
+  :alt: Toltec package: oxide
   :target: https://toltec-dev.org/
 
 Replace ``<name>`` with the name of the package in :doc:`../../guide/software/toltec`.
@@ -85,6 +85,21 @@ Replace ``<name>`` with the name of the package in :doc:`../../guide/software/to
 .. code-block:: markdown
 
   [![opkg](https://img.shields.io/badge/OPKG-<name>-blue)](https://toltec-dev.org/)
+
+Vellum package name
+-------------------
+
+This badge is used to indicate what the package name is in vellum, so users know at a glance what to install.
+
+.. image:: https://img.shields.io/badge/vellum-xovi-purple
+  :alt: vellum package: xovi
+  :target: https://vellum.delivery/
+
+Replace ``<name>`` with the name of the package in vellum.
+
+.. code-block:: markdown
+
+  [![opkg](https://img.shields.io/badge/vellum-<name>-purple)](https://vellum.delivery/)
 
 Community Discord
 -----------------
