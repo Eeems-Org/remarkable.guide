@@ -99,7 +99,7 @@ Replace ``<name>`` with the name of the package in vellum.
 
 .. code-block:: markdown
 
-  [![opkg](https://img.shields.io/badge/vellum-<name>-purple)](https://vellum.delivery/)
+  [![vellum](https://img.shields.io/badge/vellum-<name>-purple)](https://vellum.delivery/)
 
 Community Discord
 -----------------
