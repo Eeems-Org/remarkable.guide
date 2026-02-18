@@ -46,6 +46,13 @@ SSH over USB on the device is much faster than SSH over wifi.
 Third Party Software FAQs
 =========================
 
+.. _why-doesn-t-toltec-support-the-beta-os-versions:
+
+Why doesn't third party software support the beta OS versions?
+--------------------------------------------------------------
+
+As part of the `EULA <https://support.remarkable.com/s/article/End-user-agreement-for-Opt-In-Beta>`_ you agree to in order to be able to install the beta, you agree that you will not install third party software on the device.
+
 How do I remove all third party software from my device?
 --------------------------------------------------------
 
@@ -82,11 +89,6 @@ On a reMarkable 2, you **will** soft-brick your device if you install :doc:`guid
 On a reMarkable 1, you **might** soft-brick your device if there are any breaking changes with the underlying dependencies. This doesn't happen often, but there have been several OS updates that require changes to the toolchain used to build :doc:`guide/software/toltec` in order for it to work properly.
 
 For both devices, there may be issues with packages (like custom kernels) that could soft brick your device. Packages may have other issues and not work as expected before the OS version is supported.
-
-Why doesn't toltec support the beta OS versions?
-------------------------------------------------
-
-As part of the `EULA <https://support.remarkable.com/s/article/End-user-agreement-for-Opt-In-Beta>`_ you agree to in order to be able to install the beta, you agree that you will not install third party software on the device.
 
 Can I install toltec at the same time as ddvk-hacks?
 ----------------------------------------------------
