@@ -4,11 +4,46 @@ Picking a Launcher
 
 Launchers allow you to open and switch between applications. Without them there is no way to run third party applications from the user interface. You would have to SSH into your device to launch them every time you wanted to use them.
 
-After you've installed :doc:`toltec`, you will need to install a launcher. Currently there are `three launchers in toltec <https://toltec-dev.org/stable/#section-launchers>`_. Of which we only recommend two for use: Oxide and Remux. There is also AppLoad, but that will require manual installation until it's included in :doc:`toltec`.
+After you've installed :doc:`vellum` or :doc:`toltec`, you will need to install a launcher. Currently there are `three launchers in toltec <https://toltec-dev.org/stable/#section-launchers>`_. Of which we only recommend two for use: Oxide and Remux. In :doc:`vellum` there is only AppLoad available.
 
 .. contents:: Contents
    :local:
    :backlinks: none
+
+AppLoad
+=======
+
+`AppLoad <https://github.com/asivery/rm-appload>`_ is a `xovi <https://github.com/asivery/xovi>`_ extension that allows running applications directly in xochitl.
+
+Screenshots
+-----------
+
+.. gallery::
+
+  .. image:: /images/launcher/appload-1.webp
+    :class: screenshot
+    :alt: appload launcher
+
+  .. image:: /images/launcher/appload-2.webp
+    :class: screenshot
+    :alt: appload launcher
+
+  .. image:: /images/launcher/appload-3.webp
+    :class: screenshot
+    :alt: appload launcher
+
+Features
+--------
+
+- Multitasking / Application switching.
+- Runs applications as windows inside the main UI application.
+
+Installation
+------------
+
+.. code-block:: shell
+
+  vellum add appload
 
 .. _oxide-launcher:
 
@@ -62,6 +97,8 @@ Features
 Installation
 ------------
 
+You can install oxide with :doc:`toltec`. It is not currently available in :doc:`vellum`.
+
 .. code-block:: shell
 
   opkg install oxide
@@ -92,40 +129,9 @@ Features
 Installation
 ------------
 
+You can install remux with :doc:`toltec`. It is not currently available in :doc:`vellum`.
+
 .. code-block:: shell
 
   opkg install remux
   launcherctl switch-launcher --start remux
-
-AppLoad
-=======
-
-`AppLoad <https://github.com/asivery/rm-appload>`_ is a `xovi <https://github.com/asivery/xovi>`_ extension that allows running applications directly in xochitl.
-
-Screenshots
------------
-
-.. gallery::
-
-  .. image:: /images/launcher/appload-1.webp
-    :class: screenshot
-    :alt: appload launcher
-
-  .. image:: /images/launcher/appload-2.webp
-    :class: screenshot
-    :alt: appload launcher
-
-  .. image:: /images/launcher/appload-3.webp
-    :class: screenshot
-    :alt: appload launcher
-
-Features
---------
-
-- Multitasking / Application switching.
-- Runs applications as windows inside the main UI application.
-
-Installation
-------------
-
-There is no way to install AppLoad with toltec currently.

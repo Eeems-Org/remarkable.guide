@@ -13,6 +13,17 @@ Xovi
 Installation
 ============
 
+Vellum
+------
+
+.. code-block:: shell
+
+  vellum add xovi
+
+
+Manual Installation
+-------------------
+
 Please follow the `official installation instructions <https://github.com/asivery/rm-xovi-extensions?tab=readme-ov-file#to-install-xovi>`_.
 
 External Resources
