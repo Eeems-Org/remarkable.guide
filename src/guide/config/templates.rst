@@ -13,7 +13,7 @@ Templates on the device can be found in ``/usr/share/remarkable/templates/``, an
 Manually Installing a Template
 ==============================
 
-1. If you have not done so already, install `templatectl <https://github.com/PeterGrace/templatectl>`_:
+1. If you have not done so already, install `templatectl <https://github.com/PeterGrace/templatectl>`_ using :doc:`../software/toltec`:
 
 .. code-block:: shell
 

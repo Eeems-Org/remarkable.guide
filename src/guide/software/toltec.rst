@@ -3,6 +3,11 @@ Toltec
 ======
 
 .. warningbox::
+  :title: Use <a href="vellum.html">Vellum</a> instead
+
+  It's recommended to switch to using :doc:`vellum` instead of using toltec at this point. :doc:`vellum` supports the latest OS versions and is more actively maintained.
+
+.. warningbox::
   :title: Always refer to the <a href="https://toltec-dev.org">toltec website</a> for up to date information
 
   The website contains up to date information on what version of the OS is supported, as well as the latest installation steps.
@@ -12,7 +17,7 @@ Toltec
 
   See :ref:`upgrade` for information on how to downgrade to a supported OS version.
 
-Toltec is a community-maintained repository of free software for the `reMarkable tablet <https://remarkable.com/>`_. It is the recommended way to install software on the device. While you can manually install software on your device, this is fraught with compatibility issues, as well as different standards that may not be compatible. Toltec makes sure that software works together and applies standards that work together for all the packages it contains.
+Toltec is a community-maintained repository of free software for the `reMarkable tablet <https://remarkable.com/>`_. It used to be the recommended way to install software on the device. While you can manually install software on your device, this is fraught with compatibility issues, as well as different standards that may not be compatible. Toltec makes sure that software works together and applies standards that work together for all the packages it contains.
 
 .. contents:: Contents
    :local:
