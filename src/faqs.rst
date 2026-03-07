@@ -56,7 +56,7 @@ As part of the `EULA <https://support.remarkable.com/s/article/End-user-agreemen
 How do I remove all third party software from my device?
 --------------------------------------------------------
 
-This all depends on how you installed them. If you installed toltec, it has a simple uninstall command: `toltecctl uninstall`. This will remove toltec and all of its changes. If you've installed vellum it is as simple as running `vellum self uninstall`. This will remove vellum and all of it's changes.
+This all depends on how you installed them. If you installed toltec, it has a simple uninstall command: `toltecctl uninstall`. This will remove toltec and all of its changes. If you've installed vellum it is as simple as running `vellum self uninstall`. This will remove vellum and all of its changes.
 
 If you installed ddvk-hacks with its automagic script, it also provides `another script to uninstall the hacks <https://github.com/ddvk/remarkable-hacks#uninstall--removal>`_.
 
