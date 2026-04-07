@@ -56,6 +56,7 @@ liboxide
 Libremarkable
 linux
 lockscreen
+macOS
 Memfault
 multitouch
 MX

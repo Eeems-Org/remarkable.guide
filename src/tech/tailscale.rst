@@ -37,7 +37,7 @@ Get it with ``opkg install tailscale-systemd``.
 Since the default kernel does not contain the ``tun`` module, tailscale is configured to use userspace networking.
 If you want to place outgoing connections on your tailnet, you need one or both of the proxies that were set up,
 and then you'll need to configure the application making that outbound connection to use the appropriate proxy.
-(There's some more detail `on Tailscale's userspace networking docs <https://tailscale.com/kb/1112/userspace-networking/>`_).
+(There's some more detail `on Tailscale's userspace networking docs <https://tailscale.com/docs/concepts/userspace-networking>`_).
 
 Once you have ``tailscaled`` running, you'll need to run ``tailscale up`` to log in.
 You may want to use ``tailscale up --ssh --qr``, which will enable SSH to your device with the authentication handled by the tailnet
