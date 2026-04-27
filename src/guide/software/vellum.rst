@@ -52,7 +52,7 @@ The following command will uninstall vellum from your device. This includes remo
 
 .. code-block:: shell
 
-  velum self uninstall
+  vellum self uninstall
 
 Reenable Vellum After A System Upgrade
 --------------------------------------
