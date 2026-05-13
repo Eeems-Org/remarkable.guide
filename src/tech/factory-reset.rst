@@ -12,12 +12,7 @@ Factory Reset
 In order to factory reset the device you will need to do the following steps:
 
 1. Uninstall any manually added third party software or modifications.
-2. Uninstall :doc:`../guide/software/toltec`:
-
-.. code-block:: shell
-
-  toltecctl uninstall
-
+2. :ref:`toltec-uninstall` or :ref:`vellum-uninstall`:
 3. Ensure that xochitl is enabled:
 
 .. code-block:: shell

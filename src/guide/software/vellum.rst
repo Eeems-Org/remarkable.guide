@@ -45,6 +45,8 @@ The following commands will upgrade all the packages on your system to the lates
   vellum update
   vellum upgrade
 
+.. _vellum-uninstall:
+
 Uninstall Vellum
 ----------------
 
