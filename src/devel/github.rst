@@ -82,7 +82,7 @@ This badge is used to indicate that the application supports the reMarkable Pape
 
 .. code-block:: markdown
 
-  [![rmppm](https://img.shields.io/badge/rMPPure-supported-green)](https://remarkable.com/products/remarkable-paper/pure)
+  [![rmppure](https://img.shields.io/badge/rMPPure-supported-green)](https://remarkable.com/products/remarkable-paper/pure)
 
 Toltec package name
 -------------------
