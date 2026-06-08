@@ -71,6 +71,19 @@ This badge is used to indicate that the application supports the reMarkable Pape
 
   [![rmppm](https://img.shields.io/badge/rMPPM-supported-green)](https://remarkable.com/products/remarkable-paper/pro-move)
 
+reMarkable Paper Pure support
+-----------------------------
+
+This badge is used to indicate that the application supports the reMarkable Paper Pure tablet.
+
+.. image:: https://img.shields.io/badge/rMPPure-supported-green
+  :alt: rMPPure supported
+  :target: https://remarkable.com/products/remarkable-paper/pure
+
+.. code-block:: markdown
+
+  [![rmppm](https://img.shields.io/badge/rMPPure-supported-green)](https://remarkable.com/products/remarkable-paper/pure)
+
 Toltec package name
 -------------------
 
