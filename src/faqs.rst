@@ -63,17 +63,20 @@ If you installed ddvk-hacks with its automagic script, it also provides `another
 For other third party software, they may provide an uninstall script, or they may not. If they don't, you'll need to either ask the author for instructions, or to work through what the installation script does and undo it.
 
 .. _what-can-i-install-on-the-remarkable-paper-pro:
+.. _what-can-i-install-on-the-remarkable-paper-pro-or-paper-pro-move:
 
-What can I install on the reMarkable Paper Pro or Paper Pro Move?
------------------------------------------------------------------
+What can I install on the reMarkable Paper Pro, Paper Pro Move, or Paper Pure?
+------------------------------------------------------------------------------
 
 As of September 2025, third party development for these devices is still ongoing.  At present, you can `SSH into the device <https://remarkable.guide/guide/access/ssh.html>`_ by `enabling developer mode <https://remarkable.guide/tech/developer-mode.html>`_, and you can `perform a recovery on your device if necessary <https://remarkable.guide/tech/recovery.html>`_.
 
-The reMarkable Paper Pro and Paper Pro Move use a different CPU architecture than that used in the reMarkable 1 and reMarkable 2.  At minimum, existing programs for the reMarkable 1 and 2 will need to be recompiled in order to be made compatible with the Paper Pro and Paper Pro Move.
+The reMarkable Paper Pro, Paper Pro Move, and Paper Pure use a different CPU architecture than that used in the reMarkable 1 and reMarkable 2.  At minimum, existing programs for the reMarkable 1 and 2 will need to be recompiled in order to be made compatible with the Paper Pro, Paper Pro Move, and Paper Pure.
 
 You can see more technical information regarding the Paper Pro in `this Github issue for Paper Pro <https://github.com/Eeems-Org/remarkable.guide/issues/74>`_.
 
 You can see more technical information regarding the Paper Pro Move in `this Github issue for Paper Pro Move <https://github.com/Eeems-Org/remarkable.guide/issues/99>`_.
+
+You can see more technical information regarding the Paper Pure in `this Github issue for Paper Pure <https://github.com/Eeems-Org/remarkable.guide/issues/128>`_.
 
 
 Can I install toltec on my OS version?
@@ -157,11 +160,12 @@ I updated my OS, but now I can't SSH into my device. How do I fix it?
 Every time you update your OS, the cryptographic key used to identify the device over SSH is regenerated. This means that the software you are using to SSH into your device will no longer trust it and refuse to connect. To resolve this you need to remove the entry for the reMarkable in your ``known_hosts`` file on your computer. This is usually located in the ``.ssh`` folder in your home directory. The software you use to SSH may have these values stored elsewhere.
 
 .. _why-do-some-changes-not-persist-on-the-remarkable-paper-pro:
+.. _why-do-some-changes-not-persist-on-the-remarkable-paper-pro-or-paper-pro-move:
 
-Why do some changes not persist on the reMarkable Paper Pro or Paper Pro Move?
-------------------------------------------------------------------------------
+Why do some changes not persist on the reMarkable Paper Pro, Paper Pro Move, or Paper Pure?
+-------------------------------------------------------------------------------------------
 
-The reMarkable Paper Pro and Paper Pro Move have the root filesystem marked as read only, and certain folders have `overlays <https://en.wikipedia.org/wiki/OverlayFS>`_ where any changes will not persist between reboots.
+The reMarkable Paper Pro, Paper Pro Move, and Paper Pure have the root filesystem marked as read only, and certain folders have `overlays <https://en.wikipedia.org/wiki/OverlayFS>`_ where any changes will not persist between reboots.
 
 To make the root filesystem read-write:
 
