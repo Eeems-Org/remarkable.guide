@@ -16,7 +16,7 @@ Finding Your Device Password and IP Addresses
 =============================================
 
 .. warningbox::
-  :title: reMarkable Paper Pro and Paper Pro Move require Developer Mode
+  :title: reMarkable Paper Pro, Paper Pro Move, and Paper Pure require Developer Mode
 
   Please reference :doc:`../../tech/developer-mode` for more information on how to enable it.
 
@@ -87,7 +87,7 @@ Connecting over Wifi
 
 Under the following conditions, an additional step is required to enable SSH access over Wifi:
 
-- reMarkable Paper Pro and Paper Pro Move devices on any OS version
+- reMarkable Paper Pro, Paper Pro Move, and Paper Pure devices on any OS version
 - reMarkable 2 devices on OS versions above 3.20
 
 To enable, ssh into the device over USB and run:

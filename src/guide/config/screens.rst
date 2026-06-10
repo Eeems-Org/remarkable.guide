@@ -9,7 +9,7 @@ Change System Splash Screens
 
   Files stored in ``/usr/share/remarkable/`` will be overwritten with every OS update.
 
-  reMarkable Paper Pro and Paper Pro Move require :ref:`additional steps <why-do-some-changes-not-persist-on-the-remarkable-paper-pro>` to write to ``/usr/``.
+  reMarkable Paper Pro, Paper Pro Move, and Paper Pure require :ref:`additional steps <why-do-some-changes-not-persist-on-the-remarkable-paper-pro>` to write to ``/usr/``.
 
 System splash screens on the device be found in ``/usr/share/remarkable/``. You can manually replace those files to use new splash screens. See :doc:`../access/file-transfer` for more information on how to copy files to the device.
 

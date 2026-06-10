@@ -14,7 +14,7 @@ Developer Mode
 
    https://support.remarkable.com/s/article/Limited-Warranty-Policy
 
-The reMarkable Paper Pro and Paper Pro Move require enabling Developer Mode to enable :doc:`../guide/access/ssh`.
+The reMarkable Paper Pro, Paper Pro Move, and Paper Pure require enabling Developer Mode to enable :doc:`../guide/access/ssh`.
 
 You can leave Developer Mode by using :ref:`recovery_rmpp`.
 

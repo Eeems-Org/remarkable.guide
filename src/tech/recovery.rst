@@ -19,11 +19,12 @@ This process requires building a custom pogo connector for the device, and to sh
 .. _recovery_rmpp:
 
 .. _remarkable-paper-pro-recovery:
+.. _remarkable-paper-pro-paper-pro-move-recovery:
 
-reMarkable Paper Pro & Paper Pro Move Recovery
-==============================================
+reMarkable Paper Pro, Paper Pro Move & Paper Pure Recovery
+==========================================================
 
-You can follow the official documentation for how to perform recovery on your rM Paper Pro or Paper Pro Move: https://support.remarkable.com/s/article/Software-recovery
+You can follow the official documentation for how to perform recovery on your rM Paper Pro, Paper Pro Move, or Paper Pure: https://support.remarkable.com/s/article/Software-recovery
 
 if you are using Linux, they also provide a command line recovery tool: https://developer.remarkable.com/documentation/recovery-for-linux-host
 
