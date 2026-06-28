@@ -111,7 +111,7 @@ Troubleshooting FAQs
 My device is connected to wifi, but can't sync or check for updates, how can I fix this?
 ----------------------------------------------------------------------------------------
 
-If you are on an earlier version than 3.11.2.5 and trying to update, you will need to manually update using `codexctl <https://github.com/Jayy001/codexctl>`_ to 3.11.2.5 and then you can use the built in upgrade menu. The old upgrade servers are no longer online.
+If you are on an earlier version than 3.11.2.5 and trying to update, you will need to :ref:`manually upgrade <upgrade>` to 3.11.2.5 and then you can use the built in upgrade menu. The old upgrade servers are no longer online.
 
 You could attempt the following troubleshooting steps:
 
