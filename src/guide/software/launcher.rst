@@ -43,7 +43,8 @@ Installation
 
 .. code-block:: shell
 
-  vellum add appload
+  vellum add launcherctl-appload
+  launcherctl switch-launcher --start appload
 
 .. _oxide-launcher:
 
@@ -101,7 +102,7 @@ To install with :doc:`vellum`:
 
 .. code-block:: shell
 
-  vellum add appload
+  vellum add launcherctl-oxide
   launcherctl switch-launcher --start oxide
 
 To install with :doc:`toltec`:
