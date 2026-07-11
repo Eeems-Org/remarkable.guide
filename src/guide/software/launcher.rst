@@ -4,7 +4,7 @@ Picking a Launcher
 
 Launchers allow you to open and switch between applications. Without them there is no way to run third party applications from the user interface. You would have to SSH into your device to launch them every time you wanted to use them.
 
-After you've installed :doc:`vellum` or :doc:`toltec`, you will need to install a launcher. Currently there are `three launchers in toltec <https://toltec-dev.org/stable/#section-launchers>`_. Of which we only recommend two for use: Oxide and Remux. In :doc:`vellum` there is only AppLoad available.
+After you've installed :doc:`vellum` or :doc:`toltec`, you will need to install a launcher. Currently there are `three launchers in toltec <https://toltec-dev.org/stable/#section-launchers>`_. Of which we only recommend two for use: Oxide and Remux. In :doc:`vellum` there are Oxide and AppLoad available.
 
 .. contents:: Contents
    :local:
@@ -43,7 +43,8 @@ Installation
 
 .. code-block:: shell
 
-  vellum add appload
+  vellum add launcherctl-appload
+  launcherctl switch-launcher --start appload
 
 .. _oxide-launcher:
 
@@ -97,7 +98,14 @@ Features
 Installation
 ------------
 
-You can install oxide with :doc:`toltec`. It is not currently available in :doc:`vellum`.
+To install with :doc:`vellum`:
+
+.. code-block:: shell
+
+  vellum add launcherctl-oxide
+  launcherctl switch-launcher --start oxide
+
+To install with :doc:`toltec`:
 
 .. code-block:: shell
 
