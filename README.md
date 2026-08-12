@@ -74,6 +74,13 @@ Yes, you usually will want to accomplish this by just changing the first header 
 .. redirect:: new-page-name
 ```
 
+### Can I remove a page?
+Not directly, pages can be removed from the index so they are no longer showing in the main guide, but they should not be removed fully. Instead a warning should be added to the top redirecting to the the new page that covers the topic. The following snippet will also need to be put on the top of the page to keep the build from erroring:
+
+```rst
+:orphan:
+```
+
 ### How to I add a warning to a page?
 ```rst
 .. warningbox::
