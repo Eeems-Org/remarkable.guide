@@ -33,6 +33,7 @@ dualbooting
 eInk
 entware
 epubs
+es
 executables
 fb
 filesystem
