@@ -14,36 +14,29 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout the Git repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
         with:
           submodules: true
           fetch-depth: 0
       - name: Setup Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v7
         with:
           python-version: "3.14"
       - name: Cache Python environment
-        uses: actions/cache@v4
+        uses: actions/cache@v6
         id: cache-python
         with:
           path: .venv
           key: .venv-${{ hashFiles('requirements.txt') }}
-      - name: Install base Apt packages
-        id: cache-apt
-        uses: awalsh128/cache-apt-pkgs-action@latest
-        with:
-          execute_install_scripts: true
-          packages: graphviz libgraphviz-dev librsvg2-bin pdf2svg enchant-2
-          version: 1.0
       - name: Apt-Cache-Action
-        uses: Eeems-Org/apt-cache-action@v1.4
+        uses: Eeems-Org/apt-cache-action@v1.5
         with:
-          packages: texlive-base texlive-latex-extra
+          packages: texlive-base texlive-latex-extra graphviz libgraphviz-dev librsvg2-bin pdf2svg enchant-2
       - name: Build website
         shell: bash
-        run: make -j $(nproc) prod
+        run: make -j "$(nproc)" prod
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v5
         with:
           path: "dist"
 
@@ -60,16 +53,7 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4
-      - uses: actions/checkout@v4
+        uses: actions/deploy-pages@v5
+      - uses: actions/checkout@v7
         with:
           fetch-depth: 0
-      # - name: Create Sentry release
-      #   uses: getsentry/action-release@v1
-      #   env:
-      #     SENTRY_AUTH_TOKEN: ${{ secrets.SENTRY_AUTH_TOKEN }}
-      #     SENTRY_ORG: ${{ secrets.SENTRY_ORG }}
-      #     SENTRY_PROJECT: ${{ secrets.SENTRY_PROJECT }}
-      #     SENTRY_URL: ${{ secrets.SENTRY_URL }}
-      #   with:
-      #     environment: production
