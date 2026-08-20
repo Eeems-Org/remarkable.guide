@@ -129,8 +129,8 @@ Download the thumbnail for a specific document (latest page opened).
   curl \
     -I "http://10.11.99.1/thumbnail/$guid"
 
-``POST 'http://10.11.99.1/search/{keyword}'``
----------------------------------------------
+``POST http://10.11.99.1/search/{keyword}``
+-------------------------------------------
 
 Search for documents matching a specific keyword. This endpoint is currently under development, and may not work as expected.
 
