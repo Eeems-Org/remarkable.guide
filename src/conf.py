@@ -103,6 +103,7 @@ linkcheck_ignore = [
     r"https://www.npmjs.com/.*",
     r"https://www.chiark.greenend.org.uk/~sgtatham/putty/.*",
     r"https://www.freedesktop.org/wiki/Software/libevdev/",
+    r"https://discord.remarkable.guide/.*",
 ]
 linkcheck_allowed_redirects = {
     r"https://support\.remarkable\.com": "https://support.remarkable.com/s/",
