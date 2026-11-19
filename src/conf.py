@@ -115,6 +115,7 @@ linkcheck_anchors_ignore = [
 ]
 linkcheck_anchors_ignore_for_url = [
     r"https:\/\/support\.remarkable\.com\/.*",
+    r"https:\/\/github\.com\/.*",
 ]
 linkcheck_retries = 5
 
