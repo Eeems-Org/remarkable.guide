@@ -110,11 +110,11 @@ linkcheck_allowed_redirects = {
     r"https://discord\.gg/ATqQGfu": "https://discord.com/invite/ATqQGfu",
     r"https://hub.docker.com/.*": "https://login.docker.com/u/login/identifier",
 }
+linkcheck_anchors_ignore = [
+    r"\/.*",
+]
 linkcheck_anchors_ignore_for_url = [
     r"https:\/\/support\.remarkable\.com\/.*",
-    r"https:\/\/github\.com\/.*?tab=readme-ov-file#.*",
-    r"https:\/\/hawkbit\.eclipse\.dev\/#.*",
-    r"https:\/\/docs\.ackee\.electerious\.com\/#.*"
 ]
 linkcheck_retries = 5
 
