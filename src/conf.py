@@ -110,8 +110,8 @@ linkcheck_allowed_redirects = {
     r"https://discord\.gg/ATqQGfu": "https://discord.com/invite/ATqQGfu",
     r"https://hub.docker.com/.*": "https://login.docker.com/u/login/identifier",
 }
-linkcheck_anchors_ignore = [
-    r"\/.*",
+linkcheck_anchors_ignore_for_url = [
+    r"https://support\.remarkable\.com\/.*",
 ]
 linkcheck_retries = 5
 
