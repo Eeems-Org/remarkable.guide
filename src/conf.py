@@ -111,7 +111,9 @@ linkcheck_allowed_redirects = {
     r"https://hub.docker.com/.*": "https://login.docker.com/u/login/identifier",
 }
 linkcheck_anchors_ignore_for_url = [
-    r"https://support\.remarkable\.com\/.*",
+    r"https:\/\/support\.remarkable\.com\/.*",
+    r"https:\/\/github\.com\/.*?tab=readme-ov-file#.*",
+    r"https:\/\/hawkbit\.eclipse\.dev\/#.*",
 ]
 linkcheck_retries = 5
 
