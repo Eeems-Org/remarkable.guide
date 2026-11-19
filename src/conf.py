@@ -114,6 +114,7 @@ linkcheck_anchors_ignore_for_url = [
     r"https:\/\/support\.remarkable\.com\/.*",
     r"https:\/\/github\.com\/.*?tab=readme-ov-file#.*",
     r"https:\/\/hawkbit\.eclipse\.dev\/#.*",
+    r"https:\/\/docs\.ackee\.electerious\.com\/#.*"
 ]
 linkcheck_retries = 5
 
